@@ -1,6 +1,6 @@
 // Name: Matthew Tucker 
-// Description: Randomly select texter (4 options - #ff65a3, #fff740, #feff9c,#7afcff) and generate a password and put both on stickynote 
-// Date: 1/2/2023
+// Description: Randomly select texter (4 options - #ff65a3, #fff740, #feff9c,#7afcff) and generate a password and put both on stickynote (for keypad)
+// Date: 1/4/2023
 
 using System;
 using System.Collections;
@@ -9,7 +9,7 @@ using UnityEngine;
 using TMPro;
 
 
-class RandomPasswordGen : MonoBehaviour
+class RandomKeypadGen : MonoBehaviour
 {
 
     public TMP_Text outputs; // connect TMP text to outputs in code
@@ -21,18 +21,18 @@ class RandomPasswordGen : MonoBehaviour
     {
         // select color 
         int n = UnityEngine.Random.Range(0, Materials.Length);// select material 
-        rend.enabled= true;
-        rend.sharedMaterial= Materials[n];
+        rend.enabled = true;
+        rend.sharedMaterial = Materials[n];
 
 
 
         string output = ""; // starting output of nothing
 
-        string possibleInString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#*_-"; // possible characters 
+        string possibleInString = "0123456789"; // possible characters 
         char[] possibleInput = possibleInString.ToCharArray(); // convert to char list 
 
         int x = 0;// starting input 
-        int length = 10; // length of password
+        int length = UnityEngine.Random.Range(4, 6); // length of password range
 
         var rand = new System.Random(); // set up random
 
