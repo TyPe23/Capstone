@@ -38,7 +38,7 @@ class RandomPasswordGen : MonoBehaviour
 
         while (x < length)
         { // loop untile password done 
-            int input = rand.Next(0, 60);// random between 0 and max len of character
+            int input = rand.Next(0, possibleInput.Length);// random between 0 and max len of character
             output = output + possibleInput[input]; // put into string format 
             x++;
         }

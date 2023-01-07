@@ -16,5 +16,5 @@ MonoBehaviour:
   Pose: 0
   TextureAtlas: 1
   TextureSizeLimit: 1024
-  UseHands: 0
-  MorphTargets: 
+  UseHands: 1
+  MorphTargets: []
