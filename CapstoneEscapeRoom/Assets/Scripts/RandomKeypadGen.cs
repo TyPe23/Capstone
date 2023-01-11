@@ -1,6 +1,6 @@
 // Name: Matthew Tucker 
 // Description: Randomly select texter (4 options - #ff65a3, #fff740, #feff9c,#7afcff) and generate a password and put both on stickynote (for keypad)
-// Date: 1/4/2023
+// Date: 1/10/2023
 
 using System;
 using System.Collections;
@@ -16,6 +16,7 @@ class RandomKeypadGen : MonoBehaviour
 
     public Material[] Materials; // materials list / colors 
     public Renderer rend;
+    public string outputString;
 
     public void Start()
     {
@@ -44,5 +45,6 @@ class RandomKeypadGen : MonoBehaviour
         }
 
         outputs.text = output; // send to text mesh pro
+        outputString = output;
     }
 }
