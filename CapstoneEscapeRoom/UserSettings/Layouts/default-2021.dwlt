@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Scene
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 107
+  controlID: 17
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -223,7 +223,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 17
+  controlID: 29
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 18
+  controlID: 30
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -268,8 +268,8 @@ MonoBehaviour:
     y: 0
     width: 1107
     height: 678
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -317,22 +317,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Animation
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Animation
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\GitHub\Capstone\CapstoneEscapeRoom
+  m_LastProjectPath: C:\Users\ifire\OneDrive\Documents\GitHub\Capstone\CapstoneEscapeRoom
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 92}
-    m_SelectedIDs: d2700000
-    m_LastClickedID: 28882
-    m_ExpandedIDs: 000000000a7000000c7000000e70000010700000127000001470000016700000d2700000d470000000ca9a3b
+    scrollPos: {x: 0, y: 180}
+    m_SelectedIDs: c6ca0000
+    m_LastClickedID: 51910
+    m_ExpandedIDs: 0000000000c9000002c9000004c9000006c9000008c900000ac900000cc900000ec9000010c9000012c900001ac900001cc90000c6ca000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -360,7 +360,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000000a7000000c7000000e70000010700000127000001470000016700000
+    m_ExpandedIDs: 0000000000c9000002c9000004c9000006c9000008c900000ac900000cc900000ec9000010c9000012c9000014c9000016c9000018c900001ac900001cc90000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -487,10 +487,10 @@ MonoBehaviour:
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
+      scrollPos: {x: 0, y: 196}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: ee96ffff3c97ffff3698ffff309cffff809cffff7a9dffff52a4ffffa0a4ffff76a8ffff3cadffff8aadffff84aeffff9ab1ffffe8b1ffffe2b2ffff18b9ffff66b9ffff60baffffcec6ffff50caffff30cbffff7ecbffff78ccffff38cfffff86cfffff84d0ffff90d2ffffc2d9ffffbcdaffff0adbffff5cddffff74e0ffff68e1ffffb6e1ffffb0e2ffff40e8ffff58e9ffffaae9ffffa4eaffff5af0ffffa8f0ffff26f3ffff66f4ffffb4f4ffff7cf8ffffe2faffffa47e0000b67e0000ec7e0000587f0000ee7f0000bc8c0000ca8c0000fa8c0000448d0000409b0000d2b60000e0b6000010b700005ab70000c2bd0000d0bd00003ebe0000b8be0000ccc20000dac2000048c30000c2c30000aac80000b8c8000026c90000a0c90000bace0000dcce0000eace000004cf000024cf000028cf000030cf000034cf00004ccf000058cf000074cf0000a6cf0000b8cf0000d2cf00002cd0000038d000003ed000005ed0000002d3000024d3000032d300004cd300006cd3000070d3000078d300007cd3000094d30000a0d30000bcd30000eed3000000d400001ad4000074d4000080d4000086d40000a6d40000
+      m_ExpandedIDs: 3c8dfaff3e8dfaff5a8efaff5c8efaffa89ffaffaa9ffaff14d8fbfff44bfdff204ffdffc2fafffff6dd0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -783,9 +783,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -12.307803, y: -2.407585, z: -29.726278}
+    m_Target: {x: 57.70587, y: 82.82216, z: 3.3304863}
     speed: 2
-    m_Value: {x: -12.307803, y: -2.407585, z: -29.726278}
+    m_Value: {x: 57.70587, y: 82.82216, z: 3.3304863}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -832,13 +832,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.0073947683, y: 0.97999656, z: -0.037070714, w: -0.19542205}
+    m_Target: {x: -0.1435559, y: 0.18150136, z: -0.027945643, w: -0.9728427}
     speed: 2
-    m_Value: {x: -0.00733911, y: 0.9802828, z: -0.037081543, w: -0.19395068}
+    m_Value: {x: -0.14354348, y: 0.17997399, z: -0.02771982, w: -0.97274685}
   m_Size:
-    m_Target: 16.46616
+    m_Target: 1.2149374
     speed: 2
-    m_Value: 16.46616
+    m_Value: 1.214938
   m_Ortho:
     m_Target: 0
     speed: 2
