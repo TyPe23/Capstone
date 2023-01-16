@@ -1,5 +1,5 @@
 // Name: Matthew Tucker
-// Data: 1/15/2023
+// Data: 1/16/2023
 // Description: Handles keypad input and checking 
 
 using System.Collections;
@@ -9,6 +9,7 @@ using UnityEngine.UI;
 using TMPro;
 using Unity.VisualScripting.Antlr3.Runtime;
 using Unity.VisualScripting;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class keypadControler : MonoBehaviour
 {
@@ -21,6 +22,8 @@ public class keypadControler : MonoBehaviour
 
     public Material[] Materials; // materials list / colors 
     public Renderer rend;// renders 
+
+    public GameObject doorLock; // the door grab object 
 
     void Start() { // get input 
         textIn = inputField.GetComponent<TMP_Text>().text;  
@@ -52,13 +55,15 @@ public class keypadControler : MonoBehaviour
     {
        if(textOut == textIn) // if correct 
         {
-            rend.enabled = true;
-            rend.sharedMaterial = Materials[0];
+            rend.enabled = true; // enable rendering change 
+            rend.sharedMaterial = Materials[0]; // change material 
+            doorLock.GetComponent<XRGrabInteractable>().enabled = true; // unlock door
         }
         else // if wrong 
         {
-            rend.enabled = true;
-            rend.sharedMaterial = Materials[1];
+            rend.enabled = true; // enable rendering chage 
+            rend.sharedMaterial = Materials[1]; // change material 
+            doorLock.GetComponent<XRGrabInteractable>().enabled = false;// lock door
         }
     }
 
