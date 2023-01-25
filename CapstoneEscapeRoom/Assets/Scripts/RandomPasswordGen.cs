@@ -1,12 +1,14 @@
 // Name: Matthew Tucker 
 // Description: Randomly select texter (4 options - #ff65a3, #fff740, #feff9c,#7afcff) and generate a password and put both on stickynote 
-// Date: 1/10/2023
+// possible random locations (has to be set by game developer) 
+// Date: 1/10/2023, 1/24/2023
 
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using static UnityEditor.FilePathAttribute;
 
 
 class RandomPasswordGen : MonoBehaviour
@@ -14,9 +16,11 @@ class RandomPasswordGen : MonoBehaviour
 
     public TMP_Text outputs; // connect TMP text to outputs in code
 
-    public Material[] Materials; // materials list / colors 
+    public Material[] Materials; // materials list / colors
     public Renderer rend;
     public string outputString;
+
+    public Vector3[] Locations; // locations the object could be (x,y,z)
 
     public void Start()
     {
@@ -25,6 +29,11 @@ class RandomPasswordGen : MonoBehaviour
         rend.enabled= true;
         rend.sharedMaterial= Materials[n];
 
+        if (Locations.Length > 0) // if more then 0 locations to place object 
+        {
+            int y = UnityEngine.Random.Range(0, Locations.Length);// select position 
+            transform.position = Locations[y]; // set position 
+        }
 
 
         string output = ""; // starting output of nothing
