@@ -45,7 +45,7 @@ public class KeyBoardSwitch : MonoBehaviour
     private float GetValue() // get the current value of button (how much pressed) 
     {
         var value = Vector3.Distance(startPos, transform.localPosition) / joint.linearLimit.limit; // get distance 
-        if (Mathf.Abs(value) < deadZone) // check if less then deadzone if so 0 
+        if (Mathf.Abs(value) < deadZone) // check if less than deadzone if so 0 
         {
             value = 0;
         }
