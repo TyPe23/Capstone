@@ -29,10 +29,14 @@ public class KeyboardTyping : MonoBehaviour {
     public void typingFunct(string letter) {
         //check if the character is not in the dictionary
         //or shift is false
+
+        print("word = " + word);
         if (!shiftDictionary.ContainsKey(letter) | shift == false) {
             wordIndex++;
             word = word + letter;
             output.text = word; // send to text mesh pro
+
+            print("word = " + word);
         }
         else if (shift == true) {
             wordIndex++;
