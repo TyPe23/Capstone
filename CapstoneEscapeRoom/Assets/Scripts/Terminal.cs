@@ -13,7 +13,8 @@ public class Terminal : KeyboardTyping {
     //a dictionary of commands and their outputs
     IDictionary<string, string> commands = new Dictionary<string, string>() {
         {"ls", "tmp.txt \t passwords.txt \t forms \n" +
-                "user_information \t taxes.exe" }
+                "user_information \t taxes.exe" },
+        {"cd forms", "" }
     };
 
     //triggered when the terminal is opened
@@ -77,5 +78,21 @@ public class Terminal : KeyboardTyping {
         commandLine = "";
         print("closeword = " + word);
         print("CL = " + commandLine);
+    }
+
+    //controls what happens in the command line
+    public void commandOptions(string input) {
+        //write on the next line
+        commandLine += "\n";
+        //identify command
+        switch (input) {
+            case "ls":
+                commandLine += "tmp.txt \t passwords.txt \t forms \n" +
+                "user_information \t taxes.exe";
+                break;
+            case "cd forms":
+                user += "/forms";
+                break;
+        }
     }
 }
