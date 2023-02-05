@@ -3699,13 +3699,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5468179166197647119}
     m_Modifications:
+    - target: {fileID: 606503239065875612, guid: 656568f71bcd0da40ab8ba4298bed7a5, type: 3}
+      propertyPath: m_InteractionLayers.m_Bits
+      value: 4294967291
+      objectReference: {fileID: 0}
     - target: {fileID: 606503239065875613, guid: 656568f71bcd0da40ab8ba4298bed7a5, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.85
       objectReference: {fileID: 0}
+    - target: {fileID: 606503239088079802, guid: 656568f71bcd0da40ab8ba4298bed7a5, type: 3}
+      propertyPath: m_InteractionLayers.m_Bits
+      value: 4294967291
+      objectReference: {fileID: 0}
     - target: {fileID: 606503239088079803, guid: 656568f71bcd0da40ab8ba4298bed7a5, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 606503239371616932, guid: 656568f71bcd0da40ab8ba4298bed7a5, type: 3}
+      propertyPath: m_InteractionLayers.m_Bits
+      value: 4294967291
       objectReference: {fileID: 0}
     - target: {fileID: 606503239371616933, guid: 656568f71bcd0da40ab8ba4298bed7a5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3715,6 +3727,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.85
       objectReference: {fileID: 0}
+    - target: {fileID: 606503239622046259, guid: 656568f71bcd0da40ab8ba4298bed7a5, type: 3}
+      propertyPath: m_InteractionLayers.m_Bits
+      value: 4294967291
+      objectReference: {fileID: 0}
+    - target: {fileID: 606503239703917894, guid: 656568f71bcd0da40ab8ba4298bed7a5, type: 3}
+      propertyPath: m_InteractionLayers.m_Bits
+      value: 4294967291
+      objectReference: {fileID: 0}
     - target: {fileID: 606503239703917895, guid: 656568f71bcd0da40ab8ba4298bed7a5, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.85
@@ -3722,6 +3742,10 @@ PrefabInstance:
     - target: {fileID: 606503240051106056, guid: 656568f71bcd0da40ab8ba4298bed7a5, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 606503240051106059, guid: 656568f71bcd0da40ab8ba4298bed7a5, type: 3}
+      propertyPath: m_InteractionLayers.m_Bits
+      value: 4294967291
       objectReference: {fileID: 0}
     - target: {fileID: 606503240207334385, guid: 656568f71bcd0da40ab8ba4298bed7a5, type: 3}
       propertyPath: HMD
