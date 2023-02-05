@@ -34,14 +34,12 @@ public class KeyboardTyping : MonoBehaviour {
         if (!shiftDictionary.ContainsKey(letter) | shift == false) {
             wordIndex++;
             word = word + letter;
-            output.text = word; // send to text mesh pro
-
-            print("word = " + word);
+            printFunct(word); // send to text mesh pro
         }
         else if (shift == true) {
             wordIndex++;
             word = word + shiftDictionary[letter];
-            output.text = word;
+            printFunct(word);
         }
         shift = false;
     }
@@ -52,11 +50,15 @@ public class KeyboardTyping : MonoBehaviour {
             //subtract a character from the word
             word = word.Substring(0, wordIndex - 1);
             wordIndex--;
-            output.text = word;
+            printFunct(word);
         }
     }
 
     public void shiftFunct() {
         shift = true;
+    }
+
+    public virtual void printFunct(string input) {
+        output.text = input;
     }
 }

@@ -7,7 +7,7 @@ using TMPro;
 public class Terminal : KeyboardTyping {
 
     //wordIndex, word, and output are defined in the parent class
-    public string commandLine = null;
+    public string commandLine = "";
     public string user = "C:\\Users\\Champ> ";
 
     //a dictionary of commands and their outputs
@@ -18,53 +18,64 @@ public class Terminal : KeyboardTyping {
 
     //triggered when the terminal is opened
     public void startTerminal() {
-        typingFunct(" ");
-        word = user;
-        output.text = word;
+        commandLine = user;
+        output.text = commandLine;
 
-        print("word = " + word);
+        print("CL = " + commandLine);
     }
 
     public void commandExecution() {
+
+        print("CLbeforeEx = " + commandLine);
+        //add word to commandLine so it will remain printed
+        commandLine += word;
         //grab the input
-        string command = word.Substring(word.Length - wordIndex, word.Length);
+        string command = word;//.Substring(word.Length - wordIndex, word.Length);
         //check for the command
         if (commands.ContainsKey(command)) {
-            printTerm("\n" + commands[command]);
+            commandLine += ("\n" + commands[command]);
         }
         //give an error if that command is not valid
         else {
-            printTerm("\n\'" + command + "\' is not recognized as an internal or external command");
+            commandLine += ("\n\'" + command + "\' is not recognized as an internal or external command");
         }
+        //return and print username
+        commandLine += ("\n" + user);
+        //print output
+        output.text = commandLine;
+        print("CLafterEx = " + commandLine);
         //reset terminal input
-        //word = "";
+        word = "";
         wordIndex = 0;
     }
 
-    //send text to the terminal one letter at a time
-    public void textCrawler(string text) {
-        for (int i = 0; i < text.Length; i++) {
+    ////send text to the terminal one letter at a time
+    //public void textCrawler(string text) {
+    //    for (int i = 0; i < text.Length; i++) {
 
-            word += text[i];
-            //System.Threading.Thread.Sleep(500);
-            output.text = word;
-        }
-    }
+    //        word += text[i];
+    //        //System.Threading.Thread.Sleep(500);
+    //        output.text = word;
+    //    }
+    //}
 
     //prints output and formats command line
-    public void printTerm(string input) {
-        word += input;
-        //return and print username
-        word += ("\n" + user);
-        //print output
-        output.text = word;
-        print("word = " + word);
+    public override void printFunct(string command) {
+        print("new print");
+        //save input to process input
+        print("command = " + command);
+        //print input
+        output.text = (commandLine + command);
+        print("CL = " + commandLine);
     }
 
     //triggered when the terminal is closed
     public void closeTerminal() {
+        print("closed");
         word = "";
         wordIndex = 0;
-        print("word = " + word);
+        commandLine = "";
+        print("closeword = " + word);
+        print("CL = " + commandLine);
     }
 }
