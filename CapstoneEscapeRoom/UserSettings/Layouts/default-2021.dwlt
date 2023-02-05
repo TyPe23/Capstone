@@ -48,7 +48,11 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
+<<<<<<< HEAD
   controlID: 118
+=======
+  controlID: 130
+>>>>>>> 6996c4897d8a1312c8189887abff37bef6f62aaf
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -223,7 +227,11 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
+<<<<<<< HEAD
   controlID: 18
+=======
+  controlID: 65
+>>>>>>> 6996c4897d8a1312c8189887abff37bef6f62aaf
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -248,7 +256,11 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
+<<<<<<< HEAD
   controlID: 19
+=======
+  controlID: 66
+>>>>>>> 6996c4897d8a1312c8189887abff37bef6f62aaf
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -382,22 +394,36 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
+<<<<<<< HEAD
     - Assets/Scenes/TestWorlds/CharacterTemp
+=======
+    - Assets/Materials
+>>>>>>> 6996c4897d8a1312c8189887abff37bef6f62aaf
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
+<<<<<<< HEAD
   - Assets/Scenes/TestWorlds/CharacterTemp
+=======
+  - Assets/Materials
+>>>>>>> 6996c4897d8a1312c8189887abff37bef6f62aaf
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Firer\OneDrive\Desktop\Louisiana Tech\Fourth Year\CAPSTONE\GIT\Capstone\CapstoneEscapeRoom
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
     m_SelectedIDs: 98770000
     m_LastClickedID: 30616
     m_ExpandedIDs: 000000002a7700002c7700002e77000030770000327700003477000036770000387700003a7700003c7700003e77000040770000427700004477000046770000487700004a7700004c7700004e77000050770000527700005477000056770000587700005a7700005c7700005e77000060770000627700006477000066770000687700006a7700006c7700006e770000707700007277000074770000767700009c77000000ca9a3b
+=======
+    m_SelectedIDs: 42cc0000
+    m_LastClickedID: 52290
+    m_ExpandedIDs: 00000000d2cb0000d4cb0000d6cb0000d8cb0000dacb0000dccb0000decb0000e0cb0000e2cb0000e4cb0000e6cb0000e8cb0000eacb0000f0cb0000f2cb0000f4cb0000f6cb000000ca9a3b
+>>>>>>> 6996c4897d8a1312c8189887abff37bef6f62aaf
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -425,7 +451,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 000000002a7700002c7700002e77000030770000327700003477000036770000387700003a7700003c7700003e77000040770000427700004477000046770000487700004a7700004c7700004e77000050770000527700005477000056770000587700005a7700005c7700005e77000060770000627700006477000066770000687700006a7700006c7700006e77000070770000727700007477000076770000
+=======
+    m_ExpandedIDs: 00000000d2cb0000d4cb0000d6cb0000d8cb0000dacb0000dccb0000decb0000e0cb0000e2cb0000e4cb0000e6cb0000e8cb0000eacb0000eccb0000eecb0000f0cb0000f2cb0000f4cb0000f6cb0000
+>>>>>>> 6996c4897d8a1312c8189887abff37bef6f62aaf
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -452,8 +482,13 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
+<<<<<<< HEAD
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000d08000005478000082ab0000
+=======
+    m_HadKeyboardFocusLastEvent: 0
+    m_ExpandedInstanceIDs: c6230000d0800000
+>>>>>>> 6996c4897d8a1312c8189887abff37bef6f62aaf
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -516,7 +551,11 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
+<<<<<<< HEAD
   m_LastVerticalScrollValue: 0
+=======
+  m_LastVerticalScrollValue: 864
+>>>>>>> 6996c4897d8a1312c8189887abff37bef6f62aaf
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
@@ -555,7 +594,11 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
+<<<<<<< HEAD
       m_ExpandedIDs: dafaffff326f0000b06f00004e7000004872000014730000
+=======
+      m_ExpandedIDs: 5ecefdff66d1fdfff0e2feff74e5feffdefaffff4ece0000c6cf0000f8d1000028d30000
+>>>>>>> 6996c4897d8a1312c8189887abff37bef6f62aaf
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: IK_Hand_L_target
@@ -848,9 +891,15 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< HEAD
     m_Target: {x: -3.1503358, y: 1.1995106, z: -2.1373365}
     speed: 2
     m_Value: {x: -3.1503358, y: 1.1995106, z: -2.1373365}
+=======
+    m_Target: {x: 42.618732, y: 56.002663, z: -2.2866764}
+    speed: 2
+    m_Value: {x: 42.618732, y: 56.002663, z: -2.2866764}
+>>>>>>> 6996c4897d8a1312c8189887abff37bef6f62aaf
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -897,9 +946,15 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
+<<<<<<< HEAD
     m_Target: {x: -0.008145032, y: 0.9704015, z: -0.23933777, w: -0.0332033}
     speed: 2
     m_Value: {x: -0.008194281, y: 0.9699782, z: -0.2407774, w: -0.033188883}
+=======
+    m_Target: {x: 0.006769295, y: -0.98756015, z: -0.045671932, w: -0.14983997}
+    speed: 2
+    m_Value: {x: 0.006544927, y: -0.98769724, z: -0.04419367, w: -0.14986053}
+>>>>>>> 6996c4897d8a1312c8189887abff37bef6f62aaf
   m_Size:
     m_Target: 2.7148643
     speed: 2
