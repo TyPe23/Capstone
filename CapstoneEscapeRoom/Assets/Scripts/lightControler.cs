@@ -14,6 +14,7 @@ public class lightControler : MonoBehaviour
     public int state = 1;
     public Material[] Materials; // materials list / colors
     public Renderer rend;
+    public GameObject PointLight;
 
         
 
@@ -45,6 +46,7 @@ public class lightControler : MonoBehaviour
         //rend.sharedMaterial = Materials[1];
         uniqueMaterial.DisableKeyword("_EMISSION");
         uniqueMaterial.globalIlluminationFlags = MaterialGlobalIlluminationFlags.EmissiveIsBlack;
+        PointLight.SetActive(false);
     }
 
     void On()
@@ -53,5 +55,6 @@ public class lightControler : MonoBehaviour
         //rend.sharedMaterial = Materials[0];
         uniqueMaterial.EnableKeyword("_EMISSION");
         uniqueMaterial.globalIlluminationFlags = MaterialGlobalIlluminationFlags.None;
+        PointLight.SetActive(true);
     }
 }

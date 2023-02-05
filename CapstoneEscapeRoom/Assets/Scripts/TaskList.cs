@@ -20,14 +20,20 @@ public class TaskList : MonoBehaviour
     private string FilePath; // path to file 
     private List<string> fileLines; // lines in file 
     private string output; // output 
-    public bool done = false; 
+    public bool done = false;
+
+ 
 
     // Start is called before the first frame update
     void Start()
     {
         // file connection 
-        FilePath = "Assets/Scenes/TestWorlds/" + "TaskList" +level+ ".txt";
-        fileLines = File.ReadAllLines(FilePath).ToList();
+        //FilePath = "Assets/Scenes/TestWorlds/" + "TaskList" +level+ ".txt";
+        //fileLines = File.ReadAllLines(FilePath).ToList();
+        if(level == 1) // temp for task list 
+        {
+            fileLines = new List<string>() {"Press button", "Task 2", "Task 3"};
+        }
 
         // task output 
         output = "Task List: \n"; // starting output default 
@@ -61,9 +67,18 @@ public class TaskList : MonoBehaviour
             }
             outputs.text = output; // send to text mesh pro
         }
-        if(left == 0 && compleated == total)
+
+        if(left == 0 && compleated == total) // check if done with all task
         {
-            done = true; 
+            done = true;
+
+            output = "Task List: \n"; // starting output default
+            foreach (string line in fileLines)
+            {
+                output += line + "\n"; // The List
+            }
+            output += "Escape\n"; // tell user to leave 
+            outputs.text = output; // send to text mesh pro
         }
     }
 
