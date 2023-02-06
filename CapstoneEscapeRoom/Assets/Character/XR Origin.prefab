@@ -3701,7 +3701,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 606503239065875612, guid: 656568f71bcd0da40ab8ba4298bed7a5, type: 3}
       propertyPath: m_InteractionLayers.m_Bits
-      value: 4294967291
+      value: 4294967290
       objectReference: {fileID: 0}
     - target: {fileID: 606503239065875613, guid: 656568f71bcd0da40ab8ba4298bed7a5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3709,7 +3709,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 606503239088079802, guid: 656568f71bcd0da40ab8ba4298bed7a5, type: 3}
       propertyPath: m_InteractionLayers.m_Bits
-      value: 4294967291
+      value: 4294967290
       objectReference: {fileID: 0}
     - target: {fileID: 606503239088079803, guid: 656568f71bcd0da40ab8ba4298bed7a5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3717,7 +3717,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 606503239371616932, guid: 656568f71bcd0da40ab8ba4298bed7a5, type: 3}
       propertyPath: m_InteractionLayers.m_Bits
-      value: 4294967291
+      value: 4294967290
       objectReference: {fileID: 0}
     - target: {fileID: 606503239371616933, guid: 656568f71bcd0da40ab8ba4298bed7a5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3729,11 +3729,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 606503239622046259, guid: 656568f71bcd0da40ab8ba4298bed7a5, type: 3}
       propertyPath: m_InteractionLayers.m_Bits
-      value: 4294967291
+      value: 4294967290
       objectReference: {fileID: 0}
     - target: {fileID: 606503239703917894, guid: 656568f71bcd0da40ab8ba4298bed7a5, type: 3}
       propertyPath: m_InteractionLayers.m_Bits
-      value: 4294967291
+      value: 4294967290
       objectReference: {fileID: 0}
     - target: {fileID: 606503239703917895, guid: 656568f71bcd0da40ab8ba4298bed7a5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3745,7 +3745,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 606503240051106059, guid: 656568f71bcd0da40ab8ba4298bed7a5, type: 3}
       propertyPath: m_InteractionLayers.m_Bits
-      value: 4294967291
+      value: 4294967290
       objectReference: {fileID: 0}
     - target: {fileID: 606503240207334385, guid: 656568f71bcd0da40ab8ba4298bed7a5, type: 3}
       propertyPath: HMD
