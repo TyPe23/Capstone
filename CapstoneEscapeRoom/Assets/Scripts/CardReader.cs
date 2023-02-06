@@ -30,13 +30,13 @@ public class CardReader : MonoBehaviour
         {
 
             rend.enabled = true; // enable rendering change 
-            rend.sharedMaterial = Materials[0]; // change material 
+            rend.sharedMaterial = Materials[1]; // change material 
             doorLock2.GetComponent<XRGrabInteractable>().enabled = true; // unlock door
         }
         else // if wrong 
         {
             rend.enabled = true; // enable rendering chage 
-            rend.sharedMaterial = Materials[1]; // change material 
+            rend.sharedMaterial = Materials[0]; // change material 
             doorLock2.GetComponent<XRGrabInteractable>().enabled = false;// lock door
         }
     }
