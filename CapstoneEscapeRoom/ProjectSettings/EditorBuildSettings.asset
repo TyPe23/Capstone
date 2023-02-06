@@ -17,7 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TestWorlds/TEST WORLD Ty.unity
     guid: d2a55bad2ffba214f8bacdd2d0b13eec
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TestWorlds/TEST WORLD Matthew.unity
     guid: fe82d175c5440594ab34b4b17664fb9b
   - enabled: 1
