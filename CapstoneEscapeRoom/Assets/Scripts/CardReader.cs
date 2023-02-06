@@ -12,7 +12,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class CardReader : MonoBehaviour
 {
-    public Rigidbody _rb; //Rigidbody
+    //public Rigidbody _rb; //Rigidbody
     public Material[] Materials; // materials list / colors
     public Renderer rend;// renders 
 
@@ -21,11 +21,12 @@ public class CardReader : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _rb = this.GetComponent<Rigidbody>(); //assigne rigidbody to rb
+        //_rb = this.GetComponent<Rigidbody>(); //assigne rigidbody to rb
     }
 
     private void OnCollisionEnter(Collision collision)
     {
+
         if (collision.gameObject.name == "ID card") //check what is collidinf with the reader if the it is the card unlock door
         {
 
@@ -33,11 +34,11 @@ public class CardReader : MonoBehaviour
             rend.sharedMaterial = Materials[1]; // change material 
             doorLock2.GetComponent<XRGrabInteractable>().enabled = true; // unlock door
         }
-        else // if wrong 
-        {
-            rend.enabled = true; // enable rendering chage 
-            rend.sharedMaterial = Materials[0]; // change material 
-            doorLock2.GetComponent<XRGrabInteractable>().enabled = false;// lock door
-        }
+        // else // if wrong 
+        // {
+        //     rend.enabled = true; // enable rendering chage 
+        //     rend.sharedMaterial = Materials[0]; // change material 
+        //     doorLock2.GetComponent<XRGrabInteractable>().enabled = false;// lock door
+        // }
     }
 }
