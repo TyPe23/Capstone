@@ -23,7 +23,7 @@ public class CommandLine {
 public class Terminal : KeyboardTyping {
 
     //wordIndex, word, and output are defined in the parent class
-    //public string commandLine = "";
+    public string commandLine = "";
     public string user = "C:\\Users\\Champ> ";
 
     //a dictionary of commands and their outputs
