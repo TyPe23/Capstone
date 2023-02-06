@@ -5,7 +5,16 @@ using UnityEngine.UI;
 
 public class elevatordoor : MonoBehaviour
 {
-    [SerializeField] private int rayLength = 5;
-    [SerializeField] private LayerMask layerMaskInteract;
-    [SerializeField] private string excludeLayername = null;
+    public int i = 0;
+    public Animator anim;
+
+    public void PlayAnimation()
+    {
+        if (i < 1)
+        {
+
+            anim.Play("Elevator");
+            i++;
+        }
+    }
 }
