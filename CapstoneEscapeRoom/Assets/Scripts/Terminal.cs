@@ -4,10 +4,26 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+
+public class CommandLine {
+    private string commandLine = "";
+
+    public string add(string text) {
+        commandLine += text;
+        return commandLine;
+    }
+    
+    public void reset() {
+        commandLine = "";
+    }
+
+}
+
+//used to alter and print to the command line
 public class Terminal : KeyboardTyping {
 
     //wordIndex, word, and output are defined in the parent class
-    public string commandLine = "";
+    //public string commandLine = "";
     public string user = "C:\\Users\\Champ> ";
 
     //a dictionary of commands and their outputs
@@ -19,9 +35,10 @@ public class Terminal : KeyboardTyping {
 
     //triggered when the terminal is opened
     public void startTerminal() {
-        commandLine = user;
-        output.text = commandLine;
-
+        //commandLine = user;
+        alterCommandLine(user);
+        //output.text = commandLine;
+        printFunct("");
         print("CL = " + commandLine);
     }
 
@@ -29,7 +46,8 @@ public class Terminal : KeyboardTyping {
 
         print("CLbeforeEx = " + commandLine);
         //add word to commandLine so it will remain printed
-        commandLine += word;
+        // commandLine += word;
+        alterCommandLine(word);
         //grab the input
         string command = word;//.Substring(word.Length - wordIndex, word.Length);
         //check for the command
@@ -41,9 +59,11 @@ public class Terminal : KeyboardTyping {
             commandLine += ("\n\'" + command + "\' is not recognized as an internal or external command");
         }
         //return and print username
-        commandLine += ("\n" + user);
+        //commandLine += ("\n" + user);
+        alterCommandLine("\n" + user);
         //print output
-        output.text = commandLine;
+        //output.text = commandLine;
+        printFunct("");
         print("CLafterEx = " + commandLine);
         //reset terminal input
         word = "";
@@ -62,7 +82,6 @@ public class Terminal : KeyboardTyping {
 
     //prints output and formats command line
     public override void printFunct(string command) {
-        print("new print");
         //save input to process input
         print("command = " + command);
         //print input
@@ -78,6 +97,10 @@ public class Terminal : KeyboardTyping {
         commandLine = "";
         print("closeword = " + word);
         print("CL = " + commandLine);
+    }
+
+    public void alterCommandLine(string addition) {
+        commandLine += addition;
     }
 
     //controls what happens in the command line
