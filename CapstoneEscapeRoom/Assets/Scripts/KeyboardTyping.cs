@@ -30,7 +30,6 @@ public class KeyboardTyping : MonoBehaviour {
         //check if the character is not in the dictionary
         //or shift is false
 
-        print("word = " + word);
         if (!shiftDictionary.ContainsKey(letter) | shift == false) {
             wordIndex++;
             word = word + letter;

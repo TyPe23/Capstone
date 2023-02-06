@@ -206,7 +206,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415383161}
+      - m_Target: {fileID: 712401492}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -339,7 +339,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415383161}
+      - m_Target: {fileID: 712401492}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -472,7 +472,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415383161}
+      - m_Target: {fileID: 712401492}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -605,7 +605,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415383161}
+      - m_Target: {fileID: 712401492}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -738,7 +738,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415383161}
+      - m_Target: {fileID: 712401492}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -871,7 +871,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415383161}
+      - m_Target: {fileID: 712401492}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -1004,7 +1004,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415383161}
+      - m_Target: {fileID: 712401492}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -1234,7 +1234,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415383161}
+      - m_Target: {fileID: 712401492}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -1464,7 +1464,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415383161}
+      - m_Target: {fileID: 712401492}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -1597,7 +1597,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415383161}
+      - m_Target: {fileID: 712401492}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -1730,7 +1730,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415383161}
+      - m_Target: {fileID: 712401492}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -1863,7 +1863,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415383161}
+      - m_Target: {fileID: 712401492}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -2317,7 +2317,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1060476862}
+      - m_Target: {fileID: 712401492}
         m_TargetAssemblyTypeName: Terminal, Assembly-CSharp
         m_MethodName: startTerminal
         m_Mode: 1
@@ -2494,7 +2494,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415383161}
+      - m_Target: {fileID: 712401492}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -2559,6 +2559,7 @@ GameObject:
   - component: {fileID: 712401486}
   - component: {fileID: 712401485}
   - component: {fileID: 712401491}
+  - component: {fileID: 712401492}
   m_Layer: 5
   m_Name: TerminalScreen
   m_TagString: Untagged
@@ -2706,6 +2707,23 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RaycastTriggerInteraction: 1
+--- !u!114 &712401492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 712401484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d8803eef250fac449f866468bbcb162, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  word: 
+  wordIndex: 0
+  output: {fileID: 743390308}
+  commandLine: 
+  user: 'C:\Users\Champ> '
 --- !u!1 &723796845
 GameObject:
   m_ObjectHideFlags: 0
@@ -2789,7 +2807,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415383161}
+      - m_Target: {fileID: 712401492}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -3057,7 +3075,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415383161}
+      - m_Target: {fileID: 712401492}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -3190,7 +3208,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415383161}
+      - m_Target: {fileID: 712401492}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -3420,7 +3438,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415383161}
+      - m_Target: {fileID: 712401492}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -3553,7 +3571,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415383161}
+      - m_Target: {fileID: 712401492}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -3686,7 +3704,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415383161}
+      - m_Target: {fileID: 712401492}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -3916,7 +3934,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415383161}
+      - m_Target: {fileID: 712401492}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -4049,7 +4067,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415383161}
+      - m_Target: {fileID: 712401492}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -4182,7 +4200,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415383161}
+      - m_Target: {fileID: 712401492}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -4412,7 +4430,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415383161}
+      - m_Target: {fileID: 712401492}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -4476,7 +4494,6 @@ GameObject:
   - component: {fileID: 1060476856}
   - component: {fileID: 1060476861}
   - component: {fileID: 1060476860}
-  - component: {fileID: 1060476862}
   - component: {fileID: 1060476863}
   m_Layer: 5
   m_Name: ComputerScreen
@@ -4605,23 +4622,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1060476855}
   m_CullTransparentMesh: 1
---- !u!114 &1060476862
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1060476855}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d8803eef250fac449f866468bbcb162, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  word: 
-  wordIndex: 0
-  output: {fileID: 743390308}
-  commandLine: 
-  user: 'C:\Users\Champ> '
 --- !u!114 &1060476863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4724,7 +4724,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415383161}
+      - m_Target: {fileID: 712401492}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: shiftFunct
         m_Mode: 1
@@ -4914,7 +4914,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415383161}
+      - m_Target: {fileID: 712401492}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -5072,7 +5072,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1060476862}
+      - m_Target: {fileID: 712401492}
         m_TargetAssemblyTypeName: Terminal, Assembly-CSharp
         m_MethodName: closeTerminal
         m_Mode: 1
@@ -5205,7 +5205,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415383161}
+      - m_Target: {fileID: 712401492}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -5467,7 +5467,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415383161}
+      - m_Target: {fileID: 712401492}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -5600,7 +5600,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415383161}
+      - m_Target: {fileID: 712401492}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -5830,7 +5830,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415383161}
+      - m_Target: {fileID: 712401492}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -6060,7 +6060,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415383161}
+      - m_Target: {fileID: 712401492}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -6193,7 +6193,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415383161}
+      - m_Target: {fileID: 712401492}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -6570,7 +6570,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415383161}
+      - m_Target: {fileID: 712401492}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -6703,7 +6703,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415383161}
+      - m_Target: {fileID: 712401492}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -6933,7 +6933,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415383161}
+      - m_Target: {fileID: 712401492}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -7066,7 +7066,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415383161}
+      - m_Target: {fileID: 712401492}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -7199,7 +7199,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415383161}
+      - m_Target: {fileID: 712401492}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -7332,7 +7332,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415383161}
+      - m_Target: {fileID: 712401492}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -7465,7 +7465,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415383161}
+      - m_Target: {fileID: 712401492}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -7828,7 +7828,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415383161}
+      - m_Target: {fileID: 712401492}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -7961,7 +7961,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415383161}
+      - m_Target: {fileID: 712401492}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -8094,7 +8094,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415383161}
+      - m_Target: {fileID: 712401492}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -8227,7 +8227,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415383161}
+      - m_Target: {fileID: 712401492}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -8360,7 +8360,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415383161}
+      - m_Target: {fileID: 712401492}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -8493,7 +8493,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415383161}
+      - m_Target: {fileID: 712401492}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -8813,7 +8813,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415383161}
+      - m_Target: {fileID: 712401492}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -8946,7 +8946,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415383161}
+      - m_Target: {fileID: 712401492}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -9079,7 +9079,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415383161}
+      - m_Target: {fileID: 712401492}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: backspaceFunct
         m_Mode: 1
@@ -9212,7 +9212,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415383161}
+      - m_Target: {fileID: 712401492}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -9345,7 +9345,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415383161}
+      - m_Target: {fileID: 712401492}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -9478,7 +9478,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415383161}
+      - m_Target: {fileID: 712401492}
         m_TargetAssemblyTypeName: Terminal, Assembly-CSharp
         m_MethodName: commandExecution
         m_Mode: 1

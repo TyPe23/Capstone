@@ -4,67 +4,46 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-
-public class CommandLine {
-    private string commandLine = "";
-
-    public string add(string text) {
-        commandLine += text;
-        return commandLine;
-    }
-    
-    public void reset() {
-        commandLine = "";
-    }
-
-}
-
 //used to alter and print to the command line
 public class Terminal : KeyboardTyping {
 
     //wordIndex, word, and output are defined in the parent class
     public string commandLine = "";
     public string user = "C:\\Users\\Champ> ";
+    public bool taskComplete = false;
 
     //a dictionary of commands and their outputs
     IDictionary<string, string> commands = new Dictionary<string, string>() {
         {"ls", "tmp.txt \t passwords.txt \t forms \n" +
                 "user_information \t taxes.exe" },
-        {"cd forms", "" }
+        {"", "" },
+        {"cat passwords.txt", "p@ss123" }
     };
 
     //triggered when the terminal is opened
     public void startTerminal() {
-        //commandLine = user;
-        alterCommandLine(user);
-        //output.text = commandLine;
-        printFunct("");
-        print("CL = " + commandLine);
+        commandLine = user;
+        output.text = commandLine;
     }
 
+    //triggered when the "Enter" button is pressed
     public void commandExecution() {
-
-        print("CLbeforeEx = " + commandLine);
         //add word to commandLine so it will remain printed
-        // commandLine += word;
-        alterCommandLine(word);
-        //grab the input
-        string command = word;//.Substring(word.Length - wordIndex, word.Length);
+        commandLine += word;
         //check for the command
-        if (commands.ContainsKey(command)) {
-            commandLine += ("\n" + commands[command]);
+        if (commands.ContainsKey(word)) {
+            //print saved response
+            commandOptions(word);
+            //commandLine += ("\n" + commands[word]);
         }
         //give an error if that command is not valid
         else {
-            commandLine += ("\n\'" + command + "\' is not recognized as an internal or external command");
+            commandLine += ("\n\'" + word + "\' is not recognized as an internal or external command");
         }
         //return and print username
-        //commandLine += ("\n" + user);
-        alterCommandLine("\n" + user);
+        commandLine += ("\n" + user);
         //print output
-        //output.text = commandLine;
-        printFunct("");
-        print("CLafterEx = " + commandLine);
+        output.text = commandLine;
         //reset terminal input
         word = "";
         wordIndex = 0;
@@ -82,39 +61,34 @@ public class Terminal : KeyboardTyping {
 
     //prints output and formats command line
     public override void printFunct(string command) {
-        //save input to process input
-        print("command = " + command);
-        //print input
+        //add input to the print statement
+        //the command is the entire word typed up to this point, which is why it it not yet saved to the commandLine
         output.text = (commandLine + command);
-        print("CL = " + commandLine);
     }
 
     //triggered when the terminal is closed
     public void closeTerminal() {
-        print("closed");
+        //reset all values
         word = "";
         wordIndex = 0;
         commandLine = "";
-        print("closeword = " + word);
-        print("CL = " + commandLine);
+        output.text = "";
     }
 
-    public void alterCommandLine(string addition) {
-        commandLine += addition;
-    }
-
+    //the idea here was to use this function to implement command feedback and overwrite this funciton in a child class for every computer instance
     //controls what happens in the command line
     public void commandOptions(string input) {
-        //write on the next line
-        commandLine += "\n";
         //identify command
         switch (input) {
             case "ls":
-                commandLine += "tmp.txt \t passwords.txt \t forms \n" +
-                "user_information \t taxes.exe";
+                commandLine += ("\n" + "tmp.txt \t passwords.txt \t forms \n" +
+                "user_information \t taxes.exe");
                 break;
-            case "cd forms":
-                user += "/forms";
+            case "cat passwords.txt":
+                commandLine += ("\n" + "p@ss123");
+                taskComplete = true;
+                break;
+            case "":
                 break;
         }
     }
