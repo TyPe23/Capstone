@@ -37,7 +37,7 @@ public class AvatorController : MonoBehaviour
     [SerializeField] Vector3 HeadBodyOffset;
 
     // update each frame (Using late update to make smother) 
-    private void LateUpdate()
+    private void Update()
     {
         // head movement 
         transform.position = ikHead.position + HeadBodyOffset; // offset 

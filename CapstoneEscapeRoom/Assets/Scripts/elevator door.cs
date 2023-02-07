@@ -5,16 +5,15 @@ using UnityEngine.UI;
 
 public class elevatordoor : MonoBehaviour
 {
-    public int i = 0;
-    public Animator anim;
+
+    private Animation anim;
+    public GameObject ob;
 
     public void PlayAnimation()
     {
-        if (i < 1)
-        {
+        anim = ob.GetComponent<Animation>();
+        anim.Play("Elevator");
 
-            anim.Play("Elevator");
-            i++;
-        }
+       
     }
 }
