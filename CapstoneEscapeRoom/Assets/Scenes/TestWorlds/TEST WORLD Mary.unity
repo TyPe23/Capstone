@@ -655,6 +655,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 102179745}
   m_CullTransparentMesh: 1
+--- !u!1 &105540533
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 105540534}
+  m_Layer: 0
+  m_Name: Enteire Computer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &105540534
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 105540533}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.016086698, y: 0.897, z: 3.081704}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &114782863
 GameObject:
   m_ObjectHideFlags: 0
@@ -2675,7 +2706,7 @@ RectTransform:
   m_GameObject: {fileID: 712401484}
   m_LocalRotation: {x: -0, y: 0.012467203, z: -0, w: 0.9999223}
   m_LocalPosition: {x: 0, y: 0, z: 3.25}
-  m_LocalScale: {x: 0.0006931444, y: 0.0006931444, z: 0.0006931444}
+  m_LocalScale: {x: 0.00069314433, y: 0.0006931444, z: 0.00069314433}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1078936846}
@@ -2685,7 +2716,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 1.429, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.0285, y: 1.3622}
+  m_AnchoredPosition: {x: -23.213491, y: 1288.801}
   m_SizeDelta: {x: 745.626, y: 447.3739}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &712401491
@@ -2724,6 +2755,7 @@ MonoBehaviour:
   output: {fileID: 743390308}
   commandLine: 
   user: 'C:\Users\Champ> '
+  taskComplete: 0
 --- !u!1 &723796845
 GameObject:
   m_ObjectHideFlags: 0
@@ -4572,7 +4604,7 @@ RectTransform:
   m_GameObject: {fileID: 1060476855}
   m_LocalRotation: {x: -0, y: 0.012467203, z: -0, w: 0.9999223}
   m_LocalPosition: {x: 0, y: 0, z: 3.25}
-  m_LocalScale: {x: 0.0006931444, y: 0.0006931444, z: 0.0006931444}
+  m_LocalScale: {x: 0.00069314433, y: 0.0006931444, z: 0.00069314433}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 675024069}
@@ -4581,7 +4613,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 1.429, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.0285, y: 1.3622}
+  m_AnchoredPosition: {x: -23.213491, y: 1288.801}
   m_SizeDelta: {x: 745.626, y: 447.3739}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1060476860
@@ -4788,6 +4820,14 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 49ddef57dd87da2489028c9f6666f2fc, type: 3}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 49ddef57dd87da2489028c9f6666f2fc, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.99999994
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 49ddef57dd87da2489028c9f6666f2fc, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.99999994
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 49ddef57dd87da2489028c9f6666f2fc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6409,7 +6449,7 @@ RectTransform:
   m_GameObject: {fileID: 1415383152}
   m_LocalRotation: {x: -0.0007011008, y: -0.0142475795, z: 0.0005341607, w: 0.9998982}
   m_LocalPosition: {x: 0, y: 0, z: 3.044}
-  m_LocalScale: {x: 0.00051, y: 0.00059999997, z: 0.4116}
+  m_LocalScale: {x: 0.00051, y: 0.00059999997, z: 0.41159993}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1739807402}
@@ -6467,7 +6507,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: -0.079, y: -1.633, z: 0.062}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.01, y: 1.113}
+  m_AnchoredPosition: {x: -29.61823, y: 1488.5792}
   m_SizeDelta: {x: 800, y: 285.5996}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1415383161
@@ -6487,6 +6527,7 @@ MonoBehaviour:
   output: {fileID: 743390308}
   commandLine: 
   user: 'C:\Users\Champ> '
+  taskComplete: 0
 --- !u!1 &1466300663
 GameObject:
   m_ObjectHideFlags: 0
