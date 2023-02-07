@@ -8,6 +8,7 @@ using UnityEngine;
 using TMPro;
 using System.IO;
 using System.Linq;
+using UnityEngine.SceneManagement;
 
 public class TaskList : MonoBehaviour
 {
@@ -32,7 +33,7 @@ public class TaskList : MonoBehaviour
         //fileLines = File.ReadAllLines(FilePath).ToList();
         if(level == 1) // temp for task list 
         {
-            fileLines = new List<string>() {"Press button", "Task 2", "Task 3"};
+            fileLines = new List<string>() {"Gain Access to managers office", "Find password", "Enter Server Room", "Find password on the computer" };
         }
 
         // task output 
@@ -81,6 +82,13 @@ public class TaskList : MonoBehaviour
             outputs.text = output; // send to text mesh pro
         }
     }
-
+    // function to end the level 
+    public void endLevel()
+    {
+        if(left == 0 && compleated == total) // no objectives left 
+        {
+            SceneManager.LoadScene(1); // sending player to level Selection
+        }
+    }
 
 }
