@@ -21,7 +21,7 @@ public class SocketInvSystem : MonoBehaviour
 
     private void UpdateSocketInventory()
     {
-        transform.localPosition = new Vector3(_currentHMDlocalPosition.x, 0, _currentHMDlocalPosition.z);
+        transform.localPosition = new Vector3(_currentHMDlocalPosition.x, -0.9f, _currentHMDlocalPosition.z);
         transform.rotation = new Quaternion(transform.rotation.x, _currentHMDRotation.y, transform.rotation.z, _currentHMDRotation.w);
     }
 }
