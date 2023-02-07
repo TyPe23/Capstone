@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -74556,15 +74556,15 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 11500000, guid: a772369103123fa4eb2e9615c274dabd, type: 3}
-        m_TargetAssemblyTypeName: lightControler, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
+        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
+        m_MethodName: set_name
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: elevatordoor.Playanimation
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!224 &3366097920907456155
@@ -75237,6 +75237,54 @@ PrefabInstance:
     - target: {fileID: 5228495151858628002, guid: f832457213448e14aa3a95329ea44fa5, type: 3}
       propertyPath: m_Radius
       value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228495152152950261, guid: f832457213448e14aa3a95329ea44fa5, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228495152152950261, guid: f832457213448e14aa3a95329ea44fa5, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228495152152950261, guid: f832457213448e14aa3a95329ea44fa5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228495152152950261, guid: f832457213448e14aa3a95329ea44fa5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228495153156276903, guid: f832457213448e14aa3a95329ea44fa5, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228495153156276903, guid: f832457213448e14aa3a95329ea44fa5, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228495153156276903, guid: f832457213448e14aa3a95329ea44fa5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228495153156276903, guid: f832457213448e14aa3a95329ea44fa5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228495153503544466, guid: f832457213448e14aa3a95329ea44fa5, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228495153503544466, guid: f832457213448e14aa3a95329ea44fa5, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228495153503544466, guid: f832457213448e14aa3a95329ea44fa5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228495153503544466, guid: f832457213448e14aa3a95329ea44fa5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f832457213448e14aa3a95329ea44fa5, type: 3}
