@@ -10,7 +10,7 @@ public class KeyboardTyping : MonoBehaviour {
     public int wordIndex = 0;
     public TMP_Text output = null;
     bool shift = false;
-    IDictionary<string, string> shiftDictionary = new Dictionary<string, string>() {
+    public IDictionary<string, string> shiftDictionary = new Dictionary<string, string>() {
         {"a", "A"}, {"b", "B"}, {"c", "C" }, {"d", "D"},
         {"e", "E"}, {"f", "F"}, {"g", "G"}, {"h", "H"},
         {"i", "I"}, {"j", "J" }, {"k", "K"}, {"l", "L"},

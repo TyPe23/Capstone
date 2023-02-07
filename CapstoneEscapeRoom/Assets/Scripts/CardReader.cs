@@ -24,10 +24,10 @@ public class CardReader : MonoBehaviour
         //_rb = this.GetComponent<Rigidbody>(); //assigne rigidbody to rb
     }
 
-    private void OnCollisionEnter(Collision collision)
+    public void OnCollisionEnter(Collision collision)
     {
 
-        if (collision.gameObject.name == "ID card") //check what is collidinf with the reader if the it is the card unlock door
+        if (collision.gameObject.name == "ID card") //check what is colliding with the reader; if the it is the card unlock door
         {
 
             rend.enabled = true; // enable rendering change 
