@@ -25,9 +25,12 @@ public class keypadControler : MonoBehaviour
 
     public GameObject doorLock; // the door grab object 
 
+    public TaskList UI;
+
     void Start() { // get input 
         textIn = inputField.GetComponent<TMP_Text>().text;  
     }   
+    
     
     
 
@@ -53,11 +56,13 @@ public class keypadControler : MonoBehaviour
 
     public void enterFunct() // enter and check if correct 
     {
-       if(textOut == textIn) // if correct 
+        textIn = inputField.GetComponent<TMP_Text>().text; // fixes problem where sometimes this code is ran too soon/fast and does not pick up the correct code 
+        if (textOut == textIn) // if correct 
         {
             rend.enabled = true; // enable rendering change 
             rend.sharedMaterial = Materials[0]; // change material 
             doorLock.GetComponent<XRGrabInteractable>().enabled = true; // unlock door
+            UI.taskDone(2);
         }
         else // if wrong 
         {

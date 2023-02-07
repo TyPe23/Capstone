@@ -6,6 +6,7 @@ using TMPro;
 using Unity.VisualScripting.Antlr3.Runtime;
 using Unity.VisualScripting;
 using UnityEngine.XR.Interaction.Toolkit;
+using System;
 // Name: Benjamin Sanguinetti
 // Data: 2/5/2023
 // Description: Handles Key Card Reader
@@ -17,6 +18,9 @@ public class CardReader : MonoBehaviour
     public Renderer rend;// renders 
 
     public GameObject doorLock2; // the door grab object 
+
+    
+    public TaskList UI;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +37,8 @@ public class CardReader : MonoBehaviour
             rend.enabled = true; // enable rendering change 
             rend.sharedMaterial = Materials[1]; // change material 
             doorLock2.GetComponent<XRGrabInteractable>().enabled = true; // unlock door
+                                                                         // compleate task 
+            UI.taskDone(1);
         }
         // else // if wrong 
         // {

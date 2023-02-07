@@ -15,10 +15,10 @@ public class TaskList : MonoBehaviour
     public TMP_Text outputs; // connect TMP text to outputs in code
     public int level; // current level
 
-    private int compleated = 0; // number compleated 
-    private int left = 0; // number left 
-    private int total = 0; // total task 
-    private string FilePath; // path to file 
+    public int compleated = 0; // number compleated 
+    public int left = 0; // number left 
+    public int total = 0; // total task 
+    //private string FilePath; // path to file 
     private List<string> fileLines; // lines in file 
     private string output; // output 
     public bool done = false;
@@ -33,7 +33,7 @@ public class TaskList : MonoBehaviour
         //fileLines = File.ReadAllLines(FilePath).ToList();
         if(level == 1) // temp for task list 
         {
-            fileLines = new List<string>() {"Gain Access to managers office", "Find password", "Enter Server Room", "Find password on the computer" };
+            fileLines = new List<string>() {"Gain Access to managers office", "Enter Server Room", "Find password on the computer" };
         }
 
         // task output 
@@ -54,8 +54,8 @@ public class TaskList : MonoBehaviour
         {
             output = "Task List: \n"; // starting output default 
             fileLines[num-1] = "[X]" + fileLines[num-1]; // add x to compleated task 
-            compleated =+1;
-            left =-1;
+            compleated = compleated + 1;
+            left = left - 1;
             foreach (string line in fileLines)
             {
                 if(!(line.Substring(0,3) == "[X]")) { 
@@ -78,7 +78,7 @@ public class TaskList : MonoBehaviour
             {
                 output += line + "\n"; // The List
             }
-            output += "Escape\n"; // tell user to leave 
+            output += "[]Escape\n"; // tell user to leave 
             outputs.text = output; // send to text mesh pro
         }
     }

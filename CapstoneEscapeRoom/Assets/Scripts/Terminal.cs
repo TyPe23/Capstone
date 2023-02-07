@@ -12,6 +12,8 @@ public class Terminal : KeyboardTyping {
     public string user = "C:\\Users\\Champ> ";
     public bool taskComplete = false;
 
+    public TaskList UI; // access to UI class
+
     //a dictionary of commands and their outputs
     IDictionary<string, string> commands = new Dictionary<string, string>() {
         {"ls", "tmp.txt \t passwords.txt \t forms \n" +
@@ -85,8 +87,10 @@ public class Terminal : KeyboardTyping {
                 "user_information \t taxes.exe");
                 break;
             case "cat passwords.txt":
+                UI.taskDone(3);
                 commandLine += ("\n" + "p@ss123");
                 taskComplete = true;
+                
                 break;
             case "":
                 break;

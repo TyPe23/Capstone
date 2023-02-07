@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1624,6 +1624,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 138498369214060861, guid: ae60b1b67da838041bca8f75b539a5f6, type: 3}
+      propertyPath: UI
+      value: 
+      objectReference: {fileID: 1954559639}
     - target: {fileID: 1971100598478814520, guid: ae60b1b67da838041bca8f75b539a5f6, type: 3}
       propertyPath: m_Name
       value: Enteire Computer
@@ -19019,11 +19023,24 @@ MeshCollider:
   m_GameObject: {fileID: 241324511}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -6281424698479989189, guid: 0d7740f4e5905354fbbe8fb78d75ce92, type: 3}
+--- !u!65 &628518794
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241324511}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.12102777, y: 3.8312805, z: 3.8312798}
+  m_Center: {x: 0.0000076293945, y: 1.9156364, z: -0.000001013279}
 --- !u!1001 &628631734
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21482,6 +21499,29 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4856739104305366279, guid: 5d92172a83edfe945853027f33e47ae6, type: 3}
   m_PrefabInstance: {fileID: 714941075}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &717941576 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4921925809655179311, guid: f832457213448e14aa3a95329ea44fa5, type: 3}
+  m_PrefabInstance: {fileID: 7997234229107079384}
+  m_PrefabAsset: {fileID: 0}
+--- !u!143 &717941582
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717941576}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.05
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &723389868
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21669,7 +21709,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh28878
+  m_Name: pb_Mesh1676820
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -28810,7 +28850,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-242280
+  m_Name: pb_Mesh1840096
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -29352,7 +29392,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-242592
+  m_Name: pb_Mesh1657132
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -39940,7 +39980,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-242296
+  m_Name: pb_Mesh1675286
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -40964,7 +41004,7 @@ MeshCollider:
   m_GameObject: {fileID: 1288681523}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30
@@ -45139,7 +45179,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-71604
+  m_Name: pb_Mesh1714406
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -52368,6 +52408,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: a053864b27b68e84392d94987b724d67, type: 2}
   rend: {fileID: 2094970700}
   doorLock2: {fileID: 549042010}
+  UI: {fileID: 1954559639}
 --- !u!65 &1597918060
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -63667,6 +63708,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7048810000185825627, guid: 818ff9dab394c184fab252c49384be07, type: 3}
   m_PrefabInstance: {fileID: 1954418993}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1954559639 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3376754663466154886, guid: f832457213448e14aa3a95329ea44fa5, type: 3}
+  m_PrefabInstance: {fileID: 7997234229107079384}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16646d339db4f0041a5074e9001327b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1969613897
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -64726,6 +64778,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: KeyPad
       objectReference: {fileID: 0}
+    - target: {fileID: 9089240869283253059, guid: d799eb7213becda4eaaaf8bb49b566be, type: 3}
+      propertyPath: UI
+      value: 
+      objectReference: {fileID: 1954559639}
     - target: {fileID: 9089240869283253059, guid: d799eb7213becda4eaaaf8bb49b566be, type: 3}
       propertyPath: doorLock
       value: 
@@ -74653,9 +74709,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3366097922552532620}
-        m_TargetAssemblyTypeName: elevatordoor, Assembly-CSharp
-        m_MethodName: PlayAnimation
+      - m_Target: {fileID: 1954559639}
+        m_TargetAssemblyTypeName: TaskList, Assembly-CSharp
+        m_MethodName: endLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -75302,6 +75358,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Character With Ui
       objectReference: {fileID: 0}
+    - target: {fileID: 3299700636833729637, guid: f832457213448e14aa3a95329ea44fa5, type: 3}
+      propertyPath: Head.trackingPositionOffset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3299700636833729637, guid: f832457213448e14aa3a95329ea44fa5, type: 3}
+      propertyPath: LeftHand.trackingPositionOffset.y
+      value: -0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 3299700636833729637, guid: f832457213448e14aa3a95329ea44fa5, type: 3}
+      propertyPath: RightHand.trackingPositionOffset.y
+      value: -0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 4444194685203818647, guid: f832457213448e14aa3a95329ea44fa5, type: 3}
       propertyPath: m_RootOrder
       value: 18
@@ -75312,7 +75380,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4444194685203818647, guid: f832457213448e14aa3a95329ea44fa5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 55.228004
+      value: 56
       objectReference: {fileID: 0}
     - target: {fileID: 4444194685203818647, guid: f832457213448e14aa3a95329ea44fa5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -75350,6 +75418,10 @@ PrefabInstance:
       propertyPath: m_Radius
       value: 0.05
       objectReference: {fileID: 0}
+    - target: {fileID: 5228495151858628002, guid: f832457213448e14aa3a95329ea44fa5, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5228495152152950261, guid: f832457213448e14aa3a95329ea44fa5, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -75381,6 +75453,10 @@ PrefabInstance:
     - target: {fileID: 5228495153156276903, guid: f832457213448e14aa3a95329ea44fa5, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228495153254434383, guid: f832457213448e14aa3a95329ea44fa5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.4
       objectReference: {fileID: 0}
     - target: {fileID: 5228495153503544466, guid: f832457213448e14aa3a95329ea44fa5, type: 3}
       propertyPath: m_AnchorMax.y
