@@ -18,7 +18,9 @@ public class CardReader : MonoBehaviour
     public Renderer rend;// renders 
 
     public GameObject doorLock2; // the door grab object 
-
+    public GameObject trackedObjecct;
+    public GameObject reader;
+    public float minDist;
     
     public TaskList UI;
 
@@ -28,23 +30,30 @@ public class CardReader : MonoBehaviour
         //_rb = this.GetComponent<Rigidbody>(); //assigne rigidbody to rb
     }
 
-    public void OnCollisionEnter(Collision collision)
+    private void Update()
     {
-
-        if (collision.gameObject.name == "ID card") //check what is colliding with the reader; if the it is the card unlock door
+        float dist = Vector3.Distance(reader.transform.position, trackedObjecct.transform.position);
+        if (dist <= minDist)
         {
-
             rend.enabled = true; // enable rendering change 
             rend.sharedMaterial = Materials[1]; // change material 
             doorLock2.GetComponent<XRGrabInteractable>().enabled = true; // unlock door
                                                                          // compleate task 
             UI.taskDone(1);
         }
-        // else // if wrong 
-        // {
-        //     rend.enabled = true; // enable rendering chage 
-        //     rend.sharedMaterial = Materials[0]; // change material 
-        //     doorLock2.GetComponent<XRGrabInteractable>().enabled = false;// lock door
-        // }
     }
+
+    //public void OnCollisionEnter(Collision collision)
+    //{
+
+    //    if (collision.gameObject.name == "ID card") //check what is colliding with the reader; if the it is the card unlock door
+    //    {
+
+    //        rend.enabled = true; // enable rendering change 
+    //        rend.sharedMaterial = Materials[1]; // change material 
+    //        doorLock2.GetComponent<XRGrabInteractable>().enabled = true; // unlock door
+    //                                                                     // compleate task 
+    //        UI.taskDone(1);
+    //    }
+    //}
 }
