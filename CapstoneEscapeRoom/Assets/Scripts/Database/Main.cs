@@ -14,128 +14,104 @@ using UnityEngine.UI;
 //[InitializeOnLoad]
 public class Main {
 
-    public static string document = "playerData.xml";
+    public string document = "playerData.xml";
 
     public Main() {
-        // open and load the document
-        XmlDocument doc = new XmlDocument();
-        doc.Load(document);
 
-        //adding players
+        ////adding players
         //Player p1 = new Player();
         //Player p2 = new Player();
-        Player p3 = new Player();
+        //Player p3 = new Player();
 
         //p1.setName("player1");
         //p2.setName("player2");
-        p3.setName("player1");
-        p3.setLevel(3);
+        //p3.setName("player5");
 
         //addPlayer(p1, document);
         //addPlayer(p2, document);
-        XmlElement playerElm = makePlayerElement(p3, doc);
-        //addPlayerElement(playerElm, doc);
-        //playerElm = makePlayerElement(p2, doc);
-        //addPlayerElement(playerElm, doc);
-        //playerElm = makePlayerElement(p3, doc);
-        //addPlayerElement(playerElm, doc);
+        //addPlayer(p3, document);
 
-        alterPlayer(playerElm, doc);
-
-        //alterPlayer("player1", "Level", "3");
+        alterPlayer("player1", "Level", "3");
 
 
     }
 
-    public static XmlElement makePlayerElement(Player player, XmlDocument doc) {
-
-        //// open and load the document
-        //XmlDocument doc = new XmlDocument();
-        //doc.Load(path);
+    public static void addPlayer(Player player, string path) {
+        
+        // open and load the document
+        XmlDocument doc = new XmlDocument();
+        doc.Load(path);
 
         //create all elements
         XmlElement p = doc.CreateElement("Player");
         XmlElement level = doc.CreateElement("Level");
-        XmlAttribute name = doc.CreateAttribute("Name");
+        XmlElement name = doc.CreateElement("Name");
 
         //set element values
         level.InnerText = player.level.ToString();
-        name.Value = player.name;
+        name.InnerText = player.name;
 
         //set all child elements of the new node
-        p.Attributes.Append(name);
-        p.AppendChild(level);
-        //name.AppendChild(level);
+        name.AppendChild(level);
+        p.AppendChild(name);
 
-        ////append this node to the root parent node
-        //doc.DocumentElement.AppendChild(p);
-        //doc.Save(path);
-
-        return p;
-    }
-
-    /// <summary>
-    /// adds a given player element to the end of a given XmlDocument and saves it
-    /// </summary>
-    /// <param name="playerElem"></param>
-    /// <param name="doc"></param>
-    public static void addPlayerElement(XmlElement playerElem, XmlDocument doc) {
-        
         //append this node to the root parent node
-        doc.DocumentElement.AppendChild(playerElem);
-        doc.Save(document);
-    }
+        doc.DocumentElement.AppendChild(p);
+        doc.Save(path);
 
+    }
     /// <summary>
     /// Searches for a node by username and changes the given field/element to the new value
     /// </summary>
-    /// <param name="newPlayerElement"></param>
-    /// <param name="xml"></param>
-    public void alterPlayer(XmlElement newPlayerElement, XmlDocument xml){//string username, string field, string newValue) {
+    /// <param name="username"></param>
+    /// <param name="field"></param>
+    /// <param name="newValue"></param>
+    public void alterPlayer(string username, string field, string newValue) {
 
         //XmlDocument xml = new XmlDocument();
         //xml.Load(document);
-        //get name of current element
-        string username = newPlayerElement.GetAttribute("Name");
-        Debug.Log(username);
+
+        //XmlNode root = xml.DocumentElement;
+        //string searchString = "descendant::Player[Name='" + username + "']";
+
+        //XmlNode node = root.SelectSingleNode(searchString);
+        //Debug.Log(((System.Xml.XmlElement)node).GetAttribute("Level"));
+        ////XmlNode newNode = xml.CreateElement(field);
+        ////newNode.InnerText = newValue;
+
+        ////        node.Element(field) = newValue;
+
+        ////xml.ReplaceChild(newNode, node);
+
+        //xml.Save(document);
+
+
+        XmlDocument xml = new XmlDocument();
+
+        xml.Load(document);
+
         foreach (XmlElement playerElement in xml.SelectNodes("//Player")) {
-            Debug.Log(playerElement.GetAttribute("Name"));
-            //find element with matching username
-            if (playerElement.GetAttribute("Name") == username) {
-                Debug.Log("in the If!");
-                //replace old player instance with new player instance
-                xml.DocumentElement.ReplaceChild(newPlayerElement, playerElement);
-            }
-            
-            
-            //foreach (XmlElement element1 in playerElement) {
-            //    //Debug.Log(playerElement.OuterXml);
-            //    Debug.Log(element1.InnerText.Split('\n')[0]);
-
-                //Debug.Log(playerElement.SelectSingleNode(".//Name").InnerText.Split('\n')[0]);
-                //Debug.Log(username);
+            foreach (XmlElement element1 in playerElement) {
+                //Debug.Log(playerElement.OuterXml);
+                Debug.Log(playerElement.SelectSingleNode(".//Name").InnerText.Split('\n')[0]);
+                Debug.Log(username);
                 //Grab the user name (the 1st element in the InnerText)
-                
-                
-                //if (element1.InnerText.Split('\n')[0] == username) {
-                //    Debug.Log("in if");
+                if (playerElement.SelectSingleNode(".//Name").InnerText.Split('\n')[0].ToString() == username) {
+                    Debug.Log("in if");
                      
-                //    XmlNode newNode = xml.CreateElement("test");
-                //    newNode.InnerText = newValue;
-                //    element1.AppendChild(newNode);
-                //    playerElement.ReplaceChild(newNode, element1);
-                    
-                    
-                    
-                //    //XmlNode oldNode = element1.SelectSingleNode("//" + field);
-                //    //element1.ReplaceChild(newNode, oldNode);
+                    XmlNode newNode = xml.CreateElement("test");
+                    newNode.InnerText = newValue;
+                    element1.AppendChild(newNode);
+                    playerElement.ReplaceChild(newNode, element1);
+                    //XmlNode oldNode = element1.SelectSingleNode("//" + field);
+                    //element1.ReplaceChild(newNode, oldNode);
 
-                //    xml.Save(document);
-                //}
-                //else {
-                //    Debug.Log("fml");
-                //}
-            //}
+                    xml.Save(document);
+                }
+                else {
+                    Debug.Log("fml");
+                }
+            }
         }
         //xml.Save(document);
     }

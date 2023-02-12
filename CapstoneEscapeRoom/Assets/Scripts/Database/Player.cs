@@ -22,7 +22,4 @@ public class Player {
     public void setName(string input) {
         name = input;
     }
-    public void setLevel(int input) {
-        level = input;
-    }
 }
