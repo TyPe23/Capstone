@@ -2756,6 +2756,7 @@ MonoBehaviour:
   commandLine: 
   user: 'C:\Users\Champ> '
   taskComplete: 0
+  UI: {fileID: 0}
 --- !u!1 &723796845
 GameObject:
   m_ObjectHideFlags: 0
@@ -6528,6 +6529,7 @@ MonoBehaviour:
   commandLine: 
   user: 'C:\Users\Champ> '
   taskComplete: 0
+  UI: {fileID: 0}
 --- !u!1 &1466300663
 GameObject:
   m_ObjectHideFlags: 0

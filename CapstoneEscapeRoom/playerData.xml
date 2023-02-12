@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<PlayerList xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Player>
+    <Name>player1
+      <Level>0</Level>
+    </Name>
+  </Player>
+  <Player>
+    <Name>player2
+      <Level>0</Level>
+    </Name>
+  </Player>
+  <Player>
+    <Name>player5
+      <Level>0</Level>
+    </Name>
+  </Player>
+</PlayerList>

@@ -2,17 +2,24 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Xml.Serialization;
+using System.Xml;
 
 [Serializable]
 public class Player {
-    [SerializeField]
+    [XmlElement("name")]
     public string name;
-    public int number;
-    public TimeSpan time;
-    
+
+    [XmlElement("level")]
+    //public PlayerLevel level;
+    public int level;
 
     public Player() {
-        number = 5;
-        //time = (2, 4, 6);
+        //name = "PlayerName3";
+        //level.time = new TimeSpan(2, 4, 6);
+    }
+
+    public void setName(string input) {
+        name = input;
     }
 }
