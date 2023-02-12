@@ -5,20 +5,14 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 
 //runs at the start of the program
-//[InitializeOnLoad]
+// all with a * needs to be commented out when building 
+//[InitializeOnLoad] //*
 public class Start{
 	static Start(){
         //calls the Trilleon automatic tester if Debug is on
-<<<<<<< Updated upstream
-        if (Application.isEditor || Debug.isDebugBuild) {
-            TrilleonAutomation.AutomationMaster.Initialize();
-        }
-        Main test = new Main();
-=======
-        //if (Application.isEditor || Debug.isDebugBuild) {
-            //TrilleonAutomation.AutomationMaster.Initialize();
-        //}
-        //Main test = new Main();
->>>>>>> Stashed changes
+        //if (Application.isEditor || Debug.isDebugBuild) {  //*
+            //TrilleonAutomation.AutomationMaster.Initialize();  //*
+        //} //*
+        //Main test = new Main(); //* 
     }
 }
