@@ -37,11 +37,14 @@ public class TaskList : MonoBehaviour
         }
 
         // task output 
-        output = "Task List: \n"; // starting output default 
+        output = "Task:"; // starting output default 
         foreach(string line in fileLines)
         {
-            left += 1; 
-            output += "[]"+ line+"\n"; // The List
+            left += 1;
+            if (output == "Task:") // only display one task at a time 
+            {
+                output += "\n[]" + line + "\n"; // The List
+            }
         }
         total = left;
          
@@ -52,14 +55,17 @@ public class TaskList : MonoBehaviour
     {
         if ((!(num > total))&& num>0 &&(fileLines[num - 1].Substring(0, 3) != "[X]")) // check if within valid numbers and not already done 
         {
-            output = "Task List: \n"; // starting output default 
+            output = "Task:"; // starting output default 
             fileLines[num-1] = "[X]" + fileLines[num-1]; // add x to compleated task 
             compleated = compleated + 1;
             left = left - 1;
             foreach (string line in fileLines)
             {
-                if(!(line.Substring(0,3) == "[X]")) { 
-                    output += "[]" + line + "\n"; // The List
+                if(!(line.Substring(0,3) == "[X]")) {
+                    if (output == "Task:") // only display one task at a time 
+                    {
+                        output += "\n[]" + line + "\n"; // The List
+                    }
                 }
                 else
                 {
@@ -73,11 +79,11 @@ public class TaskList : MonoBehaviour
         {
             done = true;
 
-            output = "Task List: \n"; // starting output default
-            foreach (string line in fileLines)
-            {
-                output += line + "\n"; // The List
-            }
+            output = "Task\n"; // starting output default
+            //foreach (string line in fileLines) // dont need old task just to Escape
+            //{
+            //    output += line + "\n"; // The List
+            //}
             output += "[]Escape\n"; // tell user to leave 
             outputs.text = output; // send to text mesh pro
         }

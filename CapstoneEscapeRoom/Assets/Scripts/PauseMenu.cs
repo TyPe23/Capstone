@@ -11,9 +11,9 @@ using UnityEngine.InputSystem;
 public class PauseMenu : MonoBehaviour
 {
     // controler 
-    public GameObject wristUI;
+    public GameObject PauseUI;
     //  bool about if active 
-    public bool activeWristUI = true; 
+    public bool activePauseUI = true; 
     
     void Start() // on start up 
     {
@@ -23,15 +23,15 @@ public class PauseMenu : MonoBehaviour
     // change if displaying or not
     public void DisplayWristUI()
     {
-        if(activeWristUI)
+        if(activePauseUI)
         {
-            wristUI.SetActive(false);
-            activeWristUI = false;
+            PauseUI.SetActive(false);
+            activePauseUI = false;
         }
-        else if (!activeWristUI)
+        else if (!activePauseUI)
         {
-            wristUI.SetActive(true);
-            activeWristUI = true;
+            PauseUI.SetActive(true);
+            activePauseUI = true;
         }
     }
     // pause button if button clicked and removal of pause menue if clicked 
