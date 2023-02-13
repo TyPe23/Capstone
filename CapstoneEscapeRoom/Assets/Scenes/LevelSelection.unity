@@ -7679,8 +7679,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2e4199162d378d409bc64ce3fa1b5b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PauseUI: {fileID: 0}
+  PauseUI: {fileID: 1647026188}
+  Locamotion: {fileID: 0}
   activePauseUI: 1
+  movement: {fileID: 0}
+  rotation: {fileID: 0}
 --- !u!1001 &1393326819
 PrefabInstance:
   m_ObjectHideFlags: 0

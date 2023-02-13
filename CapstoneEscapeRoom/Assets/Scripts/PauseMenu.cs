@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -14,11 +15,16 @@ public class PauseMenu : MonoBehaviour
     public GameObject PauseUI;
     public GameObject Locamotion;
     //  bool about if active 
-    public bool activePauseUI = true; 
-    
+    public bool activePauseUI = true;
+    public LocomotionSystem movement;
+    public ActionBasedContinuousMoveProvider rotation;
+
     void Start() // on start up 
     {
         DisplayWristUI(); 
+        // get locomation system 
+        //movement = Locamotion.GetComponent<LocomotionSystem>();
+        //rotation = Locamotion.GetComponent<ActionBasedContinuousMoveProvider>();
     }
 
     // change if displaying or not
@@ -27,13 +33,15 @@ public class PauseMenu : MonoBehaviour
         if(activePauseUI)
         {
             PauseUI.SetActive(false);
-            Locamotion.SetActive(true);
+            movement.enabled = true;
+            rotation.enabled = true;
             activePauseUI = false;
         }
         else if (!activePauseUI)
         {
             PauseUI.SetActive(true);
-            Locamotion.SetActive(false);
+            movement.enabled = false;
+            rotation.enabled = false;
             activePauseUI = true;
         }
     }
