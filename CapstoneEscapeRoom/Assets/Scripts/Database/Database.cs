@@ -116,25 +116,26 @@ public class Database {
 
     public string[,,] getPlayers() {
 
-        //format [level[player[name,score]]]
+        //format [level[player[name, score, time]]]
         //ex:   playerList[0] would return all results of level 1
-        //      playerList[0,1] returns the second player's pair [name, score]
+        //      playerList[0,1] returns the second player's pair [name, score, time]
         //      playerList[0,1,1] returns level 1, player 2, score
         //      playerList[0,1,0] returns level 1, player 2, name
+        //      playerList[0,1,2] returns level 1, player 2, time
 
 
         string[,,] playerList = new string[,,] {
             {
-                {"player1", "25"},
-                {"player2", "30"}
+                {"player1", "25", "(05:06:07)"},
+                {"player2", "30", "(06:07:08)"}
             },
             {
-                { "player1", "42"},
-                { "player2", "39"}
+                { "player1", "42", "(10:20:30)"},
+                { "player2", "39", "(12:22:32)"}
             }
         };
 
-        //Debug.Log(playerList[0, 1, 0]);
+        Debug.Log(playerList[0, 1, 0]);
 
         return playerList;
     }
