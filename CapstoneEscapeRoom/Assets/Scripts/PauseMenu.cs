@@ -12,6 +12,7 @@ public class PauseMenu : MonoBehaviour
 {
     // controler 
     public GameObject PauseUI;
+    public GameObject Locamotion;
     //  bool about if active 
     public bool activePauseUI = true; 
     
@@ -26,11 +27,13 @@ public class PauseMenu : MonoBehaviour
         if(activePauseUI)
         {
             PauseUI.SetActive(false);
+            Locamotion.SetActive(true);
             activePauseUI = false;
         }
         else if (!activePauseUI)
         {
             PauseUI.SetActive(true);
+            Locamotion.SetActive(false);
             activePauseUI = true;
         }
     }
