@@ -7,19 +7,32 @@ using System.Xml;
 
 [Serializable]
 public class Player {
-    [XmlElement("name")]
-    public string name;
 
-    [XmlElement("level")]
-    //public PlayerLevel level;
-    public int level;
+    public string name;
+    /// <summary>
+    /// There are currently 5 levels added
+    /// </summary>
+    public List<PlayerLevel> levels = new List<PlayerLevel>();
+    public string ID;
 
     public Player() {
-        //name = "PlayerName3";
-        //level.time = new TimeSpan(2, 4, 6);
+        name = null;
+        ID = null;
+        addLevels();
     }
 
     public void setName(string input) {
         name = input;
+    }
+
+    /// <summary>
+    /// Adds a new level instance for every level in the game. !!! If levels are added, the for loop needs to be changed !!!
+    /// </summary>
+    private void addLevels() {
+        for (int i = 1; i <= 5; i++) {
+            PlayerLevel newLevel = new PlayerLevel();
+            newLevel.level = i;
+            levels.Add(newLevel);
+        }
     }
 }
