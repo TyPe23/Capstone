@@ -7,7 +7,7 @@ using UnityEngine.UI;
 //runs at the start of the program
 
 // all with a * needs to be commented out when building 
-//[InitializeOnLoad] //*
+//[InitializeOnLoad]
 public class Start{
     static Start()
     {
@@ -15,6 +15,6 @@ public class Start{
         //if (Application.isEditor || Debug.isDebugBuild) {  //*
         //TrilleonAutomation.AutomationMaster.Initialize();  //*
         //} //*
-        //Main test = new Main(); //* 
+        Database test = new Database();
     }
 }

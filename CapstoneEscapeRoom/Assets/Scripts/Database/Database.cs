@@ -12,15 +12,15 @@ using UnityEditor;
 using UnityEngine.UI;
 
 //[InitializeOnLoad]
-public class Main {
+public class Database {
 
     public static string document = "playerData.xml";
 
-    public Main() {
+    public Database() {
         // open and load the document
         XmlDocument doc = new XmlDocument();
         doc.Load(document);
-
+        getPlayers();
 
         // --------------------------- for testing; delete later ------------------------------- //
         ////adding players
@@ -112,5 +112,30 @@ public class Main {
             }
         }
         doc.Save(document);
+    }
+
+    public string[,,] getPlayers() {
+
+        //format [level[player[name,score]]]
+        //ex:   playerList[0] would return all results of level 1
+        //      playerList[0,1] returns the second player's pair [name, score]
+        //      playerList[0,1,1] returns level 1, player 2, score
+        //      playerList[0,1,0] returns level 1, player 2, name
+
+
+        string[,,] playerList = new string[,,] {
+            {
+                {"player1", "25"},
+                {"player2", "30"}
+            },
+            {
+                { "player1", "42"},
+                { "player2", "39"}
+            }
+        };
+
+        //Debug.Log(playerList[0, 1, 0]);
+
+        return playerList;
     }
 }
