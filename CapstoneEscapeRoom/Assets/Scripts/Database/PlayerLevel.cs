@@ -4,22 +4,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerLevel {
+	
 	public int level;
-	public DateTime startTime;
-	public DateTime endTime;
-	public TimeSpan time;
+	public TimeSpan bestTime;
+	public int bonusPoints;
+	public int totalScore;
 
-
-
-	public PlayerLevel() { 
+	public PlayerLevel() {
+		bestTime = new TimeSpan();
+		bonusPoints = 0;
+		totalScore = 0;
 	}
-
-	public void getTime() {
-		if (startTime == null | endTime == null) {
-			return;
-		}
-		else {
-			time = endTime - startTime;
-        }
-    }
 }
