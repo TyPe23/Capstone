@@ -45902,6 +45902,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StickyNote2
       objectReference: {fileID: 0}
+    - target: {fileID: 1235046653205326576, guid: e8de7129755467e47a8db44a78f8cdb2, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1235046653205326584, guid: e8de7129755467e47a8db44a78f8cdb2, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -45981,6 +45985,10 @@ PrefabInstance:
     - target: {fileID: 1235046653205326591, guid: e8de7129755467e47a8db44a78f8cdb2, type: 3}
       propertyPath: m_InteractionLayers.m_Bits
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1235046654258087236, guid: e8de7129755467e47a8db44a78f8cdb2, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8de7129755467e47a8db44a78f8cdb2, type: 3}
