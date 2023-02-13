@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 17
+  controlID: 21
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -223,7 +223,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 29
+  controlID: 85
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 30
+  controlID: 86
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -317,22 +317,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Materials
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Materials
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\ifire\OneDrive\Documents\GitHub\Capstone\CapstoneEscapeRoom
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 60}
-    m_SelectedIDs: b0960000
-    m_LastClickedID: 38576
-    m_ExpandedIDs: 00000000d6950000d8950000da950000dc950000de950000e0950000e2950000e4950000e6950000e8950000ea950000ec950000ee950000f0950000f2950000f4950000f6950000f895000000ca9a3b
+    scrollPos: {x: 0, y: 171}
+    m_SelectedIDs: c0d90000
+    m_LastClickedID: 55744
+    m_ExpandedIDs: 00000000acd90000aed90000b0d90000b2d90000b4d90000b6d90000b8d90000bad90000bcd90000bed90000c0d90000c2d90000c4d90000c6d90000c8d90000cad90000ccd90000ced9000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -360,7 +360,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000d6950000d8950000da950000dc950000de950000e0950000e2950000e4950000e6950000e8950000ea950000ec950000ee950000f0950000f2950000f4950000f6950000f8950000
+    m_ExpandedIDs: 00000000acd90000aed90000b0d90000b2d90000b4d90000b6d90000b8d90000bad90000bcd90000bed90000c0d90000c2d90000c4d90000c6d90000c8d90000cad90000ccd90000ced90000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -487,10 +487,10 @@ MonoBehaviour:
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 4441}
+      scrollPos: {x: 0, y: 1497}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 9ccdfeff0acefeff36cefeffcad2feff70d3feff0c8effffd4e4ffffb6e8ffffbc9a00003e9b0000f89b0000
+      m_ExpandedIDs: ccb9fdff90d6feffa0e5feffe6faffff14720000507300007aec0000b6ec000056ed00005aed000090ed000002ee000018ee00002cee000066ee00007cee000090ee00001eef000026ef000036ef000056ef00006cef0000caef000010f0000022f0000028f000003af000006af00000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -783,9 +783,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 35.14457, y: 59.854523, z: 16.376493}
+    m_Target: {x: 0.13317892, y: 3.0828352, z: -0.10442891}
     speed: 2
-    m_Value: {x: 35.14457, y: 59.854523, z: 16.376493}
+    m_Value: {x: 0.13317892, y: 3.0828352, z: -0.10442891}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -832,9 +832,9 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.05778226, y: 0.111195184, z: 0.0065646847, w: 0.992031}
+    m_Target: {x: -0.1579208, y: -0.09320679, z: 0.014881207, w: -0.98282284}
     speed: 2
-    m_Value: {x: -0.056297753, y: 0.11121204, z: 0.006398337, w: 0.9921802}
+    m_Value: {x: -0.15795963, y: -0.09174215, z: 0.014645857, w: -0.9830654}
   m_Size:
     m_Target: 1.0211585
     speed: 2
