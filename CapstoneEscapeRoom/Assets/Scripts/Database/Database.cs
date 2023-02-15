@@ -12,7 +12,7 @@ using UnityEditor;
 using UnityEngine.UI;
 
 //[InitializeOnLoad]
-public class Database {
+public class Database : MonoBehaviour{
 
     public static string document = "playerData.xml";
 
