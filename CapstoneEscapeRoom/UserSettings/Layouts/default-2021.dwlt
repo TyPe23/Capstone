@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 114
+  controlID: 126
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -223,7 +223,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 19
+  controlID: 17
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 20
+  controlID: 18
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -317,22 +317,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Audio
+    - Assets/PreFabs/OfficeProps
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Audio/MusicExampels
+  - Assets/PreFabs/OfficeProps
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\ifire\OneDrive\Documents\GitHub\Capstone\CapstoneEscapeRoom
+  m_LastProjectPath: C:\GitHub\Capstone\CapstoneEscapeRoom
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: e6790000
-    m_LastClickedID: 31206
-    m_ExpandedIDs: 00000000c4780000c6780000c8780000ca780000cc780000ce780000d0780000d2780000d4780000d6780000dc780000de780000e0780000e2780000e67800004e7a0000747a000000ca9a3b
+    scrollPos: {x: 0, y: 180}
+    m_SelectedIDs: 9cf20000
+    m_LastClickedID: 62108
+    m_ExpandedIDs: 000000002cf200002ef2000030f2000032f2000034f2000036f2000038f200003af200003cf200003ef2000040f2000042f2000044f2000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -360,7 +360,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000c4780000c6780000c8780000ca780000cc780000ce780000d0780000d2780000d4780000d6780000d8780000da780000dc780000de780000e0780000e2780000e4780000e6780000
+    m_ExpandedIDs: 000000002cf200002ef2000030f2000032f2000034f2000036f2000038f200003af200003cf200003ef2000040f2000042f2000044f20000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -412,7 +412,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 22}
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 324
@@ -487,10 +487,10 @@ MonoBehaviour:
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 1}
-      m_SelectedIDs: 34f0ffff
-      m_LastClickedID: -4044
-      m_ExpandedIDs: defaffffa4730000
+      scrollPos: {x: 0, y: 241}
+      m_SelectedIDs: 8023faff
+      m_LastClickedID: -384128
+      m_ExpandedIDs: 1424faff0a29faffbe2afaff5a39fbffca3afbff1c3bfbff1440fbff1e44fbff0c46fbffce62fcffc665fcffba66fcff926bfcffe06bfcffd66dfcffdc71fcffc873fcff6890fdff6093fdff5094fdffcc95fdff1a96fdff129bfdff1c9ffdff0aa1fdffccbdfeffc4c0feffbec1feffc4cafeff5ce8ffff50f3000088f30000cef500007af60000c0f60000d8f6000078f70000baf70000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -776,16 +776,16 @@ MonoBehaviour:
   m_WindowGUID: cc27987af1a868c49b0894db9c0f5429
   m_Gizmos: 1
   m_OverrideSceneCullingMask: 6917529027641081856
-  m_SceneIsLit: 0
+  m_SceneIsLit: 1
   m_SceneLighting: 1
   m_2DMode: 0
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 4.2614193, y: 7.8503947, z: 0.7306521}
+    m_Target: {x: 65.35439, y: 15.866062, z: 67.06149}
     speed: 2
-    m_Value: {x: 4.2614193, y: 7.8503947, z: 0.7306521}
+    m_Value: {x: 65.35439, y: 15.866062, z: 67.06149}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -832,20 +832,20 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.11669002, y: 0.5993071, z: -0.08900649, w: -0.7868026}
+    m_Target: {x: -0.2846324, y: -0.184317, z: 0.05601865, w: -0.939132}
     speed: 2
-    m_Value: {x: -0.117884085, y: 0.5992431, z: -0.0899156, w: -0.78671867}
+    m_Value: {x: -0.2860272, y: -0.18422398, z: 0.056292437, w: -0.9386593}
   m_Size:
-    m_Target: 1.0211585
+    m_Target: 35.526955
     speed: 2
-    m_Value: 0.3125
+    m_Value: 35.526955
   m_Ortho:
     m_Target: 0
     speed: 2
     m_Value: 0
   m_CameraSettings:
-    m_Speed: 0.24088
-    m_SpeedNormalized: 0.12
+    m_Speed: 1.08046
+    m_SpeedNormalized: 0.53999996
     m_SpeedMin: 0.001
     m_SpeedMax: 2
     m_EasingEnabled: 1
