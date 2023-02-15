@@ -45,7 +45,11 @@ GameObject:
   - component: {fileID: 7394975514783429675}
   - component: {fileID: 7394975514782659593}
   - component: {fileID: 7394975514781660873}
-  - component: {fileID: 7394975514783821472}
+  - component: {fileID: 8756507409714838597}
+  - component: {fileID: 311749772360108104}
+  - component: {fileID: 2893923429652087794}
+  - component: {fileID: 2296579325686125247}
+  - component: {fileID: 583258393208481440}
   m_Layer: 0
   m_Name: mesh_furniture_cabinet_big_body_01
   m_TagString: Untagged
@@ -118,8 +122,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &7394975514783821472
-MeshCollider:
+--- !u!65 &8756507409714838597
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -128,10 +132,61 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300004, guid: a4f29f93f6cf7c844b4c2bbbf5fb3e9f, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.57945824, y: 0.058625698, z: 0.5981081}
+  m_Center: {x: 0, y: 1.2002876, z: 0}
+--- !u!65 &311749772360108104
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7394975514783852555}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.57945824, y: 0.08211517, z: 0.5981081}
+  m_Center: {x: 0, y: 0.041057587, z: 0}
+--- !u!65 &2893923429652087794
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7394975514783852555}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.57945824, y: 1.2296005, z: 0.03196037}
+  m_Center: {x: 0, y: 0.6148003, z: 0.28307384}
+--- !u!65 &2296579325686125247
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7394975514783852555}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.04310131, y: 1.2296005, z: 0.5573853}
+  m_Center: {x: 0.26817846, y: 0.6148003, z: 0.020361364}
+--- !u!65 &583258393208481440
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7394975514783852555}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.020823479, y: 1.2296005, z: 0.55123603}
+  m_Center: {x: -0.27931738, y: 0.6148003, z: 0.02343601}
 --- !u!1 &7394975514783852557
 GameObject:
   m_ObjectHideFlags: 0
@@ -143,7 +198,11 @@ GameObject:
   - component: {fileID: 7394975514783429677}
   - component: {fileID: 7394975514782659595}
   - component: {fileID: 7394975514781660875}
-  - component: {fileID: 7394975514783821479}
+  - component: {fileID: 7302015164169581149}
+  - component: {fileID: 8870880083532246373}
+  - component: {fileID: 21405605860697183}
+  - component: {fileID: 3270630463210570956}
+  - component: {fileID: 3714805923479701232}
   m_Layer: 0
   m_Name: mesh_furniture_cabinet_big_door_bot_01
   m_TagString: Untagged
@@ -216,8 +275,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &7394975514783821479
-MeshCollider:
+--- !u!65 &7302015164169581149
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -226,10 +285,61 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300002, guid: a4f29f93f6cf7c844b4c2bbbf5fb3e9f, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.57945824, y: 0.5426667, z: 0.07541871}
+  m_Center: {x: 0, y: 0.27133334, z: -0.03590119}
+--- !u!65 &8870880083532246373
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7394975514783852557}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5129242, y: 0.112197876, z: 0.4792868}
+  m_Center: {x: 0.0030899048, y: 0.09604645, z: 0.22670776}
+--- !u!65 &21405605860697183
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7394975514783852557}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.046432495, y: 0.33985138, z: 0.45718443}
+  m_Center: {x: -0.23221588, y: 0.31594467, z: 0.23775893}
+--- !u!65 &3270630463210570956
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7394975514783852557}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0449028, y: 0.35255432, z: 0.467919}
+  m_Center: {x: 0.24894524, y: 0.32761383, z: 0.23239166}
+--- !u!65 &3714805923479701232
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7394975514783852557}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.54837036, y: 0.34417725, z: 0.04678023}
+  m_Center: {x: 0.0015182495, y: 0.33050537, z: 0.44296104}
 --- !u!1 &7394975514783852559
 GameObject:
   m_ObjectHideFlags: 0
@@ -241,7 +351,10 @@ GameObject:
   - component: {fileID: 7394975514783429679}
   - component: {fileID: 7394975514782659597}
   - component: {fileID: 7394975514781660877}
-  - component: {fileID: 7394975514783821478}
+  - component: {fileID: 482947549755985502}
+  - component: {fileID: 6133611004417381472}
+  - component: {fileID: 7247350261739508085}
+  - component: {fileID: 8540120839969907756}
   m_Layer: 0
   m_Name: mesh_furniture_cabinet_big_door_top_01
   m_TagString: Untagged
@@ -314,8 +427,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &7394975514783821478
-MeshCollider:
+--- !u!65 &482947549755985502
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -324,7 +437,45 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: a4f29f93f6cf7c844b4c2bbbf5fb3e9f, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.57945824, y: 0.5426667, z: 0.077177346}
+  m_Center: {x: 0.003749907, y: -0.27133334, z: -0.03502193}
+--- !u!65 &6133611004417381472
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7394975514783852559}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5102768, y: 0.11791229, z: 0.5399617}
+  m_Center: {x: 0.0022354126, y: -0.44804764, z: 0.19637024}
+--- !u!65 &7247350261739508085
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7394975514783852559}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.031742096, y: 0.34467316, z: 0.45548683}
+  m_Center: {x: -0.23612022, y: -0.21455765, z: 0.23860767}
+--- !u!65 &8540120839969907756
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7394975514783852559}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.04089737, y: 0.35355377, z: 0.45961815}
+  m_Center: {x: 0.23783684, y: -0.21062851, z: 0.23654202}
