@@ -61,16 +61,15 @@ public class TaskList : MonoBehaviour
             left = left - 1;
             foreach (string line in fileLines)
             {
-                if(!(line.Substring(0,3) == "[X]")) {
+                //print(output +"  output");
+                //print(line  +"  line");
+                if (!(line.Substring(0,3) == "[X]")) {
                     if (output == "Task:") // only display one task at a time 
                     {
                         output += "\n[]" + line + "\n"; // The List
                     }
                 }
-                else
-                {
-                    output += line + "\n"; // The List
-                }
+                
             }
             outputs.text = output; // send to text mesh pro
         }
