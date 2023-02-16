@@ -25,6 +25,7 @@ public class ScoreBoard : MonoBehaviour
     {
         string header =
                     "\t Level _\n" +
+                    "Username\tScore\tTime\n" +
                     "------------------------------\n";
 
         string text = "";
@@ -35,6 +36,7 @@ public class ScoreBoard : MonoBehaviour
             {
                 header =
                         "\t Level " + (i + 1) + "\n" +
+                        "Username\tScore\tTime\n" + 
                         "------------------------------\n";
                 
                 List<string> content = new List<string>();
