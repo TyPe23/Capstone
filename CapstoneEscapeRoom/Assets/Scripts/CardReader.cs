@@ -13,7 +13,6 @@ using System;
 
 public class CardReader : MonoBehaviour
 {
-    //public Rigidbody _rb; //Rigidbody
     public Material[] Materials; // materials list / colors
     public Renderer rend;// renders 
 
@@ -23,12 +22,6 @@ public class CardReader : MonoBehaviour
     public float minDist;
     
     public TaskList UI;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        //_rb = this.GetComponent<Rigidbody>(); //assigne rigidbody to rb
-    }
 
     private void Update()
     {
@@ -42,18 +35,4 @@ public class CardReader : MonoBehaviour
 
         }
     }
-
-    //public void OnCollisionEnter(Collision collision)
-    //{
-
-    //    if (collision.gameObject.name == "ID card") //check what is colliding with the reader; if the it is the card unlock door
-    //    {
-
-    //        rend.enabled = true; // enable rendering change 
-    //        rend.sharedMaterial = Materials[1]; // change material 
-    //        doorLock2.GetComponent<XRGrabInteractable>().enabled = true; // unlock door
-    //                                                                     // compleate task 
-    //        UI.taskDone(1);
-    //    }
-    //}
 }
