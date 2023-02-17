@@ -422,7 +422,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &138498367500251921
 RectTransform:
   m_ObjectHideFlags: 0
@@ -432,8 +432,8 @@ RectTransform:
   m_GameObject: {fileID: 138498367500251929}
   m_LocalRotation: {x: -0.0007011008, y: -0.0142475795, z: 0.0005341607, w: 0.9998982}
   m_LocalPosition: {x: 0, y: 0, z: -0.03770399}
-  m_LocalScale: {x: 0.00051, y: 0.00059999997, z: 0.41159996}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.000751, y: 0.0008835294, z: 0.60610116}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 138498368346038723}
   - {fileID: 138498369364910648}
@@ -644,6 +644,7 @@ MonoBehaviour:
   commandLine: 
   user: 'C:\Users\Champ> '
   taskComplete: 0
+  UI: {fileID: 0}
 --- !u!1 &138498367552095134
 GameObject:
   m_ObjectHideFlags: 0
@@ -1200,6 +1201,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 138498367500251929}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &138498367748120557
 GameObject:
@@ -5988,7 +6001,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 02b181ed4499a354d91bfb0cd7c5412f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2fe714165b0a0624ba526be76b52e196, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6708,6 +6721,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 138498367500251929}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &138498369193661223
 GameObject:
   m_ObjectHideFlags: 0
@@ -7022,6 +7047,7 @@ MonoBehaviour:
   commandLine: 
   user: 'C:\Users\Champ> '
   taskComplete: 0
+  UI: {fileID: 0}
 --- !u!1 &138498369225734148
 GameObject:
   m_ObjectHideFlags: 0

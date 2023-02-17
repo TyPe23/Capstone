@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.3069224, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1644,6 +1644,26 @@ PrefabInstance:
       propertyPath: UI
       value: 
       objectReference: {fileID: 2076875081}
+    - target: {fileID: 138498367500251921, guid: ae60b1b67da838041bca8f75b539a5f6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.000751
+      objectReference: {fileID: 0}
+    - target: {fileID: 138498367500251921, guid: ae60b1b67da838041bca8f75b539a5f6, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.0008835294
+      objectReference: {fileID: 0}
+    - target: {fileID: 138498367500251921, guid: ae60b1b67da838041bca8f75b539a5f6, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.60610116
+      objectReference: {fileID: 0}
+    - target: {fileID: 138498367500251921, guid: ae60b1b67da838041bca8f75b539a5f6, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 138498367500251929, guid: ae60b1b67da838041bca8f75b539a5f6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 138498369025371349, guid: ae60b1b67da838041bca8f75b539a5f6, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -13333,7 +13353,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-72636
+  m_Name: pb_Mesh-72640
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -25222,7 +25242,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-72650
+  m_Name: pb_Mesh-72654
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -30568,7 +30588,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-72932
+  m_Name: pb_Mesh-72936
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -35615,7 +35635,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh30768
+  m_Name: pb_Mesh30782
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -45012,7 +45032,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh30972
+  m_Name: pb_Mesh30986
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -53718,7 +53738,7 @@ MonoBehaviour:
   doorLock2: {fileID: 549042010}
   trackedObjecct: {fileID: 1981271438}
   reader: {fileID: 1597918058}
-  minDist: 0.5
+  minDist: 0.25
   UI: {fileID: 2076875081}
 --- !u!65 &1597918060
 BoxCollider:
