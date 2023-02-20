@@ -3606,6 +3606,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 820688128936539407, guid: 6ee717cf324c529489b2a35f2a2dfe27, type: 3}
+      propertyPath: m_AudioClipForOnHoverExited
+      value: 
+      objectReference: {fileID: 8300000, guid: 89445f89166f54343a61b7d341f8756e, type: 3}
+    - target: {fileID: 820688128936539407, guid: 6ee717cf324c529489b2a35f2a2dfe27, type: 3}
       propertyPath: m_HapticSelectEnterDuration
       value: 0.1
       objectReference: {fileID: 0}
@@ -3614,7 +3618,19 @@ PrefabInstance:
       value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 820688128936539407, guid: 6ee717cf324c529489b2a35f2a2dfe27, type: 3}
+      propertyPath: m_PlayAudioClipOnHoverExited
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 820688128936539407, guid: 6ee717cf324c529489b2a35f2a2dfe27, type: 3}
       propertyPath: m_PlayHapticsOnSelectEntered
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 820688128936539407, guid: 6ee717cf324c529489b2a35f2a2dfe27, type: 3}
+      propertyPath: m_AudioClipForOnSelectEntered
+      value: 
+      objectReference: {fileID: 8300000, guid: 5baa587acec723944aa480459f95e1a7, type: 3}
+    - target: {fileID: 820688128936539407, guid: 6ee717cf324c529489b2a35f2a2dfe27, type: 3}
+      propertyPath: m_PlayAudioClipOnSelectEntered
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 820688129445112320, guid: 6ee717cf324c529489b2a35f2a2dfe27, type: 3}
@@ -3628,6 +3644,22 @@ PrefabInstance:
     - target: {fileID: 820688129648345906, guid: 6ee717cf324c529489b2a35f2a2dfe27, type: 3}
       propertyPath: m_Layer
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 820688129727681248, guid: 6ee717cf324c529489b2a35f2a2dfe27, type: 3}
+      propertyPath: m_AudioClipForOnHoverEntered
+      value: 
+      objectReference: {fileID: 8300000, guid: 89445f89166f54343a61b7d341f8756e, type: 3}
+    - target: {fileID: 820688129727681248, guid: 6ee717cf324c529489b2a35f2a2dfe27, type: 3}
+      propertyPath: m_AudioClipForOnSelectEntered
+      value: 
+      objectReference: {fileID: 8300000, guid: 5baa587acec723944aa480459f95e1a7, type: 3}
+    - target: {fileID: 820688129727681248, guid: 6ee717cf324c529489b2a35f2a2dfe27, type: 3}
+      propertyPath: m_PlayAudioClipOnHoverEntered
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 820688129727681248, guid: 6ee717cf324c529489b2a35f2a2dfe27, type: 3}
+      propertyPath: m_PlayAudioClipOnSelectEntered
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 820688129727681252, guid: 6ee717cf324c529489b2a35f2a2dfe27, type: 3}
       propertyPath: m_Layer
