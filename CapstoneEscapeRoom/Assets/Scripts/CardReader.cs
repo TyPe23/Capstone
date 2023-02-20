@@ -20,7 +20,8 @@ public class CardReader : MonoBehaviour
     public GameObject trackedObjecct;
     public GameObject reader;
     public float minDist;
-    
+
+    public AudioSource audio;
     public TaskList UI;
 
     private void Update()
@@ -32,7 +33,7 @@ public class CardReader : MonoBehaviour
             rend.sharedMaterial = Materials[1]; // change material 
             doorLock2.GetComponent<XRGrabInteractable>().enabled = true; // unlock door
             UI.taskDone(1);                                              // compleate task 
-
+            audio.Play(0);
         }
     }
 }

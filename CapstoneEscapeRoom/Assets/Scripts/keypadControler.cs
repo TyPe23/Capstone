@@ -22,7 +22,7 @@ public class keypadControler : MonoBehaviour
 
     public Material[] Materials; // materials list / colors 
     public Renderer rend;// renders 
-
+    public AudioSource audioData;
     public GameObject doorLock; // the door grab object 
 
     public TaskList UI;
@@ -63,6 +63,7 @@ public class keypadControler : MonoBehaviour
             rend.sharedMaterial = Materials[0]; // change material 
             doorLock.GetComponent<XRGrabInteractable>().enabled = true; // unlock door
             UI.taskDone(2);
+            audioData.Play(0);
         }
         else // if wrong 
         {
