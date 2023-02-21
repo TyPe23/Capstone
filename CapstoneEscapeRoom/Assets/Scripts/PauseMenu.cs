@@ -18,7 +18,7 @@ public class PauseMenu : MonoBehaviour
     public bool activePauseUI = true;
     public LocomotionSystem movement;
     public ActionBasedContinuousMoveProvider rotation;
-    public AudioSource audioData;
+    //public AudioSource audioData;
 
     void Start() // on start up 
     {
@@ -34,7 +34,7 @@ public class PauseMenu : MonoBehaviour
     {
         if(activePauseUI)
         {
-            audioData.Play(0);
+            //audioData.Play(0);
             PauseUI.SetActive(false);
             movement.enabled = true;
             rotation.enabled = true;
@@ -42,7 +42,7 @@ public class PauseMenu : MonoBehaviour
         }
         else if (!activePauseUI)
         {
-            audioData.Play(0);
+           //audioData.Play(0);
             PauseUI.SetActive(true);
             movement.enabled = false;
             rotation.enabled = false;
