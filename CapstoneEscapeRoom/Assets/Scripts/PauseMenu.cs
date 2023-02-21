@@ -32,7 +32,7 @@ public class PauseMenu : MonoBehaviour
     // change if displaying or not
     public void DisplayWristUI()
     {
-        audioData.Play(0);
+        //audioData.Play(0);
         if (activePauseUI)
         {
             //
