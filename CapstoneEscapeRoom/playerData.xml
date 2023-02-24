@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PlayerList>
   <Player Name="player1">
-    <ID>54321</ID>
+    <ID>12345</ID>
     <Level Number="1">
       <BestTime>00:00:00</BestTime>
       <BonusPoints>0</BonusPoints>

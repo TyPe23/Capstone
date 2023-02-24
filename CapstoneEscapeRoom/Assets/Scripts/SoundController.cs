@@ -16,7 +16,7 @@ public class SoundController : MonoBehaviour
 
     public void SaveButton()
     {
-        float soundValue = soundSlid.value;
+        float soundValue = soundSlid.value/100;
         PlayerPrefs.SetFloat("Sound", soundValue);
         LoadValues();
     }
