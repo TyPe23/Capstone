@@ -1125,8 +1125,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2e4199162d378d409bc64ce3fa1b5b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wristUI: {fileID: 8808165668606302692}
-  activeWristUI: 1
+  PauseUI: {fileID: 0}
+  Locamotion: {fileID: 0}
+  activePauseUI: 1
+  movement: {fileID: 0}
+  rotation: {fileID: 0}
+  audioData: {fileID: 0}
 --- !u!1 &5468179166197647104
 GameObject:
   m_ObjectHideFlags: 0
