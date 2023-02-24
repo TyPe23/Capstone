@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Linq;
 
 //used to alter and print to the command line
 public class Terminal1 : KeyboardTyping {
@@ -11,11 +12,24 @@ public class Terminal1 : KeyboardTyping {
     public string commandLine = "";
     public string user = "C:\\Users\\Champ> ";
     public bool taskComplete = false;
+    
+    public string userName;
+    public string password;
+    public string userInfo;
+    public string[] userNames = { "Ben", "Champ", "Dr. Cherry", "Dr. Glisson", "Mary", "Matt", "Techie", "Ty" };
+    public string[] passwords = { "!dawg123", "@cat456", "#horse789", "$cow910", "%pig111", "^bird213", "&bee141", "*turtle516", "(geko171", ")lion819", "-crow202", "+star122", "!wars232", "@hammer425", "#time262", "$out728", "%play293", "^off130" };
+    public Dictionary<string, string> files;
 
     public TaskList UI; // access to UI class
 
-    //a dictionary of commands and their outputs
-    Dictionary<string, string> files = new Dictionary<string, string>() 
+    public void Start()
+    {
+        filesUser.Add("users.txt", userInfo);
+        files = filesRoot;
+    }
+
+    //a dictionary of files and their contents
+    Dictionary<string, string> filesRoot = new Dictionary<string, string>() 
     {
         {"tmp.txt", "This is just a temporary file" },
         {"passwords.txt", "p@ss123" },
@@ -25,6 +39,25 @@ public class Terminal1 : KeyboardTyping {
                       "qg4g97gq3f97hgasG(P#&TSDef;oqi4ghllef" },
         {"user_info", "Cat can only read the content of files, not directories" },
         {"forms", "Cat can only read the content of files, not directories" }
+    };
+
+    //a dictionary of files and their contents
+    Dictionary<string, string> filesUser = new Dictionary<string, string>()
+    {
+        {"tmp.txt", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. " +
+                    "Vivamus pretium leo eu ultricies accumsan. Duis sagittis " +
+                    "ornare risus, et posuere nunc. Integer eu dolor laoreet " +
+                    "metus elementum congue ut nec ante. Quisque nec nulla dolor."}
+    };
+
+    //a dictionary of files and their contents
+    Dictionary<string, string> filesForms = new Dictionary<string, string>()
+    {
+        {"tmp.txt", "This is just a temporary file" },
+        {"taxes.exe", "asdvip23&t29t07gvq9Q673RFg972Q3TG)v*^\n" +
+                      "&!RP97Q3VBQ0f#@f0RGFvfa0-r89fg47C)*&d\n" +
+                      "va234p9f7B#R907ghqp9f38hpgq13p&*W@DFp\n" +
+                      "qg4g97gq3f97hgasG(P#&TSDef;oqi4ghllef" }
     };
 
     //triggered when the terminal is opened
@@ -127,8 +160,12 @@ public class Terminal1 : KeyboardTyping {
             case "help":
                 commandLine += "\ncat\tused to display the content of a file" +
                                "\n\texample:  cat <filename>" +
+                               "\ncd\tused to change the current directory" +
                                "\n\ncd\tused to change the directory" +
                                "\n\texample: cd <directoryname>" +
+                               "\n\texample: cd" +
+                               "\n\t         the exclusion of a directory" +
+                               "\n\t         name returns to the previous directory" +
                                "\n\nexit\tused to exit the terminal" +
                                "\n\nls\tused to display the files in the directory" +
                                "\n\nrm\tused to delete files" +
@@ -181,6 +218,42 @@ public class Terminal1 : KeyboardTyping {
                 else
                 {
                     commandLine += "\nfile not found";
+                }
+                break;
+
+            case "cd":
+                if (inputArgs.Length == 1)
+                {
+                    if (user == @"C:\Users\Champ>")
+                    {
+                        commandLine += "\nthis is the root directory";
+                    }
+                    else
+                    {
+                        user = @"C:\Users\Champ>";
+                        files = filesRoot;
+                    }
+                }
+                else if (inputArgs.Length > 2)
+                {
+                    commandLine += "\ntoo many args for cd";
+                }
+                else if (files.ContainsKey(inputArgs[1]))
+                {
+                    if (inputArgs[1] == "forms")
+                    {
+                        user = @"C:\Users\Champ\forms>";
+                        files = filesForms;
+                    }
+                    else if(inputArgs[1] == "user_info") 
+                    {
+                        user = @"C:\Users\Champ\user_info>";
+                        files = filesUser;
+                    }
+                }
+                else
+                {
+                    commandLine += "\ndirectory not found";
                 }
                 break;
 
