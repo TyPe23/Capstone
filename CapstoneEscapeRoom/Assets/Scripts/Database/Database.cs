@@ -41,21 +41,21 @@ public class Database : MonoBehaviour {
 
         // --------------------------- for testing; delete later ------------------------------- //
         ////adding players
-        //Player p1 = new Player();
-        //Player p2 = new Player();
-        //Player p3 = new Player();
+        Player p1 = new Player();
+        Player p2 = new Player();
+        Player p3 = new Player();
 
-        //p1.setName("player4");
-        //p1.ID = "12345";
-        //p2.setName("player2");
-        //p3.setName("player3");
+        p1.setName("player1");
+        p1.ID = "12345";
+        p2.setName("player2");
+        p3.setName("player3");
 
-        //XmlElement playerElm = makePlayerElement(p1, doc);
-        //addPlayerElement(playerElm, doc);
-        //playerElm = makePlayerElement(p2, doc);
-        //addPlayerElement(playerElm, doc);
-        //playerElm = makePlayerElement(p3, doc);
-        //addPlayerElement(playerElm, doc);
+        XmlElement playerElm = makePlayerElement(p1, doc);
+        addPlayerElement(playerElm, doc);
+        playerElm = makePlayerElement(p2, doc);
+        addPlayerElement(playerElm, doc);
+        playerElm = makePlayerElement(p3, doc);
+        addPlayerElement(playerElm, doc);
 
         ////alterPlayer(playerElm, doc);
     }
