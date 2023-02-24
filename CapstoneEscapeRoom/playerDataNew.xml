@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PlayerList>
+  <Player Name="player3">
+    <ID>
+    </ID>
+    <Level Number="1">
+      <BestTime>00:00:00</BestTime>
+      <BonusPoints>0</BonusPoints>
+      <TotalScore>0</TotalScore>
+    </Level>
+    <Level Number="2">
+      <BestTime>00:00:00</BestTime>
+      <BonusPoints>0</BonusPoints>
+      <TotalScore>0</TotalScore>
+    </Level>
+    <Level Number="3">
+      <BestTime>00:00:00</BestTime>
+      <BonusPoints>0</BonusPoints>
+      <TotalScore>0</TotalScore>
+    </Level>
+    <Level Number="4">
+      <BestTime>00:00:00</BestTime>
+      <BonusPoints>0</BonusPoints>
+      <TotalScore>0</TotalScore>
+    </Level>
+    <Level Number="5">
+      <BestTime>00:00:00</BestTime>
+      <BonusPoints>0</BonusPoints>
+      <TotalScore>0</TotalScore>
+    </Level>
+  </Player>
+</PlayerList>

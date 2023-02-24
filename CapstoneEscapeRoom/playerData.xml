@@ -1,18 +1,117 @@
-<?xml version="1.0"?>
-<PlayerList xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <Player>
-    <Name>player1
-      <Level>0</Level>
-    </Name>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PlayerList>
+  <Player Name="player1">
+    <ID>54321</ID>
+    <Level Number="1">
+      <BestTime>00:00:00</BestTime>
+      <BonusPoints>0</BonusPoints>
+      <TotalScore>0</TotalScore>
+    </Level>
+    <Level Number="2">
+      <BestTime>00:00:00</BestTime>
+      <BonusPoints>0</BonusPoints>
+      <TotalScore>0</TotalScore>
+    </Level>
+    <Level Number="3">
+      <BestTime>00:00:00</BestTime>
+      <BonusPoints>0</BonusPoints>
+      <TotalScore>0</TotalScore>
+    </Level>
+    <Level Number="4">
+      <BestTime>00:00:00</BestTime>
+      <BonusPoints>0</BonusPoints>
+      <TotalScore>0</TotalScore>
+    </Level>
+    <Level Number="5">
+      <BestTime>00:00:00</BestTime>
+      <BonusPoints>0</BonusPoints>
+      <TotalScore>0</TotalScore>
+    </Level>
   </Player>
-  <Player>
-    <Name>player2
-      <Level>0</Level>
-    </Name>
+  <Player Name="player2">
+    <ID>
+    </ID>
+    <Level Number="1">
+      <BestTime>00:00:00</BestTime>
+      <BonusPoints>0</BonusPoints>
+      <TotalScore>0</TotalScore>
+    </Level>
+    <Level Number="2">
+      <BestTime>00:00:00</BestTime>
+      <BonusPoints>0</BonusPoints>
+      <TotalScore>0</TotalScore>
+    </Level>
+    <Level Number="3">
+      <BestTime>00:00:00</BestTime>
+      <BonusPoints>0</BonusPoints>
+      <TotalScore>0</TotalScore>
+    </Level>
+    <Level Number="4">
+      <BestTime>00:00:00</BestTime>
+      <BonusPoints>0</BonusPoints>
+      <TotalScore>0</TotalScore>
+    </Level>
+    <Level Number="5">
+      <BestTime>00:00:00</BestTime>
+      <BonusPoints>0</BonusPoints>
+      <TotalScore>0</TotalScore>
+    </Level>
   </Player>
-  <Player>
-    <Name>player5
-      <Level>0</Level>
-    </Name>
+  <Player Name="player3">
+    <ID>
+    </ID>
+    <Level Number="1">
+      <BestTime>00:00:00</BestTime>
+      <BonusPoints>0</BonusPoints>
+      <TotalScore>0</TotalScore>
+    </Level>
+    <Level Number="2">
+      <BestTime>00:00:00</BestTime>
+      <BonusPoints>0</BonusPoints>
+      <TotalScore>0</TotalScore>
+    </Level>
+    <Level Number="3">
+      <BestTime>00:00:00</BestTime>
+      <BonusPoints>0</BonusPoints>
+      <TotalScore>0</TotalScore>
+    </Level>
+    <Level Number="4">
+      <BestTime>00:00:00</BestTime>
+      <BonusPoints>0</BonusPoints>
+      <TotalScore>0</TotalScore>
+    </Level>
+    <Level Number="5">
+      <BestTime>00:00:00</BestTime>
+      <BonusPoints>0</BonusPoints>
+      <TotalScore>0</TotalScore>
+    </Level>
+  </Player>
+  <Player Name="player4">
+    <ID>12345</ID>
+    <Level Number="1">
+      <BestTime>00:00:00</BestTime>
+      <BonusPoints>0</BonusPoints>
+      <TotalScore>0</TotalScore>
+    </Level>
+    <Level Number="2">
+      <BestTime>00:00:00</BestTime>
+      <BonusPoints>0</BonusPoints>
+      <TotalScore>0</TotalScore>
+    </Level>
+    <Level Number="3">
+      <BestTime>00:00:00</BestTime>
+      <BonusPoints>0</BonusPoints>
+      <TotalScore>0</TotalScore>
+    </Level>
+    <Level Number="4">
+      <BestTime>00:00:00</BestTime>
+      <BonusPoints>0</BonusPoints>
+      <TotalScore>0</TotalScore>
+    </Level>
+    <Level Number="5">
+      <BestTime>00:00:00</BestTime>
+      <BonusPoints>0</BonusPoints>
+      <TotalScore>0</TotalScore>
+    </Level>
   </Player>
 </PlayerList>

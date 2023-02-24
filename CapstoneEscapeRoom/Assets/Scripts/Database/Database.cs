@@ -12,37 +12,60 @@ using UnityEditor;
 using UnityEngine.UI;
 
 //[InitializeOnLoad]
-public class Database : MonoBehaviour{
+public class Database : MonoBehaviour {
 
     public static string document = "playerData.xml";
 
     public Database() {
-        // open and load the document
+
         XmlDocument doc = new XmlDocument();
-        doc.Load(document);
-        getPlayers();
+
+        //check if the document is created or not
+        try {
+            // open and load the document
+            doc.Load(document);
+        }
+        //make a document if it does not exist
+        catch {
+            using (XmlWriter writer = XmlWriter.Create(document)) {
+                writer.WriteStartElement("PlayerList");
+                writer.WriteEndElement();
+                writer.Flush();
+            }
+            // open and load the document
+            doc.Load(document);
+        }
+
+
+        //getPlayers();
 
         // --------------------------- for testing; delete later ------------------------------- //
         ////adding players
         //Player p1 = new Player();
-        ////Player p2 = new Player();
-        ////Player p3 = new Player();
+        //Player p2 = new Player();
+        //Player p3 = new Player();
 
-        //p1.setName("player3");
-        //p1.ID = "12354";
-        ////p2.setName("player2");
-        ////p3.setName("player3");
+        //p1.setName("player4");
+        //p1.ID = "12345";
+        //p2.setName("player2");
+        //p3.setName("player3");
 
         //XmlElement playerElm = makePlayerElement(p1, doc);
-        ////addPlayerElement(playerElm, doc);
-        ////playerElm = makePlayerElement(p2, doc);
-        ////addPlayerElement(playerElm, doc);
-        ////playerElm = makePlayerElement(p3, doc);
-        ////addPlayerElement(playerElm, doc);
+        //addPlayerElement(playerElm, doc);
+        //playerElm = makePlayerElement(p2, doc);
+        //addPlayerElement(playerElm, doc);
+        //playerElm = makePlayerElement(p3, doc);
+        //addPlayerElement(playerElm, doc);
 
-        //alterPlayer(playerElm, doc);
+        ////alterPlayer(playerElm, doc);
     }
 
+    /// <summary>
+    /// takes in a player object and turns it into an XMl element
+    /// </summary>
+    /// <param name="player"></param>
+    /// <param name="doc"></param>
+    /// <returns>XmlElement</returns>
     public static XmlElement makePlayerElement(Player player, XmlDocument doc) {
         
         //create all elements
@@ -90,10 +113,16 @@ public class Database : MonoBehaviour{
     /// <param name="playerElem"></param>
     /// <param name="doc"></param>
     public static void addPlayerElement(XmlElement playerElem, XmlDocument doc) {
-        
-        //append this node to the root parent node
-        doc.DocumentElement.AppendChild(playerElem);
-        doc.Save(document);
+        //check if the player already exists
+        if (playerExists(playerElem, doc)) {
+            //if so, reroute to alterPlayer instead of re-adding player
+            alterPlayer(playerElem, doc);
+        }
+        else {
+            //append this node to the root parent node
+            doc.DocumentElement.AppendChild(playerElem);
+            doc.Save(document);
+        }
     }
 
     /// <summary>
@@ -101,7 +130,7 @@ public class Database : MonoBehaviour{
     /// </summary>
     /// <param name="newPlayerElement"></param>
     /// <param name="doc"></param>
-    public void alterPlayer(XmlElement newPlayerElement, XmlDocument doc) {
+    public static void alterPlayer(XmlElement newPlayerElement, XmlDocument doc) {
         //get name of current element
         string username = newPlayerElement.GetAttribute("Name");
         foreach (XmlElement playerElement in doc.SelectNodes("//Player")) {
@@ -114,15 +143,36 @@ public class Database : MonoBehaviour{
         doc.Save(document);
     }
 
-    public string[,,] getPlayers() {
+    /// <summary>
+    /// Checks if a player in a document already exists. 
+    /// </summary>
+    /// <param name="player"></param>
+    /// <param name="doc"></param>
+    /// <returns>bool</returns>
+    public static bool playerExists(XmlElement player, XmlDocument doc) {
+        string username = player.GetAttribute("Name");
+        foreach (XmlElement playerElement in doc.SelectNodes("//Player")) {
+            //find element with matching username
+            if (playerElement.GetAttribute("Name") == username) {
+                //found
+                return true;
+            }
+        }
+        //never found
+        return false;
+    }
 
+    /// <summary>
+    /// Pulls all player information from the XML doc and formats it as a 3D matrix
+    /// </summary>
+    /// <returns>string[,,]</returns>
+    public string[,,] getPlayers() {
         //format [level[player[name, score, time]]]
         //ex:   playerList[0] would return all results of level 1
         //      playerList[0,1] returns the second player's pair [name, score, time]
         //      playerList[0,1,1] returns level 1, player 2, score
         //      playerList[0,1,0] returns level 1, player 2, name
         //      playerList[0,1,2] returns level 1, player 2, time
-
 
         string[,,] playerList = new string[,,] {
             {
@@ -138,5 +188,25 @@ public class Database : MonoBehaviour{
         Debug.Log(playerList[0, 1, 0]);
 
         return playerList;
+    }
+
+    public string[,,] tempgetplayers() {
+        //open the document to be read
+        XmlDocument doc = new XmlDocument();
+        doc.Save(document);
+        //create a matrix
+        List<List<List<string>>> playerList = new List<List<List<string>>>();
+        //count the number of levels
+
+
+        //foreach (XmlElement playerElement in doc.SelectNodes("//Player")) {
+        //    //find element with matching username
+        //    if (playerElement.GetAttribute("Name") == username) {
+        //        //replace old player instance with new player instance
+        //        (doc.DocumentElement).ReplaceChild(newPlayerElement, playerElement);
+        //    }
+        //}
+        return getPlayers();
+
     }
 }
