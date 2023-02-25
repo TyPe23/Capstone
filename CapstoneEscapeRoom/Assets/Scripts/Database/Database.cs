@@ -1,24 +1,27 @@
+//Original Author: Mary Nations
+//Last updated 02/24/2023 by Mary Nations
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 using System.Runtime.Serialization;
 //using System.Xml.XmlDocument;
 using System.Xml.Serialization;
 using System.Xml;
 using System.IO;
-
 using UnityEditor;
 using UnityEngine.UI;
+//using System.Linq;
 
 //[InitializeOnLoad]
 public class Database : MonoBehaviour {
 
     public static string document = "playerData.xml";
+    public XmlDocument doc = new XmlDocument();
 
     public Database() {
 
-        XmlDocument doc = new XmlDocument();
+        
 
         //check if the document is created or not
         try {
@@ -36,26 +39,26 @@ public class Database : MonoBehaviour {
             doc.Load(document);
         }
 
-
+        //tempgetplayers();
         //getPlayers();
 
         // --------------------------- for testing; delete later ------------------------------- //
         ////adding players
-        Player p1 = new Player();
-        Player p2 = new Player();
-        Player p3 = new Player();
+        //Player p1 = new Player();
+        //Player p2 = new Player();
+        //Player p3 = new Player();
 
-        p1.setName("player1");
-        p1.ID = "12345";
-        p2.setName("player2");
-        p3.setName("player3");
+        //p1.setName("player1");
+        //p1.ID = "12345";
+        //p2.setName("player2");
+        //p3.setName("player3");
 
-        XmlElement playerElm = makePlayerElement(p1, doc);
-        addPlayerElement(playerElm, doc);
-        playerElm = makePlayerElement(p2, doc);
-        addPlayerElement(playerElm, doc);
-        playerElm = makePlayerElement(p3, doc);
-        addPlayerElement(playerElm, doc);
+        //XmlElement playerElm = makePlayerElement(p1, doc);
+        //addPlayerElement(playerElm, doc);
+        //playerElm = makePlayerElement(p2, doc);
+        //addPlayerElement(playerElm, doc);
+        //playerElm = makePlayerElement(p3, doc);
+        //addPlayerElement(playerElm, doc);
 
         ////alterPlayer(playerElm, doc);
     }
@@ -185,28 +188,42 @@ public class Database : MonoBehaviour {
             }
         };
 
-        Debug.Log(playerList[0, 1, 0]);
+        //Debug.Log(playerList[0, 1, 0]);
 
         return playerList;
     }
 
     public string[,,] tempgetplayers() {
         //open the document to be read
-        XmlDocument doc = new XmlDocument();
-        doc.Save(document);
+        //XmlDocument doc = new XmlDocument();
+        //doc.LoadXml(document);
+
+        //variables
+        string name = "";
+        int playerIndex = 0;
+        int levelIndex = 0;
+        int playerNameIndex = 0;
+        int scoreIndex = 1;
+        int timeIndex = 2;
+
         //create a matrix
         List<List<List<string>>> playerList = new List<List<List<string>>>();
-        //count the number of levels
+
+        //Populate levels first to match how the matrix is read
+        XmlElement docElem = doc.DocumentElement;
+        XmlElement firstPlayer = (XmlElement)docElem.FirstChild;
+        XmlNodeList levels = firstPlayer.ChildNodes;
+        for (int i = 0; i < levels.Count; i++) {
+            XmlElement child = (XmlElement)levels[i];
+            if (child.GetAttribute("Number") != "") {
+                //add a list of string-lists for every level
+                playerList.Add(new List<List<string>>());
+                levelIndex++;
+                Debug.Log("level = " + child.GetAttribute("Number"));
+            }
+        }
 
 
-        //foreach (XmlElement playerElement in doc.SelectNodes("//Player")) {
-        //    //find element with matching username
-        //    if (playerElement.GetAttribute("Name") == username) {
-        //        //replace old player instance with new player instance
-        //        (doc.DocumentElement).ReplaceChild(newPlayerElement, playerElement);
-        //    }
-        //}
         return getPlayers();
-
     }
 }

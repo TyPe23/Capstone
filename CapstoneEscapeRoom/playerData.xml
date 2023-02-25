@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PlayerList>
-  <Player Name="player1">
-    <ID>54321</ID>
+  <Player Name="Mary">
+    <ID>12345</ID>
     <Level Number="1">
       <BestTime>00:00:00</BestTime>
       <BonusPoints>0</BonusPoints>
@@ -28,7 +28,7 @@
       <TotalScore>0</TotalScore>
     </Level>
   </Player>
-  <Player Name="player2">
+  <Player Name="Benjamin">
     <ID>
     </ID>
     <Level Number="1">
@@ -57,7 +57,7 @@
       <TotalScore>0</TotalScore>
     </Level>
   </Player>
-  <Player Name="player3">
+  <Player Name="Mathew">
     <ID>
     </ID>
     <Level Number="1">
@@ -86,7 +86,7 @@
       <TotalScore>0</TotalScore>
     </Level>
   </Player>
-  <Player Name="player4">
+  <Player Name="Ty">
     <ID>12345</ID>
     <Level Number="1">
       <BestTime>00:00:00</BestTime>
