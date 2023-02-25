@@ -23,7 +23,12 @@ public class TaskList : MonoBehaviour
     private string output; // output 
     public bool done = false;
 
- 
+
+    // audio 
+    public AudioSource source;
+    public AudioClip clip;
+    public AudioClip clip2;
+
 
     // Start is called before the first frame update
     void Start()
@@ -55,6 +60,12 @@ public class TaskList : MonoBehaviour
     {
         if ((!(num > total))&& num>0 &&(fileLines[num - 1].Substring(0, 3) != "[X]")) // check if within valid numbers and not already done 
         {
+            // play audio if can 
+            if (source != null & clip != null)
+            {
+                source.PlayOneShot(clip);
+            }
+            //update task list 
             output = "Task:"; // starting output default 
             fileLines[num-1] = "[X]" + fileLines[num-1]; // add x to compleated task 
             compleated = compleated + 1;
@@ -76,6 +87,18 @@ public class TaskList : MonoBehaviour
 
         if(left == 0 && compleated == total) // check if done with all task
         {
+            // play audio if can
+            if (source != null & clip != null)
+            {
+                if (clip2 != null)
+                {
+                    source.PlayOneShot(clip2);
+                }
+                else
+                {
+                    source.PlayOneShot(clip);
+                }
+            }
             done = true;
 
             output = "Task\n"; // starting output default

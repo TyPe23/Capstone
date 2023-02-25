@@ -27,7 +27,7 @@ EditorBuildSettings:
     path: Assets/Scenes/TestWorlds/TEST WORLD Benjamin.unity
     guid: 932ce7fa269582b4490196bf1ec4ca2e
   - enabled: 0
-    path: Assets/Scenes/TestWorlds/Matthew/CharacterTemp/Character Testing World.unity
+    path: Assets/Character/Characterv2/Half Body/Character Testing World.unity
     guid: f64d7d29427a32f47bbe150f5413c5ab
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 380a24822041e3344822ab29fbc6b54e, type: 2}
