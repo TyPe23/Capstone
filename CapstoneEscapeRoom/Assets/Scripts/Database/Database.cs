@@ -10,7 +10,7 @@ using UnityEngine.UI;
 using System.Xml;
 //using System.Security.Cryptography;
 //using System.Security.Cryptography.Xml;
-//using System.Text;
+using System.Text;
 
 //[InitializeOnLoad]
 public class Database : MonoBehaviour {
