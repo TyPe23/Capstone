@@ -121,7 +121,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 138498369214060861}
+      - m_Target: {fileID: 608667185051541789}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -266,7 +266,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 138498369214060861}
+      - m_Target: {fileID: 608667185051541789}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -411,7 +411,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 138498369214060861}
+      - m_Target: {fileID: 608667185051541789}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -458,7 +458,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &138498367500251921
 RectTransform:
   m_ObjectHideFlags: 0
@@ -466,8 +466,8 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 138498367500251929}
-  m_LocalRotation: {x: -0.0007011008, y: -0.0142475795, z: 0.0005341607, w: 0.9998982}
-  m_LocalPosition: {x: 0, y: 0, z: -0.03770399}
+  m_LocalRotation: {x: 0.22487293, y: -0.00012167179, z: 0.0005272109, w: 0.974388}
+  m_LocalPosition: {x: 0, y: 0, z: -0.495}
   m_LocalScale: {x: 0.000751, y: 0.0008835294, z: 0.60610116}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -522,11 +522,11 @@ RectTransform:
   - {fileID: 138498367847148647}
   - {fileID: 138498368094225868}
   m_Father: {fileID: 4496485417950274147}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: -0.079, y: -1.633, z: 0.062}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 25.991, y: 0, z: 0.062}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.006086698, y: 0.22000003}
+  m_AnchoredPosition: {x: -0.06, y: 0.122}
   m_SizeDelta: {x: 800, y: 285.5996}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &138498367500251934
@@ -802,7 +802,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 138498369214060861}
+      - m_Target: {fileID: 608667185051541789}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -947,7 +947,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 138498369214060861}
+      - m_Target: {fileID: 608667185051541789}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -1092,7 +1092,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 138498369214060861}
+      - m_Target: {fileID: 608667185051541789}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -1262,7 +1262,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 138498369214060861}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Terminal, Assembly-CSharp
         m_MethodName: closeTerminal
         m_Mode: 1
@@ -1407,7 +1407,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 138498369214060861}
+      - m_Target: {fileID: 608667185051541789}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -1552,7 +1552,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 138498369214060861}
+      - m_Target: {fileID: 608667185051541789}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -1697,7 +1697,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 138498369214060861}
+      - m_Target: {fileID: 608667185051541789}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -1842,7 +1842,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 138498369214060861}
+      - m_Target: {fileID: 608667185051541789}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -1987,7 +1987,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 138498369214060861}
+      - m_Target: {fileID: 608667185051541789}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: backspaceFunct
         m_Mode: 1
@@ -2132,7 +2132,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 138498369214060861}
+      - m_Target: {fileID: 608667185051541789}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -2277,7 +2277,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 138498369214060861}
+      - m_Target: {fileID: 608667185051541789}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -2422,8 +2422,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 138498369214060861}
-        m_TargetAssemblyTypeName: Terminal, Assembly-CSharp
+      - m_Target: {fileID: 608667185051541789}
+        m_TargetAssemblyTypeName: Terminal1, Assembly-CSharp
         m_MethodName: commandExecution
         m_Mode: 1
         m_Arguments:
@@ -2567,7 +2567,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 138498369214060861}
+      - m_Target: {fileID: 608667185051541789}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -2712,7 +2712,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 138498369214060861}
+      - m_Target: {fileID: 608667185051541789}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -2857,7 +2857,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 138498369214060861}
+      - m_Target: {fileID: 608667185051541789}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -3002,7 +3002,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 138498369214060861}
+      - m_Target: {fileID: 608667185051541789}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -3147,7 +3147,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 138498369214060861}
+      - m_Target: {fileID: 608667185051541789}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -3292,7 +3292,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 138498369214060861}
+      - m_Target: {fileID: 608667185051541789}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -3437,7 +3437,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 138498369214060861}
+      - m_Target: {fileID: 608667185051541789}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -3582,7 +3582,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 138498369214060861}
+      - m_Target: {fileID: 608667185051541789}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -3727,7 +3727,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 138498369214060861}
+      - m_Target: {fileID: 608667185051541789}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -3872,7 +3872,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 138498369214060861}
+      - m_Target: {fileID: 608667185051541789}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -4017,7 +4017,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 138498369214060861}
+      - m_Target: {fileID: 608667185051541789}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -4162,7 +4162,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 138498369214060861}
+      - m_Target: {fileID: 608667185051541789}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -4307,7 +4307,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 138498369214060861}
+      - m_Target: {fileID: 608667185051541789}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -4452,7 +4452,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 138498369214060861}
+      - m_Target: {fileID: 608667185051541789}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -4597,7 +4597,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 138498369214060861}
+      - m_Target: {fileID: 608667185051541789}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -4742,7 +4742,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 138498369214060861}
+      - m_Target: {fileID: 608667185051541789}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -4887,7 +4887,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 138498369214060861}
+      - m_Target: {fileID: 608667185051541789}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -5032,7 +5032,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 138498369214060861}
+      - m_Target: {fileID: 608667185051541789}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -5177,7 +5177,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 138498369214060861}
+      - m_Target: {fileID: 608667185051541789}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -5322,7 +5322,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 138498369214060861}
+      - m_Target: {fileID: 608667185051541789}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -5467,7 +5467,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 138498369214060861}
+      - m_Target: {fileID: 608667185051541789}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -5612,7 +5612,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 138498369214060861}
+      - m_Target: {fileID: 608667185051541789}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -5757,7 +5757,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 138498369214060861}
+      - m_Target: {fileID: 608667185051541789}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -5902,7 +5902,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 138498369214060861}
+      - m_Target: {fileID: 608667185051541789}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -6047,7 +6047,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 138498369214060861}
+      - m_Target: {fileID: 608667185051541789}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -6192,7 +6192,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 138498369214060861}
+      - m_Target: {fileID: 608667185051541789}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -6337,7 +6337,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 138498369214060861}
+      - m_Target: {fileID: 608667185051541789}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: shiftFunct
         m_Mode: 1
@@ -6390,18 +6390,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 138498369025371358}
-  m_LocalRotation: {x: -0, y: 0.012467203, z: -0, w: 0.9999223}
-  m_LocalPosition: {x: 0, y: 0, z: 0.1682961}
-  m_LocalScale: {x: 0.00069314433, y: 0.0006931444, z: 0.00069314433}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.009000063}
+  m_LocalScale: {x: 0.00090123405, y: 0.00089055195, z: 0.00069314433}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 138498369175943084}
   m_Father: {fileID: 4496485417950274147}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 1.429, z: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.012413304, y: 0.46920013}
+  m_AnchoredPosition: {x: -0.025999997, y: 0.30299997}
   m_SizeDelta: {x: 745.626, y: 447.3739}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &138498369025371347
@@ -6643,7 +6643,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 138498369214060861}
+      - m_Target: {fileID: 608667185051541789}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -6788,7 +6788,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 138498369214060861}
+      - m_Target: {fileID: 608667185051541789}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -6933,7 +6933,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 138498369214060861}
+      - m_Target: {fileID: 608667185051541789}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -7237,8 +7237,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 138498369214060861}
-        m_TargetAssemblyTypeName: Terminal, Assembly-CSharp
+      - m_Target: {fileID: 608667185051541789}
+        m_TargetAssemblyTypeName: Terminal1, Assembly-CSharp
         m_MethodName: startTerminal
         m_Mode: 1
         m_Arguments:
@@ -7382,7 +7382,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 138498369214060861}
+      - m_Target: {fileID: 608667185051541789}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -7421,7 +7421,7 @@ GameObject:
   - component: {fileID: 138498369214060839}
   - component: {fileID: 138498369214060836}
   - component: {fileID: 138498369214060858}
-  - component: {fileID: 138498369214060861}
+  - component: {fileID: 608667185051541789}
   m_Layer: 5
   m_Name: TerminalScreen
   m_TagString: Untagged
@@ -7436,19 +7436,19 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 138498369214060837}
-  m_LocalRotation: {x: -0, y: 0.012467203, z: -0, w: 0.9999223}
-  m_LocalPosition: {x: 0, y: 0, z: 0.1682961}
-  m_LocalScale: {x: 0.00069314433, y: 0.0006931444, z: 0.00069314433}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.009}
+  m_LocalScale: {x: 0.00090123405, y: 0.00089055195, z: 0.00069314433}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 138498367700385383}
   - {fileID: 138498369243891466}
   m_Father: {fileID: 4496485417950274147}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 1.429, z: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.012413304, y: 0.46920013}
+  m_AnchoredPosition: {x: -0.026, y: 0.303}
   m_SizeDelta: {x: 745.626, y: 447.3739}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &138498369214060856
@@ -7569,7 +7569,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RaycastTriggerInteraction: 1
---- !u!114 &138498369214060861
+--- !u!114 &608667185051541789
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7578,7 +7578,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 138498369214060837}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d8803eef250fac449f866468bbcb162, type: 3}
+  m_Script: {fileID: 11500000, guid: 578a040595f12e74dbc8b6ecb3755899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   word: 
@@ -7587,6 +7587,37 @@ MonoBehaviour:
   commandLine: 
   user: 'C:\Users\Champ> '
   taskComplete: 0
+  userName: 
+  password: 
+  userInfo: 
+  userNames:
+  - Ben
+  - Champ
+  - Dr. Cherry
+  - Dr. Glisson
+  - Mary
+  - Matt
+  - Techie
+  - Ty
+  passwords:
+  - '!dawg123'
+  - '@cat456'
+  - '#horse789'
+  - $cow910
+  - '%pig111'
+  - ^bird213
+  - '&bee141'
+  - '*turtle516'
+  - (geko171
+  - )lion819
+  - -crow202
+  - +star122
+  - '!wars232'
+  - '@hammer425'
+  - '#time262'
+  - $out728
+  - '%play293'
+  - ^off130
   UI: {fileID: 0}
 --- !u!1 &138498369225734148
 GameObject:
@@ -7709,7 +7740,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 138498369214060861}
+      - m_Target: {fileID: 608667185051541789}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -7989,7 +8020,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 138498369214060861}
+      - m_Target: {fileID: 608667185051541789}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -8134,7 +8165,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 138498369214060861}
+      - m_Target: {fileID: 608667185051541789}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -8279,7 +8310,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 138498369214060861}
+      - m_Target: {fileID: 608667185051541789}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -8424,7 +8455,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 138498369214060861}
+      - m_Target: {fileID: 608667185051541789}
         m_TargetAssemblyTypeName: KeyboardTyping, Assembly-CSharp
         m_MethodName: typingFunct
         m_Mode: 5
@@ -8457,8 +8488,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4496485417950274147}
+  - component: {fileID: 4508713914577513164}
   m_Layer: 0
-  m_Name: Enteire Computer
+  m_Name: Entire Computer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8476,14 +8508,30 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 138498369014885046}
   - {fileID: 138498367500251921}
   - {fileID: 138498369214060859}
   - {fileID: 138498369025371346}
   - {fileID: 2340307781063281452}
+  - {fileID: 1996165701732666376}
+  - {fileID: 1621038006362885860}
+  - {fileID: 8760255938496174021}
+  - {fileID: 833106477788306612}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4508713914577513164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1971100598478814520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c10b11bb6a109a438c01fb92e9fdfff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  terminal: {fileID: 608667185051541789}
 --- !u!1 &2875694527646108389
 GameObject:
   m_ObjectHideFlags: 0
@@ -8512,12 +8560,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2875694527646108389}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.144, y: -0.047073364, z: 0.159}
+  m_LocalPosition: {x: -0.144, y: -0.062, z: 0.159}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4496485417950274147}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6949116159502856221
 MeshFilter:
@@ -8678,65 +8726,251 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1001 &138498369015017526
+--- !u!1001 &1702877535828427646
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 4496485417950274147}
     m_Modifications:
-    - target: {fileID: 100000, guid: 49ddef57dd87da2489028c9f6666f2fc, type: 3}
-      propertyPath: m_Name
-      value: mesh_PC_01
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 49ddef57dd87da2489028c9f6666f2fc, type: 3}
+    - target: {fileID: 134759868092452250, guid: 899171d8ca3a45e479969a634693256a, type: 3}
       propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 134759868092452250, guid: 899171d8ca3a45e479969a634693256a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.47972488
+      objectReference: {fileID: 0}
+    - target: {fileID: 134759868092452250, guid: 899171d8ca3a45e479969a634693256a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0034046173
+      objectReference: {fileID: 0}
+    - target: {fileID: 134759868092452250, guid: 899171d8ca3a45e479969a634693256a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.29306984
+      objectReference: {fileID: 0}
+    - target: {fileID: 134759868092452250, guid: 899171d8ca3a45e479969a634693256a, type: 3}
+      propertyPath: m_LocalRotation.w
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 49ddef57dd87da2489028c9f6666f2fc, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.2239133
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 49ddef57dd87da2489028c9f6666f2fc, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.004999995
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 49ddef57dd87da2489028c9f6666f2fc, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.05570388
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 49ddef57dd87da2489028c9f6666f2fc, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.997871
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 49ddef57dd87da2489028c9f6666f2fc, type: 3}
+    - target: {fileID: 134759868092452250, guid: 899171d8ca3a45e479969a634693256a, type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 49ddef57dd87da2489028c9f6666f2fc, type: 3}
+    - target: {fileID: 134759868092452250, guid: 899171d8ca3a45e479969a634693256a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.06521955
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 49ddef57dd87da2489028c9f6666f2fc, type: 3}
+    - target: {fileID: 134759868092452250, guid: 899171d8ca3a45e479969a634693256a, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 49ddef57dd87da2489028c9f6666f2fc, type: 3}
+    - target: {fileID: 134759868092452250, guid: 899171d8ca3a45e479969a634693256a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 49ddef57dd87da2489028c9f6666f2fc, type: 3}
+    - target: {fileID: 134759868092452250, guid: 899171d8ca3a45e479969a634693256a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -7.479
+      value: 180
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 49ddef57dd87da2489028c9f6666f2fc, type: 3}
+    - target: {fileID: 134759868092452250, guid: 899171d8ca3a45e479969a634693256a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 762537488619231008, guid: 899171d8ca3a45e479969a634693256a, type: 3}
+      propertyPath: m_Name
+      value: mouse
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 899171d8ca3a45e479969a634693256a, type: 3}
+--- !u!4 &1621038006362885860 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 134759868092452250, guid: 899171d8ca3a45e479969a634693256a, type: 3}
+  m_PrefabInstance: {fileID: 1702877535828427646}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1967589714269033898
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4496485417950274147}
+    m_Modifications:
+    - target: {fileID: 71360824482978210, guid: d87481a8b85f94b4fb421071c421ec73, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 71360824482978210, guid: d87481a8b85f94b4fb421071c421ec73, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.45879138
+      objectReference: {fileID: 0}
+    - target: {fileID: 71360824482978210, guid: d87481a8b85f94b4fb421071c421ec73, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 71360824482978210, guid: d87481a8b85f94b4fb421071c421ec73, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.26506352
+      objectReference: {fileID: 0}
+    - target: {fileID: 71360824482978210, guid: d87481a8b85f94b4fb421071c421ec73, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 71360824482978210, guid: d87481a8b85f94b4fb421071c421ec73, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 71360824482978210, guid: d87481a8b85f94b4fb421071c421ec73, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 71360824482978210, guid: d87481a8b85f94b4fb421071c421ec73, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 71360824482978210, guid: d87481a8b85f94b4fb421071c421ec73, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 71360824482978210, guid: d87481a8b85f94b4fb421071c421ec73, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 71360824482978210, guid: d87481a8b85f94b4fb421071c421ec73, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 843957526702555928, guid: d87481a8b85f94b4fb421071c421ec73, type: 3}
+      propertyPath: m_Name
+      value: mousepad
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d87481a8b85f94b4fb421071c421ec73, type: 3}
+--- !u!4 &1996165701732666376 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 71360824482978210, guid: d87481a8b85f94b4fb421071c421ec73, type: 3}
+  m_PrefabInstance: {fileID: 1967589714269033898}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5905622191297569304
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4496485417950274147}
+    m_Modifications:
+    - target: {fileID: 5850428073884967958, guid: f432191b8bd4b5747b4e77907ae1e3df, type: 3}
+      propertyPath: m_Name
+      value: display
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519864235778031276, guid: f432191b8bd4b5747b4e77907ae1e3df, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519864235778031276, guid: f432191b8bd4b5747b4e77907ae1e3df, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.026070267
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519864235778031276, guid: f432191b8bd4b5747b4e77907ae1e3df, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519864235778031276, guid: f432191b8bd4b5747b4e77907ae1e3df, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.016299963
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519864235778031276, guid: f432191b8bd4b5747b4e77907ae1e3df, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519864235778031276, guid: f432191b8bd4b5747b4e77907ae1e3df, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519864235778031276, guid: f432191b8bd4b5747b4e77907ae1e3df, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519864235778031276, guid: f432191b8bd4b5747b4e77907ae1e3df, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519864235778031276, guid: f432191b8bd4b5747b4e77907ae1e3df, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519864235778031276, guid: f432191b8bd4b5747b4e77907ae1e3df, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519864235778031276, guid: f432191b8bd4b5747b4e77907ae1e3df, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 49ddef57dd87da2489028c9f6666f2fc, type: 3}
---- !u!4 &138498369014885046 stripped
+  m_SourcePrefab: {fileID: 100100000, guid: f432191b8bd4b5747b4e77907ae1e3df, type: 3}
+--- !u!4 &833106477788306612 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 400000, guid: 49ddef57dd87da2489028c9f6666f2fc, type: 3}
-  m_PrefabInstance: {fileID: 138498369015017526}
+  m_CorrespondingSourceObject: {fileID: 6519864235778031276, guid: f432191b8bd4b5747b4e77907ae1e3df, type: 3}
+  m_PrefabInstance: {fileID: 5905622191297569304}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8188194008451587879
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4496485417950274147}
+    m_Modifications:
+    - target: {fileID: 250849048710304344, guid: dd212ed17059d7f4a8e959b575371552, type: 3}
+      propertyPath: m_Name
+      value: Keyboard
+      objectReference: {fileID: 0}
+    - target: {fileID: 590219275808999650, guid: dd212ed17059d7f4a8e959b575371552, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 590219275808999650, guid: dd212ed17059d7f4a8e959b575371552, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.11703645
+      objectReference: {fileID: 0}
+    - target: {fileID: 590219275808999650, guid: dd212ed17059d7f4a8e959b575371552, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 590219275808999650, guid: dd212ed17059d7f4a8e959b575371552, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.29393125
+      objectReference: {fileID: 0}
+    - target: {fileID: 590219275808999650, guid: dd212ed17059d7f4a8e959b575371552, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 590219275808999650, guid: dd212ed17059d7f4a8e959b575371552, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 590219275808999650, guid: dd212ed17059d7f4a8e959b575371552, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 590219275808999650, guid: dd212ed17059d7f4a8e959b575371552, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 590219275808999650, guid: dd212ed17059d7f4a8e959b575371552, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 590219275808999650, guid: dd212ed17059d7f4a8e959b575371552, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 590219275808999650, guid: dd212ed17059d7f4a8e959b575371552, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dd212ed17059d7f4a8e959b575371552, type: 3}
+--- !u!4 &8760255938496174021 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 590219275808999650, guid: dd212ed17059d7f4a8e959b575371552, type: 3}
+  m_PrefabInstance: {fileID: 8188194008451587879}
   m_PrefabAsset: {fileID: 0}
