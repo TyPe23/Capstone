@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17276807, g: 0.21589197, b: 0.29782572, a: 1}
+  m_IndirectSpecularColor: {r: 0.17276844, g: 0.21589246, b: 0.2978263, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -676,19 +676,7 @@ MonoBehaviour:
   - {fileID: 1544018993}
   onPress:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1512573646}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   onReleased:
     m_PersistentCalls:
       m_Calls: []
@@ -3430,23 +3418,11 @@ MonoBehaviour:
   - {fileID: 1544018993}
   onPress:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1512573646}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   onReleased:
     m_PersistentCalls:
       m_Calls: []
-  AD: {fileID: 1512573646}
+  AD: {fileID: 0}
 --- !u!1 &723105039
 GameObject:
   m_ObjectHideFlags: 0
@@ -3625,7 +3601,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
 --- !u!1001 &748139667
 PrefabInstance:
@@ -6456,19 +6432,7 @@ MonoBehaviour:
   - {fileID: 1544018993}
   onPress:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1512573646}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   onReleased:
     m_PersistentCalls:
       m_Calls: []
@@ -8572,19 +8536,7 @@ MonoBehaviour:
   - {fileID: 1544018993}
   onPress:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1512573646}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   onReleased:
     m_PersistentCalls:
       m_Calls: []
@@ -9155,19 +9107,7 @@ MonoBehaviour:
   - {fileID: 1172448110}
   onPress:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1512573646}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   onReleased:
     m_PersistentCalls:
       m_Calls: []
@@ -12889,7 +12829,7 @@ Transform:
   - {fileID: 24146064632204381}
   - {fileID: 6642030999227387568}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!33 &1338311494780307264
 MeshFilter:
@@ -13514,7 +13454,7 @@ Transform:
   - {fileID: 8471676233847295200}
   - {fileID: 515280826}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
 --- !u!4 &8471676233847295206
 Transform:
