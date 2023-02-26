@@ -15,6 +15,7 @@ public class ScoreBoard : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Database.start();
         string header =
                     "\t Level _\n" +
                     "------------------------------\n";
