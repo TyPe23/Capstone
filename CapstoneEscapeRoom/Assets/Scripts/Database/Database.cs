@@ -21,36 +21,6 @@ public class Database : MonoBehaviour {
 
     public Database() {
 
-        ////check if the document is created or not
-        //try {
-        //    // open and load the document
-        //    doc.Load(document);
-        //}
-        ////make a document if it does not exist
-        //catch {
-        //    using (XmlWriter writer = XmlWriter.Create(document)) {
-        //        writer.WriteStartElement("PlayerList");
-        //        writer.WriteEndElement();
-        //        writer.Flush();
-        //    }
-        //    // open and load the document
-        //    doc.Load(document);
-        //}
-
-        ////byte[] iv = new byte[16];
-        //////do not change the encryption key below unless the Xml doc is currently un-encrypted!!
-        ////key.Key = Encoding.UTF8.GetBytes("AAECAwQFBgcICQoLDA0ODw==");
-        ////key.IV = iv;
-
-        ////Encrypt("Mary");
-        ////Decrypt();
-        ////Debug.Log(doc.InnerXml);
-        //makeDummyData();
-        ////getPlayers();
-        start();
-    }
-
-    public static void start() {
         //check if the document is created or not
         try {
             // open and load the document
@@ -278,7 +248,7 @@ public class Database : MonoBehaviour {
     /// <summary>
     /// Creates dummy data for testing and presentation purposes
     /// </summary>
-    public static void makeDummyData() {
+    public void makeDummyData() {
         //adding players
         Player p1 = new Player();
         Player p2 = new Player();
