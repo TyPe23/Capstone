@@ -17,7 +17,7 @@ using UnityEngine.UI;
 public class Database : MonoBehaviour {
 
     public static string document = "playerData.xml";
-    public static XmlDocument doc = new XmlDocument();
+    public XmlDocument doc = new XmlDocument();
 
     public Database() {
 
@@ -38,15 +38,38 @@ public class Database : MonoBehaviour {
             // open and load the document
             doc.Load(document);
         }
-        makeDummyData();
+
+        //tempgetplayers();
+        //getPlayers();
+
+        // --------------------------- for testing; delete later ------------------------------- //
+        ////adding players
+        //Player p1 = new Player();
+        //Player p2 = new Player();
+        //Player p3 = new Player();
+
+        //p1.setName("player1");
+        //p1.ID = "12345";
+        //p2.setName("player2");
+        //p3.setName("player3");
+
+        //XmlElement playerElm = makePlayerElement(p1, doc);
+        //addPlayerElement(playerElm, doc);
+        //playerElm = makePlayerElement(p2, doc);
+        //addPlayerElement(playerElm, doc);
+        //playerElm = makePlayerElement(p3, doc);
+        //addPlayerElement(playerElm, doc);
+
+        ////alterPlayer(playerElm, doc);
     }
 
     /// <summary>
     /// takes in a player object and turns it into an XMl element
     /// </summary>
     /// <param name="player"></param>
+    /// <param name="doc"></param>
     /// <returns>XmlElement</returns>
-    public static XmlElement makePlayerElement(Player player) {
+    public static XmlElement makePlayerElement(Player player, XmlDocument doc) {
         
         //create all elements
         XmlElement p = doc.CreateElement("Player");
@@ -91,11 +114,12 @@ public class Database : MonoBehaviour {
     /// adds a given player element to the end of a given XmlDocument and saves it
     /// </summary>
     /// <param name="playerElem"></param>
-    public static void addPlayerElement(XmlElement playerElem) {
+    /// <param name="doc"></param>
+    public static void addPlayerElement(XmlElement playerElem, XmlDocument doc) {
         //check if the player already exists
-        if (playerExists(playerElem)) {
+        if (playerExists(playerElem, doc)) {
             //if so, reroute to alterPlayer instead of re-adding player
-            alterPlayer(playerElem);
+            alterPlayer(playerElem, doc);
         }
         else {
             //append this node to the root parent node
@@ -108,7 +132,8 @@ public class Database : MonoBehaviour {
     /// Searches for a node by the username of the old node and replaces the old with the new
     /// </summary>
     /// <param name="newPlayerElement"></param>
-    public static void alterPlayer(XmlElement newPlayerElement) {
+    /// <param name="doc"></param>
+    public static void alterPlayer(XmlElement newPlayerElement, XmlDocument doc) {
         //get name of current element
         string username = newPlayerElement.GetAttribute("Name");
         foreach (XmlElement playerElement in doc.SelectNodes("//Player")) {
@@ -125,8 +150,9 @@ public class Database : MonoBehaviour {
     /// Checks if a player in a document already exists. 
     /// </summary>
     /// <param name="player"></param>
+    /// <param name="doc"></param>
     /// <returns>bool</returns>
-    public static bool playerExists(XmlElement player) {
+    public static bool playerExists(XmlElement player, XmlDocument doc) {
         string username = player.GetAttribute("Name");
         foreach (XmlElement playerElement in doc.SelectNodes("//Player")) {
             //find element with matching username
@@ -146,123 +172,58 @@ public class Database : MonoBehaviour {
     public string[,,] getPlayers() {
         //format [level[player[name, score, time]]]
         //ex:   playerList[0] would return all results of level 1
-        //      playerList[0,1] returns the second player's tuple [name, score, time]
+        //      playerList[0,1] returns the second player's pair [name, score, time]
         //      playerList[0,1,1] returns level 1, player 2, score
         //      playerList[0,1,0] returns level 1, player 2, name
         //      playerList[0,1,2] returns level 1, player 2, time
+
+        string[,,] playerList = new string[,,] {
+            {
+                {"player1", "25", "(05:06:07)"},
+                {"player2", "30", "(06:07:08)"}
+            },
+            {
+                { "player1", "42", "(10:20:30)"},
+                { "player2", "39", "(12:22:32)"}
+            }
+        };
+
+        //Debug.Log(playerList[0, 1, 0]);
+
+        return playerList;
+    }
+
+    public string[,,] tempgetplayers() {
+        //open the document to be read
+        //XmlDocument doc = new XmlDocument();
+        //doc.LoadXml(document);
 
         //variables
         string name = "";
         int playerIndex = 0;
         int levelIndex = 0;
-        //constants (spot in matrix)
+        int playerNameIndex = 0;
         int scoreIndex = 1;
         int timeIndex = 2;
 
-        //create a list matrix
+        //create a matrix
         List<List<List<string>>> playerList = new List<List<List<string>>>();
 
         //Populate levels first to match how the matrix is read
         XmlElement docElem = doc.DocumentElement;
-        XmlElement selectedPlayer = (XmlElement)docElem.FirstChild;
-        XmlNodeList levels = selectedPlayer.ChildNodes;
+        XmlElement firstPlayer = (XmlElement)docElem.FirstChild;
+        XmlNodeList levels = firstPlayer.ChildNodes;
         for (int i = 0; i < levels.Count; i++) {
             XmlElement child = (XmlElement)levels[i];
             if (child.GetAttribute("Number") != "") {
                 //add a list of string-lists for every level
                 playerList.Add(new List<List<string>>());
+                levelIndex++;
+                Debug.Log("level = " + child.GetAttribute("Number"));
             }
         }
 
-        //Get the players
-        foreach (XmlElement playerElement in doc.SelectNodes("//Player")) {
-            name = playerElement.GetAttribute("Name");
-            //traverse their levels
-            levels = playerElement.ChildNodes;
-            levelIndex = 0;
-            for (int i = 0; i < levels.Count; i++) {
-                XmlElement child = (XmlElement)levels[i];
-                //get the info for each level
-                if (child.GetAttribute("Number") != "") {
-                    //add a player to the level list and leave placeholders for player info
-                    playerList[levelIndex].Add(new List<string> { name, "", ""} );
-                    //the score will be the first (and only) node in the list below
-                    XmlElement score = (XmlElement)(child.SelectNodes(".//TotalScore")[0]);
-                    playerList[levelIndex][playerIndex][scoreIndex] = 
-                        score.InnerText;
-                    //same for the bestTime
-                    XmlElement bestTime = (XmlElement)(child.SelectNodes(".//BestTime")[0]);
-                    playerList[levelIndex][playerIndex][timeIndex] =
-                        bestTime.InnerText;
-                    levelIndex++;
-                }
-            }
-            playerIndex++;
-        }
-        //turn the list into an array
-        string[,,] playerArray = ListToArray(playerList);
-        return playerArray;
-    }
 
-    /// <summary>
-    /// turns a 3d matrix list into a 3d array
-    /// </summary>
-    /// <param name="fooList"></param>
-    public string[,,] ListToArray(List<List<List<string>>> fooList) {
-
-        string[,,] foos = new string[fooList.Count, fooList[0].Count, fooList[0][0].Count];
-
-        for (int x = 0; x < fooList.Count; x++) {
-            for (int y = 0; y < fooList[x].Count; y++) {
-                for (int z = 0; z < fooList[x][y].Count; z++) {
-                    foos[x, y, z] = fooList[x][y][z];
-                }
-            }
-        }
-
-        ////uncomment to print to console
-        //for (int x = 0; x < foos.GetLength(0); x++) {
-        //    Debug.Log("Level " + x.ToString());
-        //    for (int y = 0; y < foos.GetLength(1); y++) {
-        //        for (int z = 0; z < foos.GetLength(2); z++) {
-        //            Debug.Log(foos[x, y, z]);
-        //        }
-        //    }
-        //}
-
-        return foos;
-    }
-
-    public void makeDummyData() {
-        //adding players
-        Player p1 = new Player();
-        Player p2 = new Player();
-        Player p3 = new Player();
-        Player p4 = new Player();
-
-        p1.setName("Mary");
-        p2.setName("Mathew");
-        p3.setName("Benjamin");
-        p4.setName("Ty");
-
-        Player[] playerList = { p1, p2, p3, p4};
-        var rand = new System.Random();
-        
-        //populate level informaiton
-        foreach (Player player in playerList) {
-            foreach (PlayerLevel level in player.levels) {
-                level.totalScore = rand.Next(50, 500);
-                level.setTime(rand.Next(10), rand.Next(59), rand.Next(59));
-            }
-        }
-
-        XmlElement playerElm = makePlayerElement(p1);
-        addPlayerElement(playerElm);
-        playerElm = makePlayerElement(p2);
-        addPlayerElement(playerElm);
-        playerElm = makePlayerElement(p3);
-        addPlayerElement(playerElm);
-        playerElm = makePlayerElement(p4);
-        addPlayerElement(playerElm);
+        return getPlayers();
     }
 }

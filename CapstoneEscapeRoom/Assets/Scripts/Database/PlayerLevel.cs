@@ -15,8 +15,4 @@ public class PlayerLevel {
 		bonusPoints = 0;
 		totalScore = 0;
 	}
-
-    public void setTime(int x, int y, int z) {
-		bestTime = new TimeSpan(x, y, z);
-    }
 }
