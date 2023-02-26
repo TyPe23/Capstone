@@ -9,6 +9,7 @@ using TMPro;
 using System.IO;
 using System.Linq;
 using UnityEngine.SceneManagement;
+using System.Diagnostics.Tracing;
 
 public class TaskList : MonoBehaviour
 {
@@ -23,7 +24,11 @@ public class TaskList : MonoBehaviour
     private string output; // output 
     public bool done = false;
 
- 
+    //audio
+    public AudioSource source;
+    public AudioClip Clip1;
+    public AudioClip Clip2;
+
 
     // Start is called before the first frame update
     void Start()
@@ -55,6 +60,11 @@ public class TaskList : MonoBehaviour
     {
         if ((!(num > total))&& num>0 &&(fileLines[num - 1].Substring(0, 3) != "[X]")) // check if within valid numbers and not already done 
         {
+            // play audio if a task is done and have audio 
+            if(source != null & Clip1 != null)
+            {
+                source.PlayOneShot(Clip1);
+            }
             output = "Task:"; // starting output default 
             fileLines[num-1] = "[X]" + fileLines[num-1]; // add x to compleated task 
             compleated = compleated + 1;
@@ -77,7 +87,18 @@ public class TaskList : MonoBehaviour
         if(left == 0 && compleated == total) // check if done with all task
         {
             done = true;
-
+            // play sound if all task are done and have audio 
+            if (source != null)
+            {
+                if (Clip2 != null)
+                {
+                    source.PlayOneShot(Clip2);
+                }
+                else if (Clip1 != null)
+                {
+                    source.PlayOneShot(Clip1);
+                }
+            }
             output = "Task\n"; // starting output default
             //foreach (string line in fileLines) // dont need old task just to Escape
             //{
