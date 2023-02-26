@@ -42,9 +42,11 @@ public class Database : MonoBehaviour {
         key.Key = Encoding.UTF8.GetBytes("AAECAwQFBgcICQoLDA0ODw==");
         key.IV = iv;
         //Encrypt("Player");
+
         //Decrypt();
         //Debug.Log(doc.InnerXml);
         //makeDummyData();
+        //getPlayers();
     }
 
     /// <summary>
@@ -159,6 +161,8 @@ public class Database : MonoBehaviour {
         //      playerList[0,1,0] returns level 1, player 2, name
         //      playerList[0,1,2] returns level 1, player 2, time
 
+        //decrypt all data
+        Decrypt();
         //variables
         string name = "";
         int playerIndex = 0;
@@ -228,15 +232,15 @@ public class Database : MonoBehaviour {
             }
         }
 
-        ////uncomment to print to console
-        //for (int x = 0; x < foos.GetLength(0); x++) {
-        //    Debug.Log("Level " + x.ToString());
-        //    for (int y = 0; y < foos.GetLength(1); y++) {
-        //        for (int z = 0; z < foos.GetLength(2); z++) {
-        //            Debug.Log(foos[x, y, z]);
-        //        }
-        //    }
-        //}
+        //uncomment to print to console
+        for (int x = 0; x < foos.GetLength(0); x++) {
+            Debug.Log("Level " + x.ToString());
+            for (int y = 0; y < foos.GetLength(1); y++) {
+                for (int z = 0; z < foos.GetLength(2); z++) {
+                    Debug.Log(foos[x, y, z]);
+                }
+            }
+        }
 
         return foos;
     }
@@ -352,6 +356,5 @@ public class Database : MonoBehaviour {
             // Replace the encryptedData element with the plaintext XML element.
             exml.ReplaceData(encryptedElement, rgbOutput);
         }
-        doc.Save(document);
     }
 }
