@@ -4,116 +4,116 @@
     <ID>
     </ID>
     <Level Number="1">
-      <BestTime>09:19:03</BestTime>
+      <BestTime>02:04:08</BestTime>
       <BonusPoints>0</BonusPoints>
-      <TotalScore>451</TotalScore>
+      <TotalScore>284</TotalScore>
     </Level>
     <Level Number="2">
-      <BestTime>07:25:51</BestTime>
+      <BestTime>02:42:48</BestTime>
       <BonusPoints>0</BonusPoints>
-      <TotalScore>315</TotalScore>
+      <TotalScore>126</TotalScore>
     </Level>
     <Level Number="3">
-      <BestTime>04:52:18</BestTime>
+      <BestTime>03:08:51</BestTime>
       <BonusPoints>0</BonusPoints>
-      <TotalScore>401</TotalScore>
+      <TotalScore>428</TotalScore>
     </Level>
     <Level Number="4">
-      <BestTime>03:06:14</BestTime>
+      <BestTime>08:20:22</BestTime>
       <BonusPoints>0</BonusPoints>
-      <TotalScore>75</TotalScore>
+      <TotalScore>240</TotalScore>
     </Level>
     <Level Number="5">
-      <BestTime>07:05:47</BestTime>
+      <BestTime>06:26:42</BestTime>
       <BonusPoints>0</BonusPoints>
-      <TotalScore>283</TotalScore>
+      <TotalScore>147</TotalScore>
     </Level>
   </Player>
   <Player Name="Mathew">
     <ID>
     </ID>
     <Level Number="1">
-      <BestTime>03:01:22</BestTime>
+      <BestTime>04:33:14</BestTime>
       <BonusPoints>0</BonusPoints>
-      <TotalScore>127</TotalScore>
+      <TotalScore>93</TotalScore>
     </Level>
     <Level Number="2">
-      <BestTime>02:05:35</BestTime>
-      <BonusPoints>0</BonusPoints>
-      <TotalScore>170</TotalScore>
-    </Level>
-    <Level Number="3">
-      <BestTime>01:58:29</BestTime>
-      <BonusPoints>0</BonusPoints>
-      <TotalScore>237</TotalScore>
-    </Level>
-    <Level Number="4">
-      <BestTime>01:06:23</BestTime>
+      <BestTime>05:05:36</BestTime>
       <BonusPoints>0</BonusPoints>
       <TotalScore>72</TotalScore>
     </Level>
-    <Level Number="5">
-      <BestTime>01:12:04</BestTime>
+    <Level Number="3">
+      <BestTime>02:38:29</BestTime>
       <BonusPoints>0</BonusPoints>
-      <TotalScore>435</TotalScore>
+      <TotalScore>236</TotalScore>
+    </Level>
+    <Level Number="4">
+      <BestTime>00:36:14</BestTime>
+      <BonusPoints>0</BonusPoints>
+      <TotalScore>276</TotalScore>
+    </Level>
+    <Level Number="5">
+      <BestTime>06:05:49</BestTime>
+      <BonusPoints>0</BonusPoints>
+      <TotalScore>484</TotalScore>
     </Level>
   </Player>
   <Player Name="Ty">
     <ID>
     </ID>
     <Level Number="1">
-      <BestTime>08:27:38</BestTime>
+      <BestTime>01:23:34</BestTime>
+      <BonusPoints>0</BonusPoints>
+      <TotalScore>117</TotalScore>
+    </Level>
+    <Level Number="2">
+      <BestTime>06:21:24</BestTime>
       <BonusPoints>0</BonusPoints>
       <TotalScore>355</TotalScore>
     </Level>
-    <Level Number="2">
-      <BestTime>03:15:51</BestTime>
-      <BonusPoints>0</BonusPoints>
-      <TotalScore>273</TotalScore>
-    </Level>
     <Level Number="3">
-      <BestTime>07:22:21</BestTime>
+      <BestTime>00:24:34</BestTime>
       <BonusPoints>0</BonusPoints>
-      <TotalScore>164</TotalScore>
+      <TotalScore>132</TotalScore>
     </Level>
     <Level Number="4">
-      <BestTime>00:41:53</BestTime>
+      <BestTime>06:52:46</BestTime>
       <BonusPoints>0</BonusPoints>
-      <TotalScore>289</TotalScore>
+      <TotalScore>296</TotalScore>
     </Level>
     <Level Number="5">
-      <BestTime>06:04:06</BestTime>
+      <BestTime>05:03:50</BestTime>
       <BonusPoints>0</BonusPoints>
-      <TotalScore>142</TotalScore>
+      <TotalScore>454</TotalScore>
     </Level>
   </Player>
   <Player Name="Benjamin">
     <ID>
     </ID>
     <Level Number="1">
-      <BestTime>02:09:19</BestTime>
+      <BestTime>03:29:58</BestTime>
       <BonusPoints>0</BonusPoints>
-      <TotalScore>92</TotalScore>
+      <TotalScore>425</TotalScore>
     </Level>
     <Level Number="2">
-      <BestTime>01:02:33</BestTime>
+      <BestTime>02:24:10</BestTime>
       <BonusPoints>0</BonusPoints>
-      <TotalScore>189</TotalScore>
+      <TotalScore>130</TotalScore>
     </Level>
     <Level Number="3">
-      <BestTime>06:44:24</BestTime>
+      <BestTime>05:43:46</BestTime>
       <BonusPoints>0</BonusPoints>
-      <TotalScore>230</TotalScore>
+      <TotalScore>134</TotalScore>
     </Level>
     <Level Number="4">
-      <BestTime>08:50:30</BestTime>
+      <BestTime>03:53:06</BestTime>
       <BonusPoints>0</BonusPoints>
-      <TotalScore>299</TotalScore>
+      <TotalScore>174</TotalScore>
     </Level>
     <Level Number="5">
-      <BestTime>09:46:17</BestTime>
+      <BestTime>08:05:38</BestTime>
       <BonusPoints>0</BonusPoints>
-      <TotalScore>464</TotalScore>
+      <TotalScore>364</TotalScore>
     </Level>
   </Player>
 </PlayerList>
