@@ -10,6 +10,7 @@ using UnityEngine.UI;
 using System.Xml;
 using System.Security.Cryptography;
 using System.Security.Cryptography.Xml;
+using System.Text;
 
 //[InitializeOnLoad]
 public class Database : MonoBehaviour {
@@ -35,9 +36,15 @@ public class Database : MonoBehaviour {
             // open and load the document
             doc.Load(document);
         }
-        //Encrypt("Name");
+
+        byte[] iv = new byte[16];
+        //do not change the encryption key below unless the Xml doc is currently un-encrypted!!
+        key.Key = Encoding.UTF8.GetBytes("AAECAwQFBgcICQoLDA0ODw==");
+        key.IV = iv;
+        //Encrypt("Player");
+        //Decrypt();
         //Debug.Log(doc.InnerXml);
-        makeDummyData();
+        //makeDummyData();
     }
 
     /// <summary>
@@ -100,6 +107,7 @@ public class Database : MonoBehaviour {
             //append this node to the root parent node
             doc.DocumentElement.AppendChild(playerElem);
             doc.Save(document);
+            Encrypt(playerElem.GetAttribute("Name"));
         }
     }
 
@@ -115,9 +123,10 @@ public class Database : MonoBehaviour {
             if (playerElement.GetAttribute("Name") == username) {
                 //replace old player instance with new player instance
                 (doc.DocumentElement).ReplaceChild(newPlayerElement, playerElement);
+                doc.Save(document);
+                Encrypt(newPlayerElement.GetAttribute("Name"));
             }
         }
-        doc.Save(document);
     }
 
     /// <summary>
@@ -232,6 +241,9 @@ public class Database : MonoBehaviour {
         return foos;
     }
 
+    /// <summary>
+    /// Creates dummy data for testing and presentation purposes
+    /// </summary>
     public void makeDummyData() {
         //adding players
         Player p1 = new Player();
@@ -265,66 +277,81 @@ public class Database : MonoBehaviour {
         addPlayerElement(playerElm);
     }
 
-    public static void Encrypt(string ElementName) {
-        // Check the arguments.
-        //ArgumentNullException.ThrowIfNull(doc);
-        //ArgumentNullException.ThrowIfNull(ElementName);
-        //ArgumentNullException.ThrowIfNull(key);
-
-        ////////////////////////////////////////////////
+    public static void Encrypt(string username) {
         // Find the specified element in the XmlDocument
         // object and create a new XmlElement object.
-        ////////////////////////////////////////////////
-        XmlElement elementToEncrypt = doc.GetElementsByTagName(ElementName)[0] as XmlElement;
-        // Throw an XmlException if the element was not found.
-        if (elementToEncrypt == null) {
-            throw new XmlException("The specified element was not found");
+        foreach (XmlElement playerElement in doc.SelectNodes("//Player")) {
+            //find element with matching username
+            if (playerElement.GetAttribute("Name") == username) {
+                foreach (XmlElement elementToEncrypt in playerElement) {
+                    Debug.Log(elementToEncrypt.OuterXml);
+                    // Create a new instance of the EncryptedXml class
+                    // and use it to encrypt the XmlElement with the
+                    // symmetric key.
+                    EncryptedXml eXml = new();
+
+                    byte[] encryptedElement = eXml.EncryptData(elementToEncrypt, key, false);
+                    // Construct an EncryptedData object and populate
+                    // it with the desired encryption information.
+
+                    EncryptedData edElement = new() {
+                        Type = EncryptedXml.XmlEncElementUrl
+                    };
+
+                    // Create an EncryptionMethod element so that the
+                    // receiver knows which algorithm to use for decryption.
+                    // Determine what kind of algorithm is being used and
+                    // supply the appropriate URL to the EncryptionMethod element.
+
+                    string encryptionMethod = null;
+
+                    encryptionMethod = EncryptedXml.XmlEncAES256Url;
+
+                    edElement.EncryptionMethod = new EncryptionMethod(encryptionMethod);
+
+                    // Add the encrypted element data to the
+                    // EncryptedData object.
+                    edElement.CipherData.CipherValue = encryptedElement;
+
+                    // Replace the element from the original XmlDocument
+                    // object with the EncryptedData element.
+                    EncryptedXml.ReplaceElement(elementToEncrypt, edElement, false);
+                }
+                break;
+            }
         }
-
-        //////////////////////////////////////////////////
-        // Create a new instance of the EncryptedXml class
-        // and use it to encrypt the XmlElement with the
-        // symmetric key.
-        //////////////////////////////////////////////////
-
-        EncryptedXml eXml = new();
-
-        byte[] encryptedElement = eXml.EncryptData(elementToEncrypt, key, false);
-        ////////////////////////////////////////////////
-        // Construct an EncryptedData object and populate
-        // it with the desired encryption information.
-        ////////////////////////////////////////////////
-
-        EncryptedData edElement = new() {
-            Type = EncryptedXml.XmlEncElementUrl
-        };
-
-        // Create an EncryptionMethod element so that the
-        // receiver knows which algorithm to use for decryption.
-        // Determine what kind of algorithm is being used and
-        // supply the appropriate URL to the EncryptionMethod element.
-
-        string encryptionMethod = null;
-
-        if (key is Aes) {
-            encryptionMethod = EncryptedXml.XmlEncAES256Url;
-        }
-        else {
-            // Throw an exception if the transform is not AES
-            throw new CryptographicException("The specified algorithm is not supported or not recommended for XML Encryption.");
-        }
-
-        edElement.EncryptionMethod = new EncryptionMethod(encryptionMethod);
-
-        // Add the encrypted element data to the
-        // EncryptedData object.
-        edElement.CipherData.CipherValue = encryptedElement;
-
-        ////////////////////////////////////////////////////
-        // Replace the element from the original XmlDocument
-        // object with the EncryptedData element.
-        ////////////////////////////////////////////////////
-        EncryptedXml.ReplaceElement(elementToEncrypt, edElement, false);
+        doc.Save(document);
     }
 
+    /// <summary>
+    /// Decrypts everything encrypted in the Xml document
+    /// </summary>
+    public static void Decrypt() {
+        //"continue" is a reserved word
+        bool cont = true;
+        while (cont) {
+            // Find the EncryptedData element in the XmlDocument.
+            XmlElement encryptedElement = doc.GetElementsByTagName("EncryptedData")[0] as XmlElement;
+
+            // If the EncryptedData element was not found, throw an exception.
+            if (encryptedElement == null) {
+                cont = false;
+                break;
+            }
+
+            // Create an EncryptedData object and populate it.
+            EncryptedData edElement = new();
+            edElement.LoadXml(encryptedElement);
+
+            // Create a new EncryptedXml object.
+            EncryptedXml exml = new();
+
+            // Decrypt the element using the symmetric key.
+            byte[] rgbOutput = exml.DecryptData(edElement, key);
+
+            // Replace the encryptedData element with the plaintext XML element.
+            exml.ReplaceData(encryptedElement, rgbOutput);
+        }
+        doc.Save(document);
+    }
 }
