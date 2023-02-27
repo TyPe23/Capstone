@@ -19,6 +19,7 @@ public class Terminal1 : KeyboardTyping {
     public string[] userNames = { "Ben", "Champ", "Dr. Cherry", "Dr. Glisson", "Mary", "Matt", "Techie", "Ty" };
     public string[] passwords = { "!dawg123", "@cat456", "#horse789", "$cow910", "%pig111", "^bird213", "&bee141", "*turtle516", "(geko171", ")lion819", "-crow202", "+star122", "!wars232", "@hammer425", "#time262", "$out728", "%play293", "^off130" };
     public Dictionary<string, string> files;
+    private bool updated = false;
 
     public TaskList UI; // access to UI class
 
@@ -26,6 +27,15 @@ public class Terminal1 : KeyboardTyping {
     {
         filesUser.Add("users.txt", userInfo);
         files = filesRoot;
+    }
+
+    public void Update() 
+    { 
+        if (taskComplete && !updated)
+        {
+            UI.taskDone(3);
+            updated = true;
+        }
     }
 
     //a dictionary of files and their contents
@@ -146,7 +156,6 @@ public class Terminal1 : KeyboardTyping {
                     commandLine += "\n" + files[inputArgs[1]];
                     if (inputArgs[1] == "passwords.txt")
                     {
-                        UI.taskDone(3);
                         taskComplete = true;
                     }
                 }
