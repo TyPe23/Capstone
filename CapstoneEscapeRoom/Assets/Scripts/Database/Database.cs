@@ -166,7 +166,7 @@ public class Database : MonoBehaviour {
     /// Pulls all player information from the XML doc and formats it as a 3D matrix
     /// </summary>
     /// <returns>string[,,]</returns>
-    public string[,,] getPlayers() {
+    public static string[,,] getPlayers() {
         //format [level[player[name, score, time]]]
         //ex:   playerList[0] would return all results of level 1
         //      playerList[0,1] returns the second player's pair [name, score, time]

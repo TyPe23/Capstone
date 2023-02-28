@@ -15,6 +15,6 @@ public class Start{
         //if (Application.isEditor || Debug.isDebugBuild) {  //*
         //TrilleonAutomation.AutomationMaster.Initialize();  //*
         //} //*
-        Database test = new Database();
+        //Database test = new Database();
     }
 }
