@@ -15,4 +15,6 @@ public class PlayerLevel {
 		bonusPoints = 0;
 		totalScore = 0;
 	}
+
+
 }

@@ -1,23 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-using System.Runtime.Serialization;
-//using System.Xml.XmlDocument;
-using System.Xml.Serialization;
-using System.Xml;
-using System.IO;
-
 using UnityEditor;
 using UnityEngine.UI;
+//using System.Runtime.Serialization;
+//using System.Xml.XmlDocument;
+//using System.Xml.Serialization;
+using System.Xml;
+//using System.IO;
+
+
 
 //[InitializeOnLoad]
 public class Database : MonoBehaviour {
 
     public static string document = "playerData.xml";
+    public static XmlDocument doc = new XmlDocument();
 
     public Database() {
 
+        
+    }
+
+    public static void startDB() {
         XmlDocument doc = new XmlDocument();
 
         //check if the document is created or not
@@ -35,38 +40,14 @@ public class Database : MonoBehaviour {
             // open and load the document
             doc.Load(document);
         }
-
-
-        //getPlayers();
-
-        // --------------------------- for testing; delete later ------------------------------- //
-        ////adding players
-        Player p1 = new Player();
-        Player p2 = new Player();
-        Player p3 = new Player();
-
-        p1.setName("player1");
-        p1.ID = "12345";
-        p2.setName("player2");
-        p3.setName("player3");
-
-        XmlElement playerElm = makePlayerElement(p1, doc);
-        addPlayerElement(playerElm, doc);
-        playerElm = makePlayerElement(p2, doc);
-        addPlayerElement(playerElm, doc);
-        playerElm = makePlayerElement(p3, doc);
-        addPlayerElement(playerElm, doc);
-
-        ////alterPlayer(playerElm, doc);
     }
 
     /// <summary>
     /// takes in a player object and turns it into an XMl element
     /// </summary>
     /// <param name="player"></param>
-    /// <param name="doc"></param>
     /// <returns>XmlElement</returns>
-    public static XmlElement makePlayerElement(Player player, XmlDocument doc) {
+    public static XmlElement makePlayerElement(Player player) {
         
         //create all elements
         XmlElement p = doc.CreateElement("Player");
@@ -111,12 +92,11 @@ public class Database : MonoBehaviour {
     /// adds a given player element to the end of a given XmlDocument and saves it
     /// </summary>
     /// <param name="playerElem"></param>
-    /// <param name="doc"></param>
-    public static void addPlayerElement(XmlElement playerElem, XmlDocument doc) {
+    public static void addPlayerElement(XmlElement playerElem) {
         //check if the player already exists
-        if (playerExists(playerElem, doc)) {
+        if (playerExists(playerElem)) {
             //if so, reroute to alterPlayer instead of re-adding player
-            alterPlayer(playerElem, doc);
+            alterPlayer(playerElem);
         }
         else {
             //append this node to the root parent node
@@ -129,8 +109,7 @@ public class Database : MonoBehaviour {
     /// Searches for a node by the username of the old node and replaces the old with the new
     /// </summary>
     /// <param name="newPlayerElement"></param>
-    /// <param name="doc"></param>
-    public static void alterPlayer(XmlElement newPlayerElement, XmlDocument doc) {
+    public static void alterPlayer(XmlElement newPlayerElement) {
         //get name of current element
         string username = newPlayerElement.GetAttribute("Name");
         foreach (XmlElement playerElement in doc.SelectNodes("//Player")) {
@@ -147,9 +126,8 @@ public class Database : MonoBehaviour {
     /// Checks if a player in a document already exists. 
     /// </summary>
     /// <param name="player"></param>
-    /// <param name="doc"></param>
     /// <returns>bool</returns>
-    public static bool playerExists(XmlElement player, XmlDocument doc) {
+    public static bool playerExists(XmlElement player) {
         string username = player.GetAttribute("Name");
         foreach (XmlElement playerElement in doc.SelectNodes("//Player")) {
             //find element with matching username
@@ -190,23 +168,135 @@ public class Database : MonoBehaviour {
         return playerList;
     }
 
-    public string[,,] tempgetplayers() {
-        //open the document to be read
-        XmlDocument doc = new XmlDocument();
-        doc.Save(document);
-        //create a matrix
+    /// <summary>
+    /// Pulls all player information from the XML doc and formats it as a 3D matrix
+    /// </summary>
+    /// <returns>string[,,]</returns>
+    public static string[,,] tempGetPlayers() {
+        //format [level[player[name, score, time]]]
+        //ex:   playerList[0] would return all results of level 1
+        //      playerList[0,1] returns the second player's tuple [name, score, time]
+        //      playerList[0,1,1] returns level 1, player 2, score
+        //      playerList[0,1,0] returns level 1, player 2, name
+        //      playerList[0,1,2] returns level 1, player 2, time
+
+        //decrypt all data
+        //Decrypt();
+        //variables
+        string name = "";
+        int playerIndex = 0;
+        int levelIndex = 0;
+        //constants (spot in matrix)
+        int scoreIndex = 1;
+        int timeIndex = 2;
+
+        //create a list matrix
         List<List<List<string>>> playerList = new List<List<List<string>>>();
-        //count the number of levels
 
+        //Populate levels first to match how the matrix is read
+        XmlElement docElem = doc.DocumentElement;
+        XmlElement selectedPlayer = (XmlElement)docElem.FirstChild;
+        XmlNodeList levels = selectedPlayer.ChildNodes;
+        for (int i = 0; i < levels.Count; i++) {
+            XmlElement child = (XmlElement)levels[i];
+            if (child.GetAttribute("Number") != "") {
+                //add a list of string-lists for every level
+                playerList.Add(new List<List<string>>());
+            }
+        }
 
-        //foreach (XmlElement playerElement in doc.SelectNodes("//Player")) {
-        //    //find element with matching username
-        //    if (playerElement.GetAttribute("Name") == username) {
-        //        //replace old player instance with new player instance
-        //        (doc.DocumentElement).ReplaceChild(newPlayerElement, playerElement);
+        //Get the players
+        foreach (XmlElement playerElement in doc.SelectNodes("//Player")) {
+            name = playerElement.GetAttribute("Name");
+            //traverse their levels
+            levels = playerElement.ChildNodes;
+            levelIndex = 0;
+            for (int i = 0; i < levels.Count; i++) {
+                XmlElement child = (XmlElement)levels[i];
+                //get the info for each level
+                if (child.GetAttribute("Number") != "") {
+                    //add a player to the level list and leave placeholders for player info
+                    playerList[levelIndex].Add(new List<string> { name, "", "" });
+                    //the score will be the first (and only) node in the list below
+                    XmlElement score = (XmlElement)(child.SelectNodes(".//TotalScore")[0]);
+                    playerList[levelIndex][playerIndex][scoreIndex] =
+                        score.InnerText;
+                    //same for the bestTime
+                    XmlElement bestTime = (XmlElement)(child.SelectNodes(".//BestTime")[0]);
+                    playerList[levelIndex][playerIndex][timeIndex] =
+                        bestTime.InnerText;
+                    levelIndex++;
+                }
+            }
+            playerIndex++;
+        }
+        //turn the list into an array
+        string[,,] playerArray = ListToArray(playerList);
+        return playerArray;
+    }
+
+    /// <summary>
+    /// turns a 3d matrix list into a 3d array
+    /// </summary>
+    /// <param name="fooList"></param>
+    public static string[,,] ListToArray(List<List<List<string>>> fooList) {
+
+        string[,,] foos = new string[fooList.Count, fooList[0].Count, fooList[0][0].Count];
+
+        for (int x = 0; x < fooList.Count; x++) {
+            for (int y = 0; y < fooList[x].Count; y++) {
+                for (int z = 0; z < fooList[x][y].Count; z++) {
+                    foos[x, y, z] = fooList[x][y][z];
+                }
+            }
+        }
+
+        //uncomment to print to console
+        //for (int x = 0; x < foos.GetLength(0); x++) {
+        //    Debug.Log("Level " + x.ToString());
+        //    for (int y = 0; y < foos.GetLength(1); y++) {
+        //        for (int z = 0; z < foos.GetLength(2); z++) {
+        //            Debug.Log(foos[x, y, z]);
+        //        }
         //    }
         //}
-        return getPlayers();
 
+        return foos;
+    }
+
+    /// <summary>
+    /// Creates dummy data for testing and presentation purposes
+    /// </summary>
+    public static void makeDummyData() {
+        //adding players
+        Player p1 = new Player();
+        Player p2 = new Player();
+        Player p3 = new Player();
+        Player p4 = new Player();
+
+        p1.setName("Mary");
+        p2.setName("Mathew");
+        p3.setName("Benjamin");
+        p4.setName("Ty");
+
+        Player[] playerList = { p1, p2, p3, p4 };
+        var rand = new System.Random();
+
+        //populate level informaiton
+        foreach (Player player in playerList) {
+            foreach (PlayerLevel level in player.levels) {
+                level.totalScore = rand.Next(50, 500);
+                level.setTime(rand.Next(10), rand.Next(59), rand.Next(59));
+            }
+        }
+
+        XmlElement playerElm = makePlayerElement(p1);
+        addPlayerElement(playerElm);
+        playerElm = makePlayerElement(p2);
+        addPlayerElement(playerElm);
+        playerElm = makePlayerElement(p3);
+        addPlayerElement(playerElm);
+        playerElm = makePlayerElement(p4);
+        addPlayerElement(playerElm);
     }
 }
