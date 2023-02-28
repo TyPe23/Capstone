@@ -19,7 +19,6 @@ public class Database : MonoBehaviour {
 
     public Database() {
 
-        
     }
 
     public static void startDB() {
@@ -40,6 +39,7 @@ public class Database : MonoBehaviour {
             // open and load the document
             doc.Load(document);
         }
+        makeDummyData();
     }
 
     /// <summary>
