@@ -1000,6 +1000,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 138498369214060837, guid: ae60b1b67da838041bca8f75b539a5f6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1971100598478814520, guid: ae60b1b67da838041bca8f75b539a5f6, type: 3}
       propertyPath: m_Name
       value: Enteire Computer
