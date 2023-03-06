@@ -38,8 +38,9 @@ public class Database : MonoBehaviour {
             }
             // open and load the document
             doc.Load(document);
+            //to be deleted for production ------------------------------------------------
+            makeDummyData();
         }
-        makeDummyData();
     }
 
     /// <summary>
@@ -144,7 +145,7 @@ public class Database : MonoBehaviour {
     /// Pulls all player information from the XML doc and formats it as a 3D matrix
     /// </summary>
     /// <returns>string[,,]</returns>
-    public static string[,,] getPlayers() {
+    public static string[,,] testGetPlayers() {
         //format [level[player[name, score, time]]]
         //ex:   playerList[0] would return all results of level 1
         //      playerList[0,1] returns the second player's pair [name, score, time]
@@ -170,7 +171,7 @@ public class Database : MonoBehaviour {
     /// Pulls all player information from the XML doc and formats it as a 3D matrix
     /// </summary>
     /// <returns>string[,,]</returns>
-    public static string[,,] tempGetPlayers() {
+    public static string[,,] getPlayers() {
         //format [level[player[name, score, time]]]
         //ex:   playerList[0] would return all results of level 1
         //      playerList[0,1] returns the second player's tuple [name, score, time]
@@ -178,6 +179,8 @@ public class Database : MonoBehaviour {
         //      playerList[0,1,0] returns level 1, player 2, name
         //      playerList[0,1,2] returns level 1, player 2, time
 
+        //open database
+        startDB();
         //decrypt all data
         //Decrypt();
         //variables
@@ -249,13 +252,11 @@ public class Database : MonoBehaviour {
             }
         }
 
-        //uncomment to print to console
+        ////uncomment to print to console
         //for (int x = 0; x < foos.GetLength(0); x++) {
-        //    Debug.Log("Level " + x.ToString());
+        //    Debug.Log("Level " + (x + 1).ToString());
         //    for (int y = 0; y < foos.GetLength(1); y++) {
-        //        for (int z = 0; z < foos.GetLength(2); z++) {
-        //            Debug.Log(foos[x, y, z]);
-        //        }
+        //        Debug.Log(foos[x, y, 0] + ", " + foos[x, y, 1] + ", " + foos[x, y, 2]);
         //    }
         //}
 
