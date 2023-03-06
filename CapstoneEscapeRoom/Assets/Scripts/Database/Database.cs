@@ -22,8 +22,6 @@ public class Database : MonoBehaviour {
     }
 
     public static void startDB() {
-        //XmlDocument doc = new XmlDocument();
-
         //check if the document is created or not
         try {
             // open and load the document
@@ -38,9 +36,10 @@ public class Database : MonoBehaviour {
             }
             // open and load the document
             doc.Load(document);
-            //to be deleted for production ------------------------------------------------
-            makeDummyData();
         }
+        //to be deleted for production ------------------------------------------------
+        makeDummyData();
+
     }
 
     /// <summary>

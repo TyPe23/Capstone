@@ -44,6 +44,7 @@ public class ScoreBoard : MonoBehaviour
                 List<int> indicies = new List<int>();
                 try {
                     for (int j = 0; j < data.GetLength(1); j++) {
+                        Debug.Log(data[i].GetLength(0));
                         indicies.Add(j);
                         content.Add(data[i, j, 0].ToString() + "\t" + data[i, j, 1].ToString() + "\t" + data[i, j, 2].ToString() + "\n");
                     }
