@@ -22,7 +22,7 @@ public class Database : MonoBehaviour {
     }
 
     public static void startDB() {
-        XmlDocument doc = new XmlDocument();
+        //XmlDocument doc = new XmlDocument();
 
         //check if the document is created or not
         try {
@@ -162,8 +162,6 @@ public class Database : MonoBehaviour {
                 { "player2", "39", "(12:22:32)"}
             }
         };
-
-        Debug.Log(playerList[0, 1, 0]);
 
         return playerList;
     }
