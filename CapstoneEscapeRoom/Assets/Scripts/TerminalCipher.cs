@@ -187,7 +187,7 @@ public class TerminalCipher : KeyboardTyping
         }
         else
         {
-            commandLine += "\n Password Denied";
+            commandLine += "\n Password Denied \n Login: Champ\r\nPassword:";
         }
     }
     public void commandOptions(string input)
