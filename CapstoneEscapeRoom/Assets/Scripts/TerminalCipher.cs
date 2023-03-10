@@ -30,39 +30,7 @@ public class TerminalCipher : KeyboardTyping
     {
         filesUser.Add("users.txt", userInfo);
         files = filesRoot;
-        password = pass.GetComponent<TMP_Text>().text;
-        char[] s = password.ToCharArray();
 
-        for (int i = 0; i < password.Length; i++)
-        {
-            int number = (int)s[i];
-
-            if (number >= 'a' && number <= 'z')
-            {
-                if (number > 'm')
-                {
-                    number -= rot;
-                }
-                else
-                {
-                    number += rot;
-                }
-            }
-            else if (number >= 'A' && number <= 'Z')
-            {
-                if (number > 'M')
-                {
-                    number -= rot;
-                }
-                else
-                {
-                    number += rot;
-                }
-            }
-            s[i] = (char)number;
-        }
-
-        password = new string(s);
     }
 
     public void Update()
@@ -171,8 +139,47 @@ public class TerminalCipher : KeyboardTyping
 
     //the idea here was to use this function to implement command feedback and overwrite this funciton in a child class for every computer instance
     //controls what happens in the command line
+    public string getPassword()
+    {
+        password = pass.GetComponent<TMP_Text>().text;
+        char[] s = password.ToCharArray();
+
+        for (int i = 0; i < password.Length; i++)
+        {
+            int number = (int)s[i];
+
+            if (number >= 'a' && number <= 'z')
+            {
+                if (number > 'm')
+                {
+                    number -= rot;
+                }
+                else
+                {
+                    number += rot;
+                }
+            }
+            else if (number >= 'A' && number <= 'Z')
+            {
+                if (number > 'M')
+                {
+                    number -= rot;
+                }
+                else
+                {
+                    number += rot;
+                }
+            }
+            s[i] = (char)number;
+        }
+
+        password = new string(s);
+        return password;
+    }
+
     public void login(string inp)
     {
+
         if (inp == password)
         {
             commandLine += "\n Password accepted";

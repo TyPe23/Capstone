@@ -15,6 +15,7 @@ class RandomCipherGen : MonoBehaviour
 {
 
     public TMP_Text outputs; // connect TMP text to outputs in code
+    public TMP_Text rots;
 
     //public Material[] Materials; // materials list / colors 
     public Renderer rend;
@@ -63,7 +64,9 @@ class RandomCipherGen : MonoBehaviour
         }
 
         string output = new string(s);
+        string shift = "a -> n";
 
+        rots.text = shift;
         outputs.text = output; // send to text mesh pro
         outputString = output;
     }
