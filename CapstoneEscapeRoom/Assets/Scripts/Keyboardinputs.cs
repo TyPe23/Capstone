@@ -30,7 +30,7 @@ public class Keyboardinputs : MonoBehaviour
     {
         //check if the character is not in the dictionary
         //or shift is false
-        if (wordIndex < 10)
+        if (wordIndex < 9)
         {
             if (!shiftDictionary.ContainsKey(letter) | shift == false)
             {

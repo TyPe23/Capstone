@@ -6,12 +6,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using System; 
-
+using System;
+using UnityEngine.XR.Interaction.Toolkit;
 public class Timer : MonoBehaviour
 {
     
     public TextMeshProUGUI timerText; // text location 
+    public TextMeshProUGUI endTimerText; // text location 
+    public GameObject Locamotion;
+    public LocomotionSystem movement;
+    public ActionBasedContinuousMoveProvider rotation;
+
 
     // timer min and max values for seconds, minutes, and hours  - if changed in unity will stay to that as a count down 
     [Header("Timer values")]
@@ -69,5 +74,13 @@ public class Timer : MonoBehaviour
     {
         CurrentTime = 0;
         timerText.text = "00:00:00";
+    }
+
+    public void StopTimer()
+    {
+        Done = true;
+        endTimerText.text = TimeSpan.FromSeconds(currentSeconds).ToString(@"hh\:mm\:ss");
+        movement.enabled = false;
+        rotation.enabled = false;
     }
 }

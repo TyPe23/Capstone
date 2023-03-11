@@ -9,16 +9,19 @@ using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit;
 
+
 public class PauseMenu : MonoBehaviour
 {
     // controler 
     public GameObject PauseUI;
     public GameObject Locamotion;
+    public GameObject EndMenu;
     //  bool about if active 
     public bool activePauseUI = true;
-    public LocomotionSystem movement;
-    public ActionBasedContinuousMoveProvider rotation;
-    public AudioSource audioData;
+    public ActionBasedContinuousMoveProvider movement;
+    public ActionBasedContinuousTurnProvider rotation;
+    public LocomotionSystem locamotion; 
+    //public AudioSource audioData;
 
     void Start() // on start up 
     {
@@ -32,22 +35,27 @@ public class PauseMenu : MonoBehaviour
     // change if displaying or not
     public void DisplayWristUI()
     {
-        //audioData.Play(0);
-        if (activePauseUI)
+        if (!EndMenu.activeInHierarchy)
         {
-            //
-            PauseUI.SetActive(false);
-            movement.enabled = true;
-            rotation.enabled = true;
-            activePauseUI = false;
-        }
-        else if (!activePauseUI)
-        {
-           //audioData.Play(0);
-            PauseUI.SetActive(true);
-            movement.enabled = false;
-            rotation.enabled = false;
-            activePauseUI = true;
+
+            if (activePauseUI)
+            {
+                
+                PauseUI.SetActive(false);
+                movement.enabled = true;
+                rotation.enabled = true;
+                
+                activePauseUI = false;
+            }
+            else if (!activePauseUI)
+            {
+
+                PauseUI.SetActive(true);
+                movement.enabled = false;
+                rotation.enabled = false;
+                
+                activePauseUI = true;
+            }
         }
     }
     // pause button if button clicked and removal of pause menue if clicked 

@@ -32,11 +32,13 @@ public class TaskList : MonoBehaviour
 
     //end game screen 
     public GameObject EndGame;
+   
 
 
     // Start is called before the first frame update
     void Start()
     {
+        
         // file connection 
         //FilePath = "Assets/Scenes/TestWorlds/" + "TaskList" +level+ ".txt";
         //fileLines = File.ReadAllLines(FilePath).ToList();
@@ -138,7 +140,6 @@ public class TaskList : MonoBehaviour
     public void endLevel()
     {
         EndGame.SetActive(true);
-        
     }
     public void leveCompleated()
     {
