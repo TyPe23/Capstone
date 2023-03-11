@@ -1,15 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
+using UnityEngine;
 
-public class KeyboardTyping : MonoBehaviour {
-
-    public string word = null;
+public class Keyboardinputs : MonoBehaviour
+{
+    string word = null;
     public int wordIndex = 0;
     public TMP_Text output = null;
     bool shift = false;
+
 
     public IDictionary<string, string> shiftDictionary = new Dictionary<string, string>() {
         {"a", "A"}, {"b", "B"}, {"c", "C" }, {"d", "D"},
@@ -26,31 +26,34 @@ public class KeyboardTyping : MonoBehaviour {
         {".", ">"}, {"/", "?"}
     };
 
-
-    public void typingFunct(string letter) {
+    public void typingFunct(string letter)
+    {
         //check if the character is not in the dictionary
         //or shift is false
- 
-        if (!shiftDictionary.ContainsKey(letter) | shift == false)
+        if (wordIndex < 10)
         {
-            wordIndex++;
-            word = word + letter;
-            printFunct(word); // send to text mesh pro
+            if (!shiftDictionary.ContainsKey(letter) | shift == false)
+            {
+                wordIndex++;
+                word = word + letter;
+                printFunct(word); // send to text mesh pro
+            }
+            else if (shift == true)
+            {
+                wordIndex++;
+                word = word + shiftDictionary[letter];
+                printFunct(word);
+            }
+            shift = false;
         }
-        else if (shift == true)
-        {
-            wordIndex++;
-            word = word + shiftDictionary[letter];
-            printFunct(word);
-        }
-        shift = false;
- 
-      
+
     }
 
-    public void backspaceFunct() {
+    public void backspaceFunct()
+    {
         //only erase a character if there are characters to erase
-        if (wordIndex > 0) {
+        if (wordIndex > 0)
+        {
             //subtract a character from the word
             word = word.Substring(0, wordIndex - 1);
             wordIndex--;
@@ -58,11 +61,14 @@ public class KeyboardTyping : MonoBehaviour {
         }
     }
 
-    public void shiftFunct() {
+    public void shiftFunct()
+    {
         shift = true;
     }
 
-    public virtual void printFunct(string input) {
+    public virtual void printFunct(string input)
+    {
         output.text = input;
     }
+
 }

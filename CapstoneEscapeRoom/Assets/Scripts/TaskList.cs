@@ -10,6 +10,7 @@ using System.IO;
 using System.Linq;
 using UnityEngine.SceneManagement;
 using System.Diagnostics.Tracing;
+using System.Linq.Expressions;
 
 public class TaskList : MonoBehaviour
 {
@@ -29,6 +30,9 @@ public class TaskList : MonoBehaviour
     public AudioClip Clip1;
     public AudioClip Clip2;
 
+    //end game screen 
+    public GameObject EndGame;
+
 
     // Start is called before the first frame update
     void Start()
@@ -36,10 +40,32 @@ public class TaskList : MonoBehaviour
         // file connection 
         //FilePath = "Assets/Scenes/TestWorlds/" + "TaskList" +level+ ".txt";
         //fileLines = File.ReadAllLines(FilePath).ToList();
-        if(level == 1) // temp for task list 
+        switch (level)// task selection 
         {
-            fileLines = new List<string>() {"Gain Access to managers office", "Enter Server Room", "Find password on the computer" };
+            case 0: // test worlds 
+                fileLines = new List<string>() {};
+                break;
+            case 1: // level 1
+                fileLines = new List<string>() { "Gain Access to managers office", "Enter Server Room", "Find password on the computer" };
+                break;
+            case 2: // level 2
+                fileLines = new List<string>() { };
+                break;
+            case 3: // level 3
+                fileLines = new List<string>() { };
+                break;
+            case 4: // level 4
+                fileLines = new List<string>() { };
+                break;
+            case 5: // level 5 
+                fileLines = new List<string>() { };
+                break;
+
         }
+        //if(level == 1) // temp for task list 
+        //{
+        //    fileLines = new List<string>() {"Gain Access to managers office", "Enter Server Room", "Find password on the computer" };
+        //}
 
         // task output 
         output = "Task:"; // starting output default 
@@ -111,10 +137,14 @@ public class TaskList : MonoBehaviour
     // function to end the level 
     public void endLevel()
     {
-        if(left == 0 && compleated == total) // no objectives left 
+        EndGame.SetActive(true);
+        
+    }
+    public void leveCompleated()
+    {
+        if (left == 0 && compleated == total) // no objectives left 
         {
             SceneManager.LoadScene(1); // sending player to level Selection
         }
     }
-
 }

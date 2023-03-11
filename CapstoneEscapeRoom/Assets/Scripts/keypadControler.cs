@@ -17,7 +17,7 @@ public class keypadControler : MonoBehaviour
     public int wordIndex = 0;// size of output 
     public TMP_Text output = null; // text display
     public GameObject inputField; // where to get correct number 
-    string[] inputs = { "ent", "0", "del", "1", "2", "3", "4", "5", "6", "7", "8", "9" }; // valid inputs (never used) 
+    //string[] inputs = { "ent", "0", "del", "1", "2", "3", "4", "5", "6", "7", "8", "9" }; // valid inputs (never used) 
     private string textIn; // correct input - make public for testing else private 
 
     public Material[] Materials; // materials list / colors 
