@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+//using Unity.VisualScripting.Dependencies.Sqlite;
 using UnityEngine;
 
 public class Keyboardinputs : MonoBehaviour
@@ -9,7 +10,7 @@ public class Keyboardinputs : MonoBehaviour
     public int wordIndex = 0;
     public TMP_Text output = null;
     bool shift = false;
-
+    public int MaxLength = 10;
 
     public IDictionary<string, string> shiftDictionary = new Dictionary<string, string>() {
         {"a", "A"}, {"b", "B"}, {"c", "C" }, {"d", "D"},
@@ -25,12 +26,12 @@ public class Keyboardinputs : MonoBehaviour
         {"\\", "|"}, {";", ":"}, {"'", "\""}, {",", "<"},
         {".", ">"}, {"/", "?"}
     };
-
+    
     public void typingFunct(string letter)
     {
         //check if the character is not in the dictionary
         //or shift is false
-        if (wordIndex < 9)
+        if (wordIndex < MaxLength)
         {
             if (!shiftDictionary.ContainsKey(letter) | shift == false)
             {
