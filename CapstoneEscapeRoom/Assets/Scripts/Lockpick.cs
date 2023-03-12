@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class Lockpick : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class Lockpick : MonoBehaviour
     public Transform pickPosition;
     public GameObject pick;
     public Camera cam;
+    public GameObject door;
 
     public float maxAngle = 90;
 
@@ -21,6 +23,7 @@ public class Lockpick : MonoBehaviour
     public float unlockAngle;
     public Vector2 unlockRange;
     public Vector3 axisAngle;
+    public GameObject trackedHand;
 
     private float keyPressTime = 0;
 
@@ -41,7 +44,11 @@ public class Lockpick : MonoBehaviour
 
         if (movePick)
         {
-            Vector3 dir = Input.mousePosition - cam.WorldToScreenPoint(pick.transform.position);
+            Vector3 dir = new Vector3(trackedHand.transform.localPosition.x, trackedHand.transform.localPosition.y, 0) - pick.transform.localPosition;
+
+            //dir = new Vector3(0, dir.y, dir.z);
+
+            print(dir);
 
             eulerAngle = Vector3.Angle(dir, Vector3.up);
 
@@ -88,6 +95,7 @@ public class Lockpick : MonoBehaviour
             if (eulerAngle < unlockRange.y && eulerAngle > unlockRange.x)
             {
                 Debug.Log("unlocked");
+                door.GetComponent<XRGrabInteractable>().enabled = true;
                 Destroy(gameObject);
 
                 movePick = true;
