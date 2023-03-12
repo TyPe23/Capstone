@@ -20,6 +20,7 @@ public class Lockpick : MonoBehaviour
     public float eulerAngle;
     public float unlockAngle;
     public Vector2 unlockRange;
+    public Vector3 axisAngle;
 
     private float keyPressTime = 0;
 
@@ -30,6 +31,7 @@ public class Lockpick : MonoBehaviour
     {
         unlockAngle = Random.Range(-maxAngle + lockRange, maxAngle - lockRange);
         unlockRange = new Vector2(unlockAngle - lockRange, unlockAngle + lockRange);
+        axisAngle = tumbler.transform.eulerAngles;
     }
 
     // Update is called once per frame
@@ -41,11 +43,7 @@ public class Lockpick : MonoBehaviour
         {
             Vector3 dir = Input.mousePosition - cam.WorldToScreenPoint(pick.transform.position);
 
-            //print(dir);
-
             eulerAngle = Vector3.Angle(dir, Vector3.up);
-
-            //print(eulerAngle);
 
             Vector3 cross = Vector3.Cross(Vector3.up, dir);
 
@@ -59,7 +57,7 @@ public class Lockpick : MonoBehaviour
 
             Quaternion rotateTo = Quaternion.AngleAxis(eulerAngle, Vector3.forward);
 
-            pick.transform.rotation = rotateTo;
+            pick.transform.rotation = Quaternion.Euler(axisAngle) * rotateTo;
         }
 
         if (Input.GetKeyDown(KeyCode.D))
@@ -83,9 +81,7 @@ public class Lockpick : MonoBehaviour
 
         float lockLerp = Mathf.Lerp(tumbler.eulerAngles.z, lockRotation, Time.deltaTime * lockSpeed);
 
-        tumbler.eulerAngles = new Vector3(0, 0, lockLerp);
-
-        //print(tumbler.eulerAngles);
+        tumbler.eulerAngles = new Vector3(0, 0, lockLerp) + axisAngle;
 
         if(lockLerp >= maxRotation - 1)
         {
