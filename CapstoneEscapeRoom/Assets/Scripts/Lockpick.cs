@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.InputSystem;
 
 public class Lockpick : MonoBehaviour
 {
@@ -29,6 +30,9 @@ public class Lockpick : MonoBehaviour
 
     private bool movePick = true;
 
+    [SerializeField]
+    private InputActionProperty turnLockAction;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -44,11 +48,7 @@ public class Lockpick : MonoBehaviour
 
         if (movePick)
         {
-            Vector3 dir = new Vector3(trackedHand.transform.localPosition.x, trackedHand.transform.localPosition.y, 0) - pick.transform.localPosition;
-
-            //dir = new Vector3(0, dir.y, dir.z);
-
-            print(dir);
+            Vector3 dir = new Vector3(trackedHand.transform.localPosition.x, trackedHand.transform.localPosition.y - 5f, trackedHand.transform.localPosition.z) + axisAngle;
 
             eulerAngle = Vector3.Angle(dir, Vector3.up);
 
@@ -67,13 +67,12 @@ public class Lockpick : MonoBehaviour
             pick.transform.rotation = Quaternion.Euler(axisAngle) * rotateTo;
         }
 
-        if (Input.GetKeyDown(KeyCode.D))
+        if (turnLockAction.action.ReadValue<bool>())
         {
             movePick = false;
             keyPressTime = 1;
         }
-
-        if (Input.GetKeyUp(KeyCode.D))
+        else
         {
             movePick = true;
             keyPressTime = 0;
