@@ -6,32 +6,29 @@ using UnityEngine.InputSystem;
 
 public class Lockpick : MonoBehaviour
 {
+    public Transform NormalRef;
+    public InputActionProperty turnLockAction;
     public Transform tumbler;
     public Transform pickPosition;
     public GameObject pick;
     public Camera cam;
     public GameObject door;
-
-    public float maxAngle = 90;
-
-    public float lockSpeed = 10;
+    public GameObject trackedHand;
 
     [Min(1)]
     [Range(1, 25)]
     public float lockRange = 10;
 
-    public float eulerAngle;
-    public float unlockAngle;
-    public Vector2 unlockRange;
-    public Vector3 axisAngle;
-    public GameObject trackedHand;
-
+    private float maxAngle = 90;
+    private float lockSpeed = 10;
+    private float eulerAngle;
+    private float unlockAngle;
+    private Vector2 unlockRange;
+    private Vector3 axisAngle;
     private float keyPressTime = 0;
-
     private bool movePick = true;
-
-    [SerializeField]
-    private InputActionProperty turnLockAction;
+    private Vector3 Normal;
+    private XRGrabInteractable doorGrab;
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +36,8 @@ public class Lockpick : MonoBehaviour
         unlockAngle = Random.Range(-maxAngle + lockRange, maxAngle - lockRange);
         unlockRange = new Vector2(unlockAngle - lockRange, unlockAngle + lockRange);
         axisAngle = tumbler.transform.eulerAngles;
+        Normal = Vector3.Normalize(NormalRef.position - tumbler.position);
+        doorGrab = door.GetComponent<XRGrabInteractable>();
     }
 
     // Update is called once per frame
@@ -48,11 +47,12 @@ public class Lockpick : MonoBehaviour
 
         if (movePick)
         {
-            Vector3 dir = new Vector3(trackedHand.transform.localPosition.x, trackedHand.transform.localPosition.y - 5f, trackedHand.transform.localPosition.z) + axisAngle;
+            Vector3 dir = (trackedHand.transform.position - tumbler.position);
+            Vector3 projectedDir = dir - (Vector3.Dot(dir, Normal) / (Mathf.Pow(Vector3.Magnitude(Normal), 2)) * Normal);
 
-            eulerAngle = Vector3.Angle(dir, Vector3.up);
+            eulerAngle = Vector3.Angle(projectedDir, Vector3.up);
 
-            Vector3 cross = Vector3.Cross(Vector3.up, dir);
+            Vector3 cross = Vector3.Cross(Vector3.up, projectedDir);
 
             if (cross.z < 0)
             {
@@ -94,7 +94,7 @@ public class Lockpick : MonoBehaviour
             if (eulerAngle < unlockRange.y && eulerAngle > unlockRange.x)
             {
                 Debug.Log("unlocked");
-                door.GetComponent<XRGrabInteractable>().enabled = true;
+                doorGrab.enabled = true;
                 Destroy(gameObject);
 
                 movePick = true;
