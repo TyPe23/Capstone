@@ -9,13 +9,13 @@ using System;
 public class ScoreBoard : MonoBehaviour
 {
     public TMP_Text output;
-    public string[,,] data;
+    public string[][][] data;
     public GameObject[] buttons;
 
     // Start is called before the first frame update
     void Start()
     {
-        data = Database.getPlayers();
+        data = Databasetwo.retrieveData();
         string header =
                     "\t Level _\n" +
                     "------------------------------\n";
@@ -43,15 +43,15 @@ public class ScoreBoard : MonoBehaviour
                 List<string> content = new List<string>();
                 List<int> indicies = new List<int>();
                 try {
-                    for (int j = 0; j < data.GetLength(1); j++) {
+                    for (int j = 0; j < data[i].GetLength(0); j++) {
                         indicies.Add(j);
-                        content.Add(data[i, j, 0].ToString() + "\t" + data[i, j, 1].ToString() + "\t" + data[i, j, 2].ToString() + "\n");
+                        content.Add(data[i][j][0].ToString() + "\t" + data[i][j][1].ToString() + "\t" + data[i][j][2].ToString() + "\n");
                     }
 
-                    for (int k = 0; k < data.GetLength(1); k++) {
+                    for (int k = 0; k < data[i].GetLength(0); k++) {
                         bool swapped = false;
                         for (int l = 0; l < indicies.Count - 1; l++) {
-                            if (Int32.Parse(data[i, indicies[l], 1]) < Int32.Parse(data[i, indicies[l + 1], 1])) {
+                            if (Int32.Parse(data[i][indicies[l]][1]) < Int32.Parse(data[i][indicies[l + 1]][1])) {
                                 swapped = true;
                                 int temp = indicies[l];
                                 indicies[l] = indicies[l + 1];

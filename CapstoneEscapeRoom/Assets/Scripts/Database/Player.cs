@@ -29,7 +29,7 @@ public class Player {
     /// Adds a new level instance for every level in the game. !!! If levels are added, the for loop needs to be changed !!!
     /// </summary>
     private void addLevels() {
-        for (int i = 1; i <= 5; i++) {
+        for (int i = 1; i <= Start.numOfLevels; i++) {
             PlayerLevel newLevel = new PlayerLevel();
             newLevel.level = i;
             levels.Add(newLevel);
