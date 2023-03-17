@@ -60,6 +60,11 @@ public class Databasetwo{
     /// </summary>
     /// <returns></returns>
     public static string[][][] retrieveData() {
+        //make dummy data for display purposes. Can delete before actual game play
+        if (PlayerPrefs.GetString("level1") == null || PlayerPrefs.GetString("level1") == "") {
+            makeDummyData();
+        }
+
         string[][][] matrix = new string[Start.numOfLevels][][]; 
         //for all 5 levels
         for (int i = 1; i <= Start.numOfLevels; i++) {
