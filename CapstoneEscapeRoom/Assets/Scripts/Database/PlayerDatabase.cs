@@ -1,12 +1,19 @@
-﻿using System;
+﻿//Original Author: Mary Nations
+//Additional Authors: 
+//Last edited by: Mary Nations
+//On: 19 March 2023
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Databasetwo{
+/// <summary>
+/// Creates a database for the scoreboards using PlayerPrefs
+/// </summary>
+public class PlayerDatabase : MonoBehaviour {
 
-	public Databasetwo() {
+	public PlayerDatabase() {
         //resetPlayerPrefs();
         //makeDummyData();
         //print2DMatrix(helperRetrieveData("level1"));
@@ -21,7 +28,7 @@ public class Databasetwo{
     /// <param name="score"></param>
     /// <param name="bonus"></param>
     /// <param name="time"></param>
-	public static void setPlayerPref(string level, string name, int score, int bonus, string time) {
+	public static void addPlayerInfo(string level, string name, int score, int bonus, string time) {
         //add bonus points to score
         score += bonus;
         string playerInfo = "";
@@ -56,7 +63,7 @@ public class Databasetwo{
     }
 
     /// <summary>
-    /// Turns all level playerPerf info into a 3D string matrix
+    /// Turns all level playerPrefs info into a 3D string matrix
     /// </summary>
     /// <returns></returns>
     public static string[][][] retrieveData() {
@@ -99,13 +106,37 @@ public class Databasetwo{
                 level.bonusPoints = rand.Next(0, 10);
                 level.setTime(rand.Next(10), rand.Next(59), rand.Next(59));
                 //Debug.Log("Setting " + player.name + "level" + i.ToString());
-                setPlayerPref("level" + i.ToString(), player.name, level.totalScore, level.bonusPoints, level.bestTime.ToString());
+                addPlayerInfo("level" + i.ToString(), player.name, level.totalScore, level.bonusPoints, level.bestTime.ToString());
                 i++;
             }
         }
     }
 
+    /// <summary>
+    /// resets all set playerPrefs for the individual at the beginning of a level
+    /// </summary>
     public static void resetPlayerPrefs() {
+        //reset level informaiton
+        PlayerPrefs.SetString("Time", "");
+        PlayerPrefs.SetInt("Score", 0);
+        PlayerPrefs.SetString("Name", "");
+        PlayerPrefs.SetInt("BonusPoints", 0);
+        //The playerPref "Level" is not reset here b/c we need to
+        //know which level the player is entering
+    }
+
+    /// <summary>
+    /// sets the level the player selected
+    /// </summary>
+    /// <param name="level"></param>
+    public static void setLevel(int level) {
+        PlayerPrefs.SetInt("Level", level);
+    }
+
+    /// <summary>
+    /// clears all level playerPrefs, which are used to store previous player informaiton
+    /// </summary>
+    public static void clearDatabase() {
         for (int i = 1; i <= Start.numOfLevels; i++) {
             PlayerPrefs.SetString("level" + i.ToString(), "");
         }

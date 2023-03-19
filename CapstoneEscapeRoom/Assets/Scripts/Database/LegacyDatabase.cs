@@ -12,12 +12,12 @@ using System.Xml;
 
 
 //[InitializeOnLoad]
-public class Database : MonoBehaviour {
+public class OldDatabase : MonoBehaviour {
 
     public static string document = "playerData.xml";
     public static XmlDocument doc = new XmlDocument();
 
-    public Database() {
+    public OldDatabase() {
 
     }
 

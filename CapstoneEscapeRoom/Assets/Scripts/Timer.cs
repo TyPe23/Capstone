@@ -79,8 +79,11 @@ public class Timer : MonoBehaviour
     public void StopTimer()
     {
         Done = true;
-        endTimerText.text = TimeSpan.FromSeconds(currentSeconds).ToString(@"hh\:mm\:ss");
+        string endTime = TimeSpan.FromSeconds(currentSeconds).ToString(@"hh\:mm\:ss");
+        endTimerText.text = endTime;
         movement.enabled = false;
         rotation.enabled = false;
+        //save final time for scoreboard
+        PlayerPrefs.SetString("Time", endTime);
     }
 }
