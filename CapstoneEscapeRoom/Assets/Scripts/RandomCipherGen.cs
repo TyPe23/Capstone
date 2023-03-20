@@ -29,7 +29,7 @@ class RandomCipherGen : MonoBehaviour
 
   
         int rot = 13;
-        string[] possibleInString = {"Jiggsaw", "HexKing", "CeasersCipher",  "ZeroTrust", "DunderMifflin" };
+        string[] possibleInString = {"Jiggsaw", "HexKing", "CaesarsCipher",  "ZeroTrust", "DunderMifflin" };
         int r = UnityEngine.Random.Range(0, possibleInString.Length);
        
         char[] s = possibleInString[r].ToCharArray();

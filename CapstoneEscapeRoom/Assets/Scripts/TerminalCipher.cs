@@ -9,7 +9,7 @@ public class TerminalCipher : KeyboardTyping
 {
     //wordIndex, word, and output are defined in the parent class
     public string commandLine = "";
-    public string user = "C:\\Users\\Champ> ";
+    public string user = "";//"C:\\Users\\Champ> "
     public bool taskComplete = false;
 
     //public string userName = "Champ";
@@ -84,6 +84,7 @@ public class TerminalCipher : KeyboardTyping
     //triggered when the "Enter" button is pressed
     public void commandExecution()
     {
+        getPassword();
         commandLine += word;
         if (loggedin == false)
         {
@@ -192,7 +193,7 @@ public class TerminalCipher : KeyboardTyping
     }
     public void commandOptions(string input)
     {
-
+        
         string[] inputArgs = input.Split(' ');
 
         //identify command
