@@ -40,6 +40,21 @@ public class Lockpick : MonoBehaviour
         doorGrab = door.GetComponent<XRGrabInteractable>();
     }
 
+    public void TurnLock(InputAction.CallbackContext context)
+    {
+        if (context.ReadValueAsButton())
+        {
+            movePick = false;
+            keyPressTime = 1;
+        }
+        else
+        {
+            movePick = true;
+            keyPressTime = 0;
+        }
+    }
+
+
     // Update is called once per frame
     void Update()
     {

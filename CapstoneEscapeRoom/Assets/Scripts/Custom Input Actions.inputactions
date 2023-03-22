@@ -13,6 +13,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "TurnLock",
+                    "type": "Button",
+                    "id": "f0e5e353-09ad-4a97-95d3-4aa706f8aa04",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -26,8 +35,25 @@
                     "action": "MenuPressed",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1eb49577-a44d-4518-a79d-9f8810456519",
+                    "path": "<OculusTouchController>{RightHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TurnLock",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Lockpick",
+            "id": "3826b46c-469f-4a15-8111-00e5704b25fb",
+            "actions": [],
+            "bindings": []
         }
     ],
     "controlSchemes": []
