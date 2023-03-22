@@ -82,16 +82,7 @@ public class Lockpick : MonoBehaviour
             pick.transform.rotation = Quaternion.Euler(axisAngle) * rotateTo;
         }
 
-        if (turnLockAction.action.ReadValue<bool>())
-        {
-            movePick = false;
-            keyPressTime = 1;
-        }
-        else
-        {
-            movePick = true;
-            keyPressTime = 0;
-        }
+        
 
         keyPressTime = Mathf.Clamp(keyPressTime, 0, 1);
 
