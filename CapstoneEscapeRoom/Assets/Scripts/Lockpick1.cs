@@ -15,6 +15,8 @@ public class Lockpick1 : MonoBehaviour
     public GameObject door;
     public GameObject trackedHand;
 
+    public TaskList UI;
+
     [Min(1)]
     [Range(1, 25)]
     public float lockRange = 10;
@@ -106,6 +108,7 @@ public class Lockpick1 : MonoBehaviour
 
                 movePick = true;
                 keyPressTime = 0;
+                UI.taskDone(1);
             }
             else
             {
