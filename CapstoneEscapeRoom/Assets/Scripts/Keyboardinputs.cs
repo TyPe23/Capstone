@@ -72,4 +72,13 @@ public class Keyboardinputs : MonoBehaviour
         output.text = input;
     }
 
+    //saves the input to playerPrefs.name and adds player information to the database
+    public void submit() {
+        PlayerPrefs.SetString("Name", word);
+        PlayerDatabase.addPlayerInfo();
+        //clear input
+        word = "";
+        wordIndex = 0;
+        printFunct(word);
+    }
 }

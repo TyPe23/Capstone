@@ -23,24 +23,41 @@ public class PlayerDatabase : MonoBehaviour {
     /// <summary>
     /// adds a player's information to the given level's playerPerf
     /// </summary>
-    /// <param name="level"></param>
-    /// <param name="name"></param>
-    /// <param name="score"></param>
-    /// <param name="bonus"></param>
-    /// <param name="time"></param>
-	public static void addPlayerInfo(string level, string name, int score, int bonus, string time) {
-        //add bonus points to score
-        score += bonus;
+	public static void addPlayerInfo() {
+        //caclulate score
+        calculateFinalScore();
+        string score = (PlayerPrefs.GetInt("Score")).ToString();
         string playerInfo = "";
+        //grab current level
+        string level = "Level" + PlayerPrefs.GetInt("Level").ToString();
         //if this is not the first player in the list, add a "|" to delimit the players
         if (PlayerPrefs.GetString(level) != "" && PlayerPrefs.GetString(level) != null) {
             playerInfo += "|";
         }
-        //add all values to a string ending in "|"
-        playerInfo += (name + "," + score.ToString() + "," + time);
+        //add all values to a string
+        playerInfo += (PlayerPrefs.GetString("Name") + "," + score.ToString() + "," + PlayerPrefs.GetString("Time"));
 
         //add string to player pref for level
         PlayerPrefs.SetString(level, (PlayerPrefs.GetString(level) + playerInfo));
+    }
+
+    /// <summary>
+    /// calculates the player's final score by the amount of time taken on a level and the bonus points
+    /// </summary>
+    public static void calculateFinalScore() {
+        int baseScore = 600;
+        //get time taken in seconds
+        string timeString = PlayerPrefs.GetString("Time");
+        string[] times = timeString.Split(':');
+        TimeSpan timeSpan = new TimeSpan(Int32.Parse(times[0]), Int32.Parse(times[1]), Int32.Parse(times[2]));
+        int seconds = (int)timeSpan.TotalSeconds;
+        //get 15 minutes - the time taken to finish the level, but don't let this drop below 0
+        int timeBonus = 0;
+        if (900 -seconds > 0) {
+            timeBonus = 900 - seconds;
+        }
+        //caclulate score
+        PlayerPrefs.SetInt("Score", baseScore + timeBonus + PlayerPrefs.GetInt("BonusPoints") - PlayerPrefs.GetInt("Hints"));
     }
 
     /// <summary>
@@ -68,48 +85,16 @@ public class PlayerDatabase : MonoBehaviour {
     /// <returns></returns>
     public static string[][][] retrieveData() {
         //make dummy data for display purposes. Can delete before actual game play
-        if (PlayerPrefs.GetString("level1") == null || PlayerPrefs.GetString("level1") == "") {
+        if (PlayerPrefs.GetString("Level1") == null || PlayerPrefs.GetString("Level1") == "") {
             makeDummyData();
         }
 
         string[][][] matrix = new string[Start.numOfLevels][][]; 
         //for all 5 levels
         for (int i = 1; i <= Start.numOfLevels; i++) {
-            matrix[i-1] = helperRetrieveData("level" + i.ToString());
+            matrix[i-1] = helperRetrieveData("Level" + i.ToString());
         }
         return matrix;
-    }
-
-    /// <summary>
-    /// Creates dummy data for testing and presentation purposes
-    /// </summary>
-    public static void makeDummyData() {
-        //adding players
-        Player p1 = new Player();
-        Player p2 = new Player();
-        Player p3 = new Player();
-        Player p4 = new Player();
-
-        p1.setName("Mary");
-        p2.setName("Mathew");
-        p3.setName("Benjamin");
-        p4.setName("Ty");
-
-        Player[] playerList = { p1, p2, p3, p4 };
-        var rand = new System.Random();
-
-        //populate level informaiton
-        foreach (Player player in playerList) {
-            int i = 1;
-            foreach (PlayerLevel level in player.levels) {
-                level.totalScore = rand.Next(50, 500);
-                level.bonusPoints = rand.Next(0, 10);
-                level.setTime(rand.Next(10), rand.Next(59), rand.Next(59));
-                //Debug.Log("Setting " + player.name + "level" + i.ToString());
-                addPlayerInfo("level" + i.ToString(), player.name, level.totalScore, level.bonusPoints, level.bestTime.ToString());
-                i++;
-            }
-        }
     }
 
     /// <summary>
@@ -117,10 +102,11 @@ public class PlayerDatabase : MonoBehaviour {
     /// </summary>
     public static void resetPlayerPrefs() {
         //reset level informaiton
-        PlayerPrefs.SetString("Time", "");
+        PlayerPrefs.SetString("Time", "00:00:00");
         PlayerPrefs.SetInt("Score", 0);
         PlayerPrefs.SetString("Name", "");
         PlayerPrefs.SetInt("BonusPoints", 0);
+        PlayerPrefs.SetInt("Hints", 0);
         //The playerPref "Level" is not reset here b/c we need to
         //know which level the player is entering
     }
@@ -134,11 +120,41 @@ public class PlayerDatabase : MonoBehaviour {
     }
 
     /// <summary>
+    /// sets the player's name
+    /// </summary>
+    /// <param name="name"></param>
+    public static void setName(string name) {
+        PlayerPrefs.SetString("Name", name);
+    }
+
+    /// <summary>
     /// clears all level playerPrefs, which are used to store previous player informaiton
     /// </summary>
     public static void clearDatabase() {
         for (int i = 1; i <= Start.numOfLevels; i++) {
-            PlayerPrefs.SetString("level" + i.ToString(), "");
+            PlayerPrefs.SetString("Level" + i.ToString(), "");
+        }
+    }
+
+    /// <summary>
+    /// Creates dummy data for testing and presentation purposes
+    /// </summary>
+    public static void makeDummyData() {
+        //adding players
+        string[] playerList = { "Mary", "Mathew", "Benjamin", "Ty" };
+        var rand = new System.Random();
+
+        //populate level informaiton
+        foreach (string player in playerList) {
+            PlayerPrefs.SetString("Name", player);
+            for (int i = 1; i <= Start.numOfLevels; i++) {
+                PlayerPrefs.SetInt("Level", i);
+                PlayerPrefs.SetInt("Score", rand.Next(50, 500));
+                PlayerPrefs.SetInt("BonusPoints", rand.Next(0, 10));
+                string time = (rand.Next(10).ToString("D2") + ":" + rand.Next(59).ToString("D2") + ":" + rand.Next(59).ToString("D2"));
+                PlayerPrefs.SetString("Time", time);
+                addPlayerInfo();
+            }
         }
     }
 
