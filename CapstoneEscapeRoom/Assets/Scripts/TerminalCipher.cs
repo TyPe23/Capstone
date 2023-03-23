@@ -9,20 +9,21 @@ public class TerminalCipher : KeyboardTyping
 {
     //wordIndex, word, and output are defined in the parent class
     public string commandLine = "";
-    public string user = "";//"C:\\Users\\Champ> "
+    public string user = "C:\\Users\\Champ>";
     public bool taskComplete = false;
+
 
     //public string userName = "Champ";
     public GameObject pass;
     public string password;
     public string userInfo;
     int rot = 13;
-    //public string[] userNames = { "Ben", "Champ", "Dr. Cherry", "Dr. Glisson", "Mary", "Matt", "Techie", "Ty" };
-    //public string[] passwords = { "!dawg123", "@cat456", "#horse789", "$cow910", "%pig111", "^bird213", "&bee141", "*turtle516", "(geko171", ")lion819", "-crow202", "+star122", "!wars232", "@hammer425", "#time262", "$out728", "%play293", "^off130" };
     public Dictionary<string, string> files;
     private bool updated = false;
     public bool loggedin = false;
-    
+    public bool question1 = false;
+    public bool question2 = false;
+
     //password = inputField.GetComponent<TMP_Text>().text;
     public TaskList UI; // access to UI class
     
@@ -35,11 +36,7 @@ public class TerminalCipher : KeyboardTyping
 
     public void Update()
     {
-        if (taskComplete && !updated)
-        {
-            UI.taskDone(3);
-            updated = true;
-        }
+
     }
 
     //a dictionary of files and their contents
@@ -80,7 +77,34 @@ public class TerminalCipher : KeyboardTyping
         commandLine = user;
         output.text = commandLine;
     }
+    public void quest1(string inp)
+    {
+        if (inp == "Smith")
+        {
+            commandLine += "\n Answer accepted";
+            question1 = true;
+            
+        }
+        else
+        {
+            commandLine += "\n Answer Denied \n Security Question:  \r\nMother's maiden name:";
+        }
+    }
+    public void quest2(string inp)
+    {
+        if (inp == "bears")
+        {
+            commandLine += "\n Answer accepted";
+            question2 = true;
+            UI.taskDone(3);
+        }
+        else
+        {
+            commandLine += "\n Answer Denied \n Security Question:  \r\nHighschool mascot name:";
+        }
+    }
 
+    //
     //triggered when the "Enter" button is pressed
     public void commandExecution()
     {
@@ -92,14 +116,27 @@ public class TerminalCipher : KeyboardTyping
         }
         else
         {
+            if (question1 == false) 
+            {
 
-            //add word to commandLine so it will remain printed
+                quest1(word);
+            }
+            else
+            {
+                if (question2 == false)
+                {
+
+                    quest2(word);
+                }
+                else
+                {
+                    commandOptions(word);
+                }
+            }
+
             
 
-            //check for the command
-            commandOptions(word);
-
-            //return and print username
+           
             
         }
         commandLine += ("\n" + user);
@@ -110,17 +147,7 @@ public class TerminalCipher : KeyboardTyping
         wordIndex = 0;
     }
 
-    ////send text to the terminal one letter at a time
-    //public void textCrawler(string text) {
-    //    for (int i = 0; i < text.Length; i++) {
-
-    //        word += text[i];
-    //        //System.Threading.Thread.Sleep(500);
-    //        output.text = word;
-    //    }
-    //}
-
-    //prints output and formats command line
+   
     public override void printFunct(string command)
     {
         //add input to the print statement
@@ -185,6 +212,7 @@ public class TerminalCipher : KeyboardTyping
         {
             commandLine += "\n Password accepted";
             loggedin = true;
+            UI.taskDone(2);
         }
         else
         {
@@ -228,7 +256,7 @@ public class TerminalCipher : KeyboardTyping
                     commandLine += "\n" + files[inputArgs[1]];
                     if (inputArgs[1] == "passwords.txt")
                     {
-                        taskComplete = true;
+                        
                     }
                 }
                 else
