@@ -322,7 +322,8 @@ public class TerminalCipher : KeyboardTyping
                 }
                 else if (files.ContainsKey(inputArgs[1]))
                 {
-                    commandLine += "\nsorry, you do not have the permissions to delete files";
+                    commandLine += "\nFile Deleted";
+                    UI.taskDone(4);
                 }
                 else
                 {
