@@ -83,7 +83,8 @@ public class TerminalCipher : KeyboardTyping
         {
             commandLine += "\n Answer accepted";
             question1 = true;
-            
+            commandLine += "\n Answer Denied \n Security Question:  \r\nHighschool mascot name:";
+
         }
         else
         {
@@ -139,6 +140,48 @@ public class TerminalCipher : KeyboardTyping
            
             
         }
+        // Determin the number of \n (new lines) are in CommandLine
+        int newLines = 0;
+        int j = 0;
+        bool change = true;
+        int lastTwoLocation1 = 0;
+        int lastTwoLocation2 = 0;
+        foreach (char c in commandLine)
+        {
+            //Debug.Log(c);
+            if (c == '\\') // count new lines 
+            {
+                Debug.Log("Found");
+                newLines++;
+                if (change)
+                {
+                    lastTwoLocation1 = j;
+                    change = false;
+                }
+                else
+                {
+                    lastTwoLocation2 = j;
+                    change = true;
+
+                }
+            }
+            j++;
+        }
+        Debug.Log(newLines);
+        if (newLines > 5)
+        {
+            Debug.Log("Working");
+            if (change)
+            {
+                commandLine = commandLine.Substring(lastTwoLocation2);
+
+            }
+            else
+            {
+                commandLine = commandLine.Substring(lastTwoLocation1);
+            }
+        }
+        //Debug.Log(commandLine);
         commandLine += ("\n" + user);
         //print output
         output.text = commandLine;

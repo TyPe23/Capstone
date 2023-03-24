@@ -51,7 +51,7 @@ public class TaskList : MonoBehaviour
                 fileLines = new List<string>() { "Gain Access to managers office", "Enter Server Room", "Find password on the computer" };
                 break;
             case 2: // level 2
-                fileLines = new List<string>() { "Gain Access to Managers room", "Gain Access to Managers Computer", "Find out this information","Delete classified.txt on managers computer"};
+                fileLines = new List<string>() { "Gain Access to Managers room", "Gain Access to Managers Computer", "Find out this information","Delete Taxes.exe on managers computer"};
                 break;
             case 3: // level 3
                 fileLines = new List<string>() { };
