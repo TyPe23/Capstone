@@ -55,7 +55,7 @@ public class TerminalCipher : KeyboardTyping
     //a dictionary of files and their contents
     Dictionary<string, string> filesUser = new Dictionary<string, string>()
     {
-        {"tmp.txt", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. " +
+        {"Classified.txt", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. " +
                     "Vivamus pretium leo eu ultricies accumsan. Duis sagittis " +
                     "ornare risus, et posuere nunc. Integer eu dolor laoreet " +
                     "metus elementum congue ut nec ante. Quisque nec nulla dolor."}
