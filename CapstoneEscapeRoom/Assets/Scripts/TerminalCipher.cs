@@ -23,6 +23,7 @@ public class TerminalCipher : KeyboardTyping
     public bool loggedin = false;
     public bool question1 = false;
     public bool question2 = false;
+    public bool question3 = false;
 
     //password = inputField.GetComponent<TMP_Text>().text;
     public TaskList UI; // access to UI class
@@ -105,6 +106,21 @@ public class TerminalCipher : KeyboardTyping
         }
     }
 
+    public void quest3(string inp)
+    {
+        if (inp == "October 23")
+        {
+            commandLine += "\n Answer accepted";
+            question2 = true;
+            UI.taskDone(3);
+        }
+        else
+        {
+            commandLine += "\n Answer Denied \n Security Question:  \r\nWedding anniversary (Month day)";
+        }
+    }
+
+
     //
     //triggered when the "Enter" button is pressed
     public void commandExecution()
@@ -131,7 +147,17 @@ public class TerminalCipher : KeyboardTyping
                 }
                 else
                 {
-                    commandOptions(word);
+
+                    if (question3 == false)
+                    {
+
+                        quest3(word);
+                    }
+                    else
+                    {
+
+                        commandOptions(word);
+                    }
                 }
             }
 
