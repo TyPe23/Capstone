@@ -98,7 +98,6 @@ public class TerminalCipher : KeyboardTyping
         {
             commandLine += "\n Answer accepted";
             question2 = true;
-            UI.taskDone(3);
         }
         else
         {
@@ -108,10 +107,10 @@ public class TerminalCipher : KeyboardTyping
 
     public void quest3(string inp)
     {
-        if (inp == "October 23")
+        if (inp == "October 20")
         {
             commandLine += "\n Answer accepted";
-            question2 = true;
+            question3 = true;
             UI.taskDone(3);
         }
         else
