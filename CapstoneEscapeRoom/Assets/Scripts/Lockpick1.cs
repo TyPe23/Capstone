@@ -66,7 +66,7 @@ public class Lockpick1 : MonoBehaviour
         {
             Vector3 dir = (trackedHand.transform.position - tumbler.position);
             Vector3 projectedDir = (dir - (Vector3.Dot(dir, Normal) / (Mathf.Pow(Vector3.Magnitude(Normal), 2)) * Normal));
-            projectedDir = new Vector3(-projectedDir.x, projectedDir.y, projectedDir.z);
+            //projectedDir = new Vector3(-projectedDir.x, projectedDir.y, projectedDir.z);
 
             eulerAngle = Vector3.Angle(projectedDir, Vector3.up);
 
