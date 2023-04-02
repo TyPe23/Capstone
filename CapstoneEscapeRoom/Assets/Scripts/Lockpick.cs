@@ -7,7 +7,6 @@ using UnityEngine.InputSystem;
 public class Lockpick : MonoBehaviour
 {
     public Transform NormalRef;
-    public InputActionProperty turnLockAction;
     public Transform tumbler;
     public Transform pickPosition;
     public GameObject pick;
@@ -64,6 +63,7 @@ public class Lockpick : MonoBehaviour
         {
             Vector3 dir = (trackedHand.transform.position - tumbler.position);
             Vector3 projectedDir = dir - (Vector3.Dot(dir, Normal) / (Mathf.Pow(Vector3.Magnitude(Normal), 2)) * Normal);
+            projectedDir = new Vector3(-projectedDir.x, projectedDir.y, projectedDir.z);
 
             eulerAngle = Vector3.Angle(projectedDir, Vector3.up);
 
