@@ -62,6 +62,7 @@ public class keypadControler : MonoBehaviour
             rend.enabled = true; // enable rendering change 
             rend.sharedMaterial = Materials[0]; // change material 
             doorLock.GetComponent<XRGrabInteractable>().enabled = true; // unlock door
+            doorLock.GetComponent<Rigidbody>().isKinematic = false;
             UI.taskDone(2);
             audioData.Play(0);
         }

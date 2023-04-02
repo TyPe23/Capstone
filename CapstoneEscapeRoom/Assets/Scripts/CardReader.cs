@@ -32,6 +32,7 @@ public class CardReader : MonoBehaviour
             rend.enabled = true; // enable rendering change 
             rend.sharedMaterial = Materials[1]; // change material 
             doorLock2.GetComponent<XRGrabInteractable>().enabled = true; // unlock door
+            doorLock2.GetComponent<Rigidbody>().isKinematic = false;
             if (UI != null)
             {
                 UI.taskDone(1);                                              // compleate task 

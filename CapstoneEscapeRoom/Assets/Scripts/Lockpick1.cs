@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.InputSystem;
+using UnityEngine.ProBuilder.Shapes;
 
 public class Lockpick1 : MonoBehaviour
 {
@@ -31,6 +32,7 @@ public class Lockpick1 : MonoBehaviour
     private bool movePick = true;
     private Vector3 Normal;
     private XRGrabInteractable doorGrab;
+    private Rigidbody doorRB;
 
     // Start is called before the first frame update
     void Start()
@@ -40,6 +42,7 @@ public class Lockpick1 : MonoBehaviour
         axisAngle = tumbler.transform.eulerAngles;
         Normal = Vector3.Normalize(NormalRef.position - tumbler.position);
         doorGrab = door.GetComponent<XRGrabInteractable>();
+        doorRB = door.GetComponent<Rigidbody>();
     }
 
     public void TurnLock(InputAction.CallbackContext context)
@@ -104,6 +107,7 @@ public class Lockpick1 : MonoBehaviour
             {
                 Debug.Log("unlocked");
                 doorGrab.enabled = true;
+                doorRB.isKinematic = false;
                 Destroy(gameObject);
 
                 movePick = true;
