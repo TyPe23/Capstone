@@ -145,7 +145,7 @@ public class TaskList : MonoBehaviour
     {
         if (left == 0 && compleated == total) // no objectives left 
         {
-            SceneManager.LoadScene(1); // sending player to level Selection
+            SceneManager.LoadScene("Lessons 1"); // sending player to level Selection
         }
     }
 }
