@@ -1,3 +1,6 @@
+//Mary Nations
+//This is the original class for the terminal in level 1
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -50,16 +53,6 @@ public class Terminal : KeyboardTyping {
         word = "";
         wordIndex = 0;
     }
-
-    ////send text to the terminal one letter at a time
-    //public void textCrawler(string text) {
-    //    for (int i = 0; i < text.Length; i++) {
-
-    //        word += text[i];
-    //        //System.Threading.Thread.Sleep(500);
-    //        output.text = word;
-    //    }
-    //}
 
     //prints output and formats command line
     public override void printFunct(string command) {
