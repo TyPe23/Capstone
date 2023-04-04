@@ -13,7 +13,7 @@ public class ScoreBoard : MonoBehaviour
     public GameObject[] buttons;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         data = PlayerDatabase.retrieveData();
         string header =
