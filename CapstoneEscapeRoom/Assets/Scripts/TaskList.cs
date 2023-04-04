@@ -24,7 +24,7 @@ public class TaskList : MonoBehaviour
     private List<string> fileLines; // lines in file 
     private string output; // output 
     public bool done = false;
-
+    public string next;
     //audio
     public AudioSource source;
     public AudioClip Clip1;
@@ -49,18 +49,23 @@ public class TaskList : MonoBehaviour
                 break;
             case 1: // level 1
                 fileLines = new List<string>() { "Gain Access to managers office", "Enter Server Room", "Find password on the computer" };
+                next = "Lessons 1";
                 break;
             case 2: // level 2
                 fileLines = new List<string>() { "Gain Access to Managers room", "Gain Access to Managers Computer", "Find out this information","Delete Taxes.exe on managers computer"};
+                next = "Lessons 2";
                 break;
             case 3: // level 3
                 fileLines = new List<string>() { };
+                next = "Lessons 3";
                 break;
             case 4: // level 4
                 fileLines = new List<string>() { };
+                next = "Lessons 4";
                 break;
             case 5: // level 5 
                 fileLines = new List<string>() { };
+                next = "Lessons 5";
                 break;
 
         }
@@ -145,7 +150,9 @@ public class TaskList : MonoBehaviour
     {
         if (left == 0 && compleated == total) // no objectives left 
         {
-            SceneManager.LoadScene("Lessons 1"); // sending player to level Selection
+
+            SceneManager.LoadScene(next); // sending player to level Selection
+
         }
     }
 }
