@@ -85,9 +85,10 @@ public class PlayerDatabase : MonoBehaviour {
     /// <returns></returns>
     public static string[][][] retrieveData() {
         //make dummy data for display purposes. Can delete before actual game play
-        if (PlayerPrefs.GetString("Level1") == null || PlayerPrefs.GetString("Level1") == "") {
-            makeDummyData();
-        }
+        //if (PlayerPrefs.GetString("Level1") == null || PlayerPrefs.GetString("Level1") == "") {
+        //    makeDummyData();
+        //}
+        clearDatabase();
 
         string[][][] matrix = new string[Start.numOfLevels][][]; 
         //for all 5 levels
