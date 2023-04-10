@@ -11,6 +11,8 @@ using TMPro;
 public class Terminal : KeyboardTyping {
 
     //wordIndex, word, and output are defined in the parent class
+    public List<string> pastCommands = new List<string>();
+    public int commandIndex = -1; //initialized here so the index will be 0 upon first entry
     public string commandLine = "";
     public string user = "C:\\Users\\Champ> ";
     public bool taskComplete = false;
@@ -69,6 +71,8 @@ public class Terminal : KeyboardTyping {
         curserIndex = 0;
         commandLine = "";
         output.text = "";
+        pastCommands.Clear();
+        commandIndex = -1;
     }
 
     //the idea here was to use this function to implement command feedback and overwrite this funciton in a child class for every computer instance
@@ -92,11 +96,14 @@ public class Terminal : KeyboardTyping {
     }
 
     /// <summary>
-    /// removes the curser from the word. Meant to be used once the word needs to be processed
+    /// removes the curser from the word and saves the input. Meant to be used once the word needs to be processed
     /// </summary>
     public void removeCurser() {
         string[] wordParts = word.Split("|");
         word = wordParts[0] + wordParts[1];
+        pastCommands.Add(word);
+        //reset command index to last index of list
+        commandIndex = pastCommands.Count - 1;
     }
 
     /// <summary>
@@ -106,5 +113,26 @@ public class Terminal : KeyboardTyping {
         word = "";
         wordIndex = 0;
         curserIndex = 0;
+    }
+
+    /// <summary>
+    /// for the up and down arrows to retrieve past commands
+    /// </summary>
+    /// <param name="direction"></param>
+    public void upOrDownArrow(string direction) {
+        if (direction == "up" & commandIndex >= 0) {
+            //get a past command
+            word = pastCommands[commandIndex] + "|";
+            wordIndex = word.Length - 1;
+            curserIndex = wordIndex;
+            commandIndex--;
+        }
+        else if (direction == "down" & commandIndex < pastCommands.Count - 1) {
+            commandIndex++;
+            word = pastCommands[commandIndex] + "|";
+            wordIndex = word.Length - 1;
+            curserIndex = wordIndex;
+        }
+        printFunct(word);
     }
 }
