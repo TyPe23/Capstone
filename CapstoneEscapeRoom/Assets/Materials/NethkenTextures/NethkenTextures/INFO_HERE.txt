@@ -1,0 +1,17 @@
+I compiled the files I could find from my team's Nethken project in CSC470.
+
+It consists of most of the indoor assets I used to remake Nethken's inside. I don't have the assets for the outside walls, etc.
+so you will have to find some brick textures if you recreate the outside.
+
+Any custom models or textures I created are found here as well as a few textures I found online.
+
+There are some models such as doorknobs, lights, and other furniture that I found on sites like TurboSquid or pulled from QuixelBridge
+but it would be rough finding them again so I leave that to you.
+
+You will most likely have to play around with the materials to get it looking right with scaling and such.
+
+Hopefully this will at least get you started on your project.
+
+If you could credit me, it would be much appreciated. I go by Eli Payton.
+
+Good luck!

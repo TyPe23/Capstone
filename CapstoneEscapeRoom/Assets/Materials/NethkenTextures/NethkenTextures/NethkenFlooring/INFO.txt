@@ -1,0 +1,2 @@
+I created this floor texture from a material I found on this quixel bridge and then edited in GIMP.
+The normal map is also included in here.

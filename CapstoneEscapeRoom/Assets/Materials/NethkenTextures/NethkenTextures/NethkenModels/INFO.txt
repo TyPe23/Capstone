@@ -1,0 +1,6 @@
+This folder contains the models I created in blender along with their textures
+
+The Chair and Table are textures I created while the wood texture for the door was found online
+
+Also I used a free glass texture pack from Unreal Marketplace to create the glass in game.
+I cannot find the link but the pack is called Advanced Glass Material Pack.
