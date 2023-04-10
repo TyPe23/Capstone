@@ -6,13 +6,9 @@ using TMPro;
 using System.Linq;
 
 //used to alter and print to the command line
-public class Terminal1 : KeyboardTyping {
+public class Terminal1 : Terminal {
 
     //wordIndex, word, and output are defined in the parent class
-    public string commandLine = "";
-    public string user = "C:\\Users\\Champ> ";
-    public bool taskComplete = false;
-    
     public string userName;
     public string password;
     public string userInfo;
@@ -20,8 +16,6 @@ public class Terminal1 : KeyboardTyping {
     public string[] passwords = { "!dawg123", "@cat456", "#horse789", "$cow910", "%pig111", "^bird213", "&bee141", "*turtle516", "(geko171", ")lion819", "-crow202", "+star122", "!wars232", "@hammer425", "#time262", "$out728", "%play293", "^off130" };
     public Dictionary<string, string> files;
     private bool updated = false;
-
-    public TaskList UI; // access to UI class
 
     public void Start()
     {
@@ -70,14 +64,9 @@ public class Terminal1 : KeyboardTyping {
                       "qg4g97gq3f97hgasG(P#&TSDef;oqi4ghllef" }
     };
 
-    //triggered when the terminal is opened
-    public void startTerminal() {
-        commandLine = user;
-        output.text = commandLine;
-    }
-
     //triggered when the "Enter" button is pressed
-    public void commandExecution() {
+    public override void commandExecution() {
+        removeCurser();
         //add word to commandLine so it will remain printed
         commandLine += word;
 
@@ -89,29 +78,12 @@ public class Terminal1 : KeyboardTyping {
         //print output
         output.text = commandLine;
         //reset terminal input
-        word = "";
-        wordIndex = 0;
-    }
-
-    //prints output and formats command line
-    public override void printFunct(string command) {
-        //add input to the print statement
-        //the command is the entire word typed up to this point, which is why it it not yet saved to the commandLine
-        output.text = (commandLine + command);
-    }
-
-    //triggered when the terminal is closed
-    public void closeTerminal() {
-        //reset all values
-        word = "";
-        wordIndex = 0;
-        commandLine = "";
-        output.text = "";
+        resetInput();
     }
 
     //the idea here was to use this function to implement command feedback and overwrite this funciton in a child class for every computer instance
     //controls what happens in the command line
-    public void commandOptions(string input) {
+    public override void commandOptions(string input) {
 
         string[] inputArgs = input.Split(' ');
 

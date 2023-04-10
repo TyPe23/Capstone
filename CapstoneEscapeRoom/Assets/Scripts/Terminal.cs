@@ -32,7 +32,8 @@ public class Terminal : KeyboardTyping {
     }
 
     //triggered when the "Enter" button is pressed
-    public void commandExecution() {
+    public virtual void commandExecution() {
+        removeCurser();
         //add word to commandLine so it will remain printed
         commandLine += word;
         //check for the command
@@ -50,8 +51,7 @@ public class Terminal : KeyboardTyping {
         //print output
         output.text = commandLine;
         //reset terminal input
-        word = "";
-        wordIndex = 0;
+        resetInput();
     }
 
     //prints output and formats command line
@@ -66,13 +66,14 @@ public class Terminal : KeyboardTyping {
         //reset all values
         word = "";
         wordIndex = 0;
+        curserIndex = 0;
         commandLine = "";
         output.text = "";
     }
 
     //the idea here was to use this function to implement command feedback and overwrite this funciton in a child class for every computer instance
     //controls what happens in the command line
-    public void commandOptions(string input) {
+    public virtual void commandOptions(string input) {
         //identify command
         switch (input) {
             case "ls":
@@ -88,5 +89,22 @@ public class Terminal : KeyboardTyping {
             case "":
                 break;
         }
+    }
+
+    /// <summary>
+    /// removes the curser from the word. Meant to be used once the word needs to be processed
+    /// </summary>
+    public void removeCurser() {
+        string[] wordParts = word.Split("|");
+        word = wordParts[0] + wordParts[1];
+    }
+
+    /// <summary>
+    /// used when "enter" is pressed and the terminal input should be cleared
+    /// </summary>
+    public void resetInput() {
+        word = "";
+        wordIndex = 0;
+        curserIndex = 0;
     }
 }
