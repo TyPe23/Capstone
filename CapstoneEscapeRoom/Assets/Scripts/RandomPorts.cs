@@ -8,16 +8,19 @@ public class RandomPorts : MonoBehaviour
     public GameObject[] allPorts;
     // empty arry of vector 3s 
     private Vector3[] locations;
+    private Quaternion[] rotationY; 
 
     // Start is called before the first frame update
     void Start()
     {
         locations = new Vector3[allPorts.Length]; // set length of locations
+        rotationY = new Quaternion[allPorts.Length];
         // get locations of all ports 
         int i = 0;
         foreach(GameObject port in allPorts)
         {
             locations[i]= port.transform.position;
+            rotationY[i]=port.transform.rotation;
             i++;
         }
         List<int> used = new List<int>();
@@ -32,6 +35,7 @@ public class RandomPorts : MonoBehaviour
                 if (!(used.Contains(x)))
                 {
                     port.transform.position = locations[x];
+                    port.transform.rotation = rotationY[x];
                     c = false;
                     used.Add(x);
                 }
