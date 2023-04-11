@@ -16,7 +16,7 @@ public class PortChecker : MonoBehaviour
     void Update()
     {
         // if both are fixed 
-        if (Starting.IsBroken == false & Ending.IsBroken == false)
+        if (Starting.IsBroken == false && Ending.IsBroken == false && allDone == false)
         {
             allDone = true;
         }
