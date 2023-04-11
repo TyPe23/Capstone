@@ -49,15 +49,15 @@ public class TaskList : MonoBehaviour
                 break;
             case 1: // level 1
                 fileLines = new List<string>() { "Gain Access to managers office", "Enter Server Room", "Find password on the computer" };
-                Lesson = "Do not store passwords in unsecured locations";
+                Lesson = "Do not store passwords in unsecured locations such as sticky notes";
                 break;
             case 2: // level 2
                 fileLines = new List<string>() { "Gain Access to Managers room", "Gain Access to Managers Computer", "Find out this information","Delete Taxes.exe on managers computer"};
                 Lesson = "Do not have security questions with easily accessible information";
                 break;
             case 3: // level 3
-                fileLines = new List<string>() { };
-                Lesson = "Makuse sure all security software is up to date";
+                fileLines = new List<string>() {" Gain Access to Server room", "Connect to server from computer", "Run exploit commands" };
+                Lesson = "Make sure all security software is up to date";
                 break;
             case 4: // level 4
                 fileLines = new List<string>() { };
@@ -69,7 +69,7 @@ public class TaskList : MonoBehaviour
                 break;
                
         }
-        outs.text = Lesson;
+        //outs.text = Lesson;
         //if(level == 1) // temp for task list 
         //{
         //    fileLines = new List<string>() {"Gain Access to managers office", "Enter Server Room", "Find password on the computer" };

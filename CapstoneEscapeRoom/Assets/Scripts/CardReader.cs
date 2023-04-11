@@ -24,20 +24,27 @@ public class CardReader : MonoBehaviour
     public AudioSource audio;
     public TaskList UI;
 
+    public int taskNum = 1;
+
+    public bool done = false;
+
     private void Update()
     {
-        float dist = Vector3.Distance(reader.transform.position, trackedObjecct.transform.position);
-        if (dist <= minDist)
-        {
-            rend.enabled = true; // enable rendering change 
-            rend.sharedMaterial = Materials[1]; // change material 
-            doorLock2.GetComponent<XRGrabInteractable>().enabled = true; // unlock door
-            doorLock2.GetComponent<Rigidbody>().isKinematic = false;
-            if (UI != null)
+        if (!done) { 
+            float dist = Vector3.Distance(reader.transform.position, trackedObjecct.transform.position);
+            if (dist <= minDist && done == false)
             {
-                UI.taskDone(1);                                              // compleate task 
+                done = true;
+                rend.enabled = true; // enable rendering change 
+                rend.sharedMaterial = Materials[1]; // change material 
+                doorLock2.GetComponent<XRGrabInteractable>().enabled = true; // unlock door
+                doorLock2.GetComponent<Rigidbody>().isKinematic = false;
+                if (UI != null)
+                {
+                    UI.taskDone(taskNum);                                              // compleate task 
+                }
+                audio.Play(0);
             }
-            audio.Play(0);
         }
     }
 }

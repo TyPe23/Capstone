@@ -9,16 +9,24 @@ public class PortChecker : MonoBehaviour
     // connect the two ports through there scripts 
     public PortScript Starting; 
     public PortScript Ending;
-    
+
+    // task 
+    public TaskList UI;
+    public int taskNum = 2;
+
     public bool allDone = false;
 
     // Update is called once per frame
     void Update()
     {
         // if both are fixed 
-        if (Starting.IsBroken == false && Ending.IsBroken == false && allDone == false)
+        if (Starting.IsBroken == false && Ending.IsBroken == false)
         {
-            allDone = true;
+            if (allDone == false)
+            {
+                allDone = true;
+                UI.taskDone(taskNum);
+            }
         }
         else // if one is broken 
         {
