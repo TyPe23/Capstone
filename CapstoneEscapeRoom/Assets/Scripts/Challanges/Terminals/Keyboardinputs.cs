@@ -81,6 +81,6 @@ public class Keyboardinputs : MonoBehaviour
         wordIndex = 0;
         printFunct(word);
         //saves the player data to the database
-        PlayerData.addPlayerInfo();
+        PlayerDatabase.addPlayerInfo();
     }
 }
