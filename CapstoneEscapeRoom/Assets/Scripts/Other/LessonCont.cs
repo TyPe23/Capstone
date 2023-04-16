@@ -5,13 +5,14 @@ using UnityEngine;
 public class LessonCont : MonoBehaviour
 {
     // Start is called before the first frame update
+    public GameObject cont;
     void Start()
     {
       
-        GameObject.FindGameObjectWithTag("ContButton").SetActive(false);
+        cont.SetActive(false);
         
         StartCoroutine(ExampleCoroutine());
-        GameObject.FindGameObjectWithTag("ContButton").SetActive(true);
+        cont.SetActive(true);
     }
 
     IEnumerator ExampleCoroutine()

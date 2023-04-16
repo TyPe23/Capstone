@@ -24,7 +24,7 @@ public class TaskList : MonoBehaviour
     private List<string> fileLines; // lines in file 
     private string output; // output 
     public bool done = false;
-    public string Lesson;
+    public string L;
     //audio
     public AudioSource source;
     public AudioClip Clip1;
@@ -49,27 +49,28 @@ public class TaskList : MonoBehaviour
                 break;
             case 1: // level 1
                 fileLines = new List<string>() { "Gain Access to managers office", "Enter Server Room", "Find password on the computer" };
-                Lesson = "Do not store passwords in unsecured locations such as sticky notes";
+              
                 break;
             case 2: // level 2
                 fileLines = new List<string>() { "Gain Access to Managers room", "Gain Access to Managers Computer", "Find out this information","Delete Taxes.exe on managers computer"};
-                Lesson = "Do not have security questions with easily accessible information";
+          
                 break;
             case 3: // level 3
                 fileLines = new List<string>() {" Gain Access to Server room", "Connect to server from computer", "Run exploit commands" };
-                Lesson = "Make sure all security software is up to date";
+             
                 break;
             case 4: // level 4
                 fileLines = new List<string>() { };
-                Lesson = "Lessons 4";
+           
                 break;
             case 5: // level 5 
                 fileLines = new List<string>() { };
-                Lesson = "Lessons 5";
+              
                 break;
                
         }
         //outs.text = Lesson;
+
         //if(level == 1) // temp for task list 
         //{
         //    fileLines = new List<string>() {"Gain Access to managers office", "Enter Server Room", "Find password on the computer" };
@@ -142,7 +143,37 @@ public class TaskList : MonoBehaviour
             outputs.text = output; // send to text mesh pro
         }
     }
-    // function to end the level 
+    public void Lessons(int level)
+    {
+        switch (level)// task selection 
+        {
+            case 0: // test worlds 
+
+                break;
+            case 1: // level 1
+
+                L = "Do not store passwords in unsecured locations such as sticky notes";
+                break;
+            case 2: // level 2
+
+                L = "Do not have security questions with easily accessible information";
+                break;
+            case 3: // level 3
+
+                L = "Make sure all security software is up to date";
+                break;
+            case 4: // level 4
+
+                L = "Lessons 4";
+                break;
+            case 5: // level 5 
+
+                L = "Lessons 5";
+                break;
+        }
+        outs.text = L;
+    }
+        // function to end the level 
     public void endLevel()
     {
         EndGame.SetActive(true);
@@ -151,7 +182,7 @@ public class TaskList : MonoBehaviour
     {
         if (left == 0 && compleated == total) // no objectives left 
         {
-
+            Lessons(level);
             SceneManager.LoadScene("Lessons"); // sending player to level Selection
 
         }
