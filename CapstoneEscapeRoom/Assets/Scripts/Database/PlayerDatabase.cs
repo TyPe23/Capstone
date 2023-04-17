@@ -171,8 +171,7 @@ public class PlayerDatabase : MonoBehaviour {
             // assign the columns to the current row in the matrix
             matrix[i] = columns;
         }
-        print2DMatrix(matrix);
-        return ("nanme");
+        return ("name");
     }
 
     /// <summary>
