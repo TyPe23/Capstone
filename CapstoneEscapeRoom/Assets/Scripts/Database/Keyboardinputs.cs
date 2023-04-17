@@ -74,10 +74,13 @@ public class Keyboardinputs : MonoBehaviour
 
     //saves the input to playerPrefs.name and adds player information to the database
     public void submit() {
-        //check if the string "name" is comprised entirely of numbers
-        if (isNumeric(PlayerPrefs.GetString("Name"))) {
+        //check if the string is comprised entirely of numbers
+        if (isNumeric(word)) {
             //if so, retrieve name that matches the given ID
-            PlayerPrefs.SetString("Name", PlayerDatabase.retrieveTeamName(PlayerPrefs.GetString("Name")));
+            PlayerPrefs.SetString("Name", PlayerDatabase.retrieveTeamName(word));
+        }
+        else {
+            PlayerPrefs.SetString("Name", word);
         }
         //saves the player data to the database
         PlayerDatabase.addPlayerInfo();
