@@ -171,7 +171,14 @@ public class PlayerDatabase : MonoBehaviour {
             // assign the columns to the current row in the matrix
             matrix[i] = columns;
         }
-        return ("name");
+        //find the given ID and its coordinating name
+        string teamName = "";
+        for (int i = 0; i < matrix.GetLength(0); i++) {
+            if (matrix[i][0] == teamID) {
+                teamName = matrix[i][1];
+            }
+        }
+        return (teamName);
     }
 
     /// <summary>

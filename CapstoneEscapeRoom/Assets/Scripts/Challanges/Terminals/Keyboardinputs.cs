@@ -74,14 +74,16 @@ public class Keyboardinputs : MonoBehaviour
 
     //saves the input to playerPrefs.name and adds player information to the database
     public void submit() {
-        PlayerDatabase.retrieveTeamName("1234");
-        PlayerPrefs.SetString("Name", word);
+        //check if the string "name" is comprised entirely of numbers
+        if (isNumeric(PlayerPrefs.GetString("Name"))) {
+            //if so, retrieve name that matches the given ID
+            PlayerPrefs.SetString("Name", PlayerDatabase.retrieveTeamName(PlayerPrefs.GetString("Name")));
+        }
         //saves the player data to the database
         PlayerDatabase.addPlayerInfo();
         //clear input
         word = "";
         wordIndex = 0;
-        printFunct(word);
     }
 
     //sets the name of the player that was input
@@ -93,5 +95,11 @@ public class Keyboardinputs : MonoBehaviour
     public void addTeam() {
         //the word here is the teamID
         PlayerDatabase.addTeam(word);
+    }
+
+    //returns true if the given string is entirely numeric
+    public static bool isNumeric(string str) {
+        int n;
+        return int.TryParse(str, out n);
     }
 }
