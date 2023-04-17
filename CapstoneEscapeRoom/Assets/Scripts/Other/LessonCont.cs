@@ -1,14 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class LessonCont : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject cont;
+    public TMP_Text outs;
     void Start()
     {
-      
+        outs.text = PlayerPrefs.GetString("Lessons");
+
+
         cont.SetActive(false);
         
         StartCoroutine(ExampleCoroutine());

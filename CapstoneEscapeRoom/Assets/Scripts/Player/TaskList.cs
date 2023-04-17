@@ -29,7 +29,7 @@ public class TaskList : MonoBehaviour
     public AudioSource source;
     public AudioClip Clip1;
     public AudioClip Clip2;
-    public TMP_Text outs;
+    
     //end game screen 
     public GameObject EndGame;
    
@@ -171,7 +171,7 @@ public class TaskList : MonoBehaviour
                 L = "Lessons 5";
                 break;
         }
-        outs.text = L;
+        PlayerPrefs.SetString("Lessons", L);
     }
         // function to end the level 
     public void endLevel()
