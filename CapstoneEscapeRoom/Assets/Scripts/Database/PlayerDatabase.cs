@@ -88,7 +88,6 @@ public class PlayerDatabase : MonoBehaviour {
         //if (PlayerPrefs.GetString("Level1") == null || PlayerPrefs.GetString("Level1") == "") {
         //    makeDummyData();
         //}
-        clearDatabase();
 
         string[][][] matrix = new string[Start.numOfLevels][][]; 
         //for all 5 levels
@@ -135,6 +134,45 @@ public class PlayerDatabase : MonoBehaviour {
         for (int i = 1; i <= Start.numOfLevels; i++) {
             PlayerPrefs.SetString("Level" + i.ToString(), "");
         }
+        PlayerPrefs.SetString("Teams", "");
+    }
+
+    /// <summary>
+    /// uses the currently set player Name and makes a key,value pair with the team name and teamID
+    /// </summary>
+    /// <param name="teamID"></param>
+    public static void addTeam(string teamID) {
+        string teamInfo = "";
+        //if this is not the first team in the list, add a "|" to delimit the teams
+        if (PlayerPrefs.GetString("Teams") != "" && PlayerPrefs.GetString("Teams") != null) {
+            teamInfo += "|";
+        }
+        //add all values to a string
+        teamInfo += (teamID + "," + PlayerPrefs.GetString("Name"));
+
+        PlayerPrefs.SetString("Teams", (PlayerPrefs.GetString("Teams") + teamInfo));
+        Debug.Log(PlayerPrefs.GetString("Teams"));
+    }
+
+    /// <summary>
+    /// returns the team name associated with the given team ID
+    /// </summary>
+    /// <param name="teamID"></param>
+    /// <returns></returns>
+    public static string retrieveTeamName(string teamID) {
+        // split the input string into key,value pairs using the delimiter "|"
+        string[] rows = PlayerPrefs.GetString("Teams").Split('|');
+        // create a 2D string array
+        string[][] matrix = new string[rows.Length][];
+
+        for (int i = 0; i < rows.Length; i++) {
+            // split each row into columns using the "," delimiter
+            string[] columns = rows[i].Split(',');
+            // assign the columns to the current row in the matrix
+            matrix[i] = columns;
+        }
+        print2DMatrix(matrix);
+        return ("nanme");
     }
 
     /// <summary>

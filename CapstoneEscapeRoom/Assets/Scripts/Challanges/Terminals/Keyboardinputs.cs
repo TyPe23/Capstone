@@ -74,13 +74,24 @@ public class Keyboardinputs : MonoBehaviour
 
     //saves the input to playerPrefs.name and adds player information to the database
     public void submit() {
+        PlayerDatabase.retrieveTeamName("1234");
         PlayerPrefs.SetString("Name", word);
+        //saves the player data to the database
         PlayerDatabase.addPlayerInfo();
         //clear input
         word = "";
         wordIndex = 0;
         printFunct(word);
-        //saves the player data to the database
-        PlayerDatabase.addPlayerInfo();
+    }
+
+    //sets the name of the player that was input
+    public void changeName() {
+        PlayerPrefs.SetString("Name", word);
+    }
+
+    //adds the player,teamID combination to the database
+    public void addTeam() {
+        //the word here is the teamID
+        PlayerDatabase.addTeam(word);
     }
 }
