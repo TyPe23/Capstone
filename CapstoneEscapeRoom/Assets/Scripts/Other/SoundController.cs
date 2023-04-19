@@ -26,6 +26,5 @@ public class SoundController : MonoBehaviour
         float soundValue = PlayerPrefs.GetFloat("Sound");
         soundSlid.value = soundValue;
         AudioListener.volume = soundValue;
-            
     }
 }
