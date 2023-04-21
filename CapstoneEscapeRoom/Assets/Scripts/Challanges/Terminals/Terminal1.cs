@@ -81,6 +81,8 @@ public class Terminal1 : Terminal {
         resetInput();
     }
 
+
+
     //the idea here was to use this function to implement command feedback and overwrite this funciton in a child class for every computer instance
     //controls what happens in the command line
     public override void commandOptions(string input) {

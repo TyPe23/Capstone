@@ -37,18 +37,22 @@ public class KeyboardTyping : MonoBehaviour {
         }
 
         //check if the curser has been moved
-        if (curserIndex != wordIndex) {
-            string[] wordParts = word.Split("|");
-            word = wordParts[0] + letter + "|" + wordParts[1];
-            //word = word.Substring(0, curserIndex) + letter + "|" + word.Substring(curserIndex + 1);
-            wordIndex++;
-            curserIndex++;
-        }
-        else {
-            wordIndex++;
-            curserIndex++;
-            word = word.Substring(0, wordIndex - 1) + letter + "|";
-        }
+        //if (curserIndex != wordIndex) {
+        //    string[] wordParts = word.Split("|");
+        //    word = wordParts[0] + letter + "|" + wordParts[1];
+        //    word = word.Substring(0, curserIndex) + letter + "|" + word.Substring(curserIndex + 1);
+        //    wordIndex++;
+        //    curserIndex++;
+        //}
+        //else {
+        //    wordIndex++;
+        //    curserIndex++;
+        //    word = word.Substring(0, wordIndex - 1) + letter + "|";
+        //}
+
+        wordIndex++;
+        curserIndex++;
+        word = word.Substring(0, wordIndex - 1) + letter + "|";
 
         printFunct(word); // send to text mesh pro
         shift = false;
