@@ -87,7 +87,7 @@ public class TaskList : MonoBehaviour
             }
         }
         total = left;
-         
+        PlayerPrefs.SetInt("Task", left);
         outputs.text = output; // send to text mesh pro
     }
 
@@ -104,6 +104,7 @@ public class TaskList : MonoBehaviour
             fileLines[num-1] = "[X]" + fileLines[num-1]; // add x to compleated task 
             compleated = compleated + 1;
             left = left - 1;
+            PlayerPrefs.SetInt("Task", left);
             foreach (string line in fileLines)
             {
                 //print(output +"  output");
