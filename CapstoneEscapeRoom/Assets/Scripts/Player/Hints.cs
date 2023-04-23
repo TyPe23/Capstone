@@ -32,7 +32,7 @@ public class Hints : MonoBehaviour
         background.SetActive(true);
         switch (level)
         {
-            case 1:
+            case 2:
                 switch(task)
                 {
                     case 3:
@@ -46,7 +46,7 @@ public class Hints : MonoBehaviour
                         break;
                 }
                 break;
-            case 2:
+            case 3:
                 switch (task)
                 {
                     case 4:
