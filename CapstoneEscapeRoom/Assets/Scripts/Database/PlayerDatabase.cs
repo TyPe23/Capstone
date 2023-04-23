@@ -53,7 +53,7 @@ public class PlayerDatabase : MonoBehaviour {
         int seconds = (int)timeSpan.TotalSeconds;
         //get 15 minutes - the time taken to finish the level, but don't let this drop below 0
         int timeBonus = 0;
-        if (900 -seconds > 0) {
+        if (900 - seconds > 0) {
             timeBonus = 900 - seconds;
         }
         //caclulate score
