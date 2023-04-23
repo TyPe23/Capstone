@@ -1,8 +1,11 @@
 using UnityEngine;
 using System.Collections;
-using UnityEngine.UI;  // Required when Using UI elements.
+using UnityEngine.UI;
 
-public class scrollReset : MonoBehaviour {
+/// <summary>
+/// Called when the "X" on the terminal screen is clicked. It resets the scroll position of the screen
+/// </summary>
+public class TerminalScrollReset : MonoBehaviour {
     public ScrollRect myScrollRect;
 
     public void ResetScrolling() {
