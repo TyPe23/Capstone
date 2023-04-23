@@ -22,7 +22,8 @@ public class keypadControler : MonoBehaviour
 
     public Material[] Materials; // materials list / colors 
     public Renderer rend;// renders 
-    public AudioSource audioData;
+    public AudioUnlock unlock;
+    public AudioDenied denied;
     public GameObject doorLock; // the door grab object 
 
     public TaskList UI;
@@ -64,13 +65,14 @@ public class keypadControler : MonoBehaviour
             doorLock.GetComponent<XRGrabInteractable>().enabled = true; // unlock door
             doorLock.GetComponent<Rigidbody>().isKinematic = false;
             UI.taskDone(2);
-            audioData.Play(0);
+            unlock.unlock();
         }
         else // if wrong 
         {
             rend.enabled = true; // enable rendering chage 
             rend.sharedMaterial = Materials[1]; // change material 
             doorLock.GetComponent<XRGrabInteractable>().enabled = false;// lock door
+            denied.deny();
         }
     }
 

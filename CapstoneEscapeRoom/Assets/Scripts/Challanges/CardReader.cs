@@ -21,7 +21,7 @@ public class CardReader : MonoBehaviour
     public GameObject reader;
     public float minDist;
 
-    public AudioSource audio;
+    public AudioUnlock unlockSound;
     public TaskList UI;
 
     public int taskNum = 1;
@@ -43,7 +43,7 @@ public class CardReader : MonoBehaviour
                 {
                     UI.taskDone(taskNum);                                              // compleate task 
                 }
-                audio.Play(0);
+                unlockSound.unlock();
             }
         }
     }
