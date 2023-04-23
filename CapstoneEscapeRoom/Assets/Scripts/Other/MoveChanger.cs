@@ -21,7 +21,7 @@ public class MoveChanger : MonoBehaviour
     public GameObject LeftHand;
     // defaults and settings 
     public XRInteractorLineVisual line;
-    public float defaultLength = 0.5f;
+    public float defaultLength = 0.75f;
     public XRRayInteractor linePart;
 
     // Start is called before the first frame update
@@ -46,8 +46,8 @@ public class MoveChanger : MonoBehaviour
         }
         else
         {
-            continuousMovment = false;
-            telportMovment = true;
+            continuousMovment = true;
+            telportMovment = false;
             continMoving();
             line.lineLength = defaultLength;
             linePart.lineType = XRRayInteractor.LineType.StraightLine;
