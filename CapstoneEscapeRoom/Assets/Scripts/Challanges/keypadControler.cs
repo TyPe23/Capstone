@@ -75,5 +75,4 @@ public class keypadControler : MonoBehaviour
             denied.deny();
         }
     }
-
 }

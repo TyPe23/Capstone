@@ -11,10 +11,11 @@ public class Hints : MonoBehaviour
     public int task;
     public TMP_Text hint;
     public string output;
+    public GameObject background;
     // Start is called before the first frame update
 
 
-    void useHint()
+    public void useHint()
     {
         hintsTotal = PlayerPrefs.GetInt("Hints");
 
@@ -28,10 +29,10 @@ public class Hints : MonoBehaviour
     {
         level = PlayerPrefs.GetInt("Level");
         task = PlayerPrefs.GetInt("Task");
-        
+        background.SetActive(true);
         switch (level)
         {
-            case 1:
+            case 2:
                 switch(task)
                 {
                     case 3:
@@ -45,7 +46,7 @@ public class Hints : MonoBehaviour
                         break;
                 }
                 break;
-            case 2:
+            case 3:
                 switch (task)
                 {
                     case 4:
