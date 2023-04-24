@@ -5,13 +5,8 @@ using UnityEngine.UI;
 using TMPro;
 using System.Linq;
 
-public class TerminalCipher : KeyboardTyping
+public class TerminalCipher : Terminal
 {
-    //wordIndex, word, and output are defined in the parent class
-    public string commandLine = "";
-    public string user = "C:\\Users\\Champ>";
-    public bool taskComplete = false;
-
 
     //public string userName = "Champ";
     public GameObject pass;
@@ -71,13 +66,6 @@ public class TerminalCipher : KeyboardTyping
                       "va234p9f7B#R907ghqp9f38hpgq13p&*W@DFp\n" +
                       "qg4g97gq3f97hgasG(P#&TSDef;oqi4ghllef" }
     };
-
-    //triggered when the terminal is opened
-    public void startTerminal()
-    {
-        commandLine = user;
-        output.text = commandLine;
-    }
     public void quest1(string inp)
     {
         if (inp == "Smith")
@@ -122,7 +110,7 @@ public class TerminalCipher : KeyboardTyping
 
     //
     //triggered when the "Enter" button is pressed
-    public void commandExecution()
+    public override void commandExecution()
     {
         getPassword();
         commandLine += word;
@@ -223,16 +211,6 @@ public class TerminalCipher : KeyboardTyping
         output.text = (commandLine + command);
     }
 
-    //triggered when the terminal is closed
-    public void closeTerminal()
-    {
-        //reset all values
-        word = "";
-        wordIndex = 0;
-        commandLine = "";
-        output.text = "";
-    }
-
     //the idea here was to use this function to implement command feedback and overwrite this funciton in a child class for every computer instance
     //controls what happens in the command line
     public string getPassword()
@@ -287,7 +265,7 @@ public class TerminalCipher : KeyboardTyping
             commandLine += "\n Password Denied \n Login: Champ\r\nPassword:";
         }
     }
-    public void commandOptions(string input)
+    public override void commandOptions(string input)
     {
         
         string[] inputArgs = input.Split(' ');

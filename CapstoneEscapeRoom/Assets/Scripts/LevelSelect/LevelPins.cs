@@ -23,7 +23,7 @@ public class LevelPins : MonoBehaviour
             buttons[i].SetActive(true);
         }
         sound.btnClick();
-        particles.Play();
+        var newParticles = Instantiate(particles, transform.position, Quaternion.Euler(0, 0, 0));
         //Debug.Log("Button Pressed");
         button.SetActive(false);
     }

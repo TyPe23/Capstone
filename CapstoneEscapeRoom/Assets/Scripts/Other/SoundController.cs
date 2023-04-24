@@ -17,14 +17,14 @@ public class SoundController : MonoBehaviour
     public void SaveButton()
     {
         float soundValue = soundSlid.value;
-        PlayerPrefs.SetFloat("Sound", soundValue);
+        PlayerPrefs.SetFloat("Sound", soundValue / 100);
         LoadValues();
     }
 
-    void LoadValues()
+    public void LoadValues()
     {
         float soundValue = PlayerPrefs.GetFloat("Sound");
-        soundSlid.value = soundValue;
+        soundSlid.value = soundValue * 100;
         AudioListener.volume = soundValue;
     }
 }
