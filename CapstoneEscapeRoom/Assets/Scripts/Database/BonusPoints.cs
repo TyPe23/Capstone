@@ -5,7 +5,7 @@ using UnityEngine;
 public class BonusPoints : MonoBehaviour
 {
     public int bPoints = 0;
-    public int pointsPer = 500;
+    public int pointsPer = 300;
     //PlayerPrefs.SetInt("BonusPoints", 0);
     public bool[] items = { false, false, false, false, false };
 
