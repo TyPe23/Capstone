@@ -6,6 +6,7 @@ using UnityEngine;
 public class AudioGrab : MonoBehaviour
 {
     private AudioSource m_AudioSource;
+    private bool canPlay = true;
 
     private void Start()
     {
@@ -15,5 +16,21 @@ public class AudioGrab : MonoBehaviour
     public void grab()
     {
         Game.globalInstance.sndPlayer.PlaySound(SoundType.GRAB, m_AudioSource);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (canPlay && Time.time > 3)
+        {
+            canPlay = false;
+            Game.globalInstance.sndPlayer.PlaySound(SoundType.DROP, m_AudioSource);
+            StartCoroutine(Cooldown());
+        }
+    }
+
+    public IEnumerator Cooldown()
+    {
+        yield return new WaitForSecondsRealtime(0.1f);
+        canPlay = true;
     }
 }

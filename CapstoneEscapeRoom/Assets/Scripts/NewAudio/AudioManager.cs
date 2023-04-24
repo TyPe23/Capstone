@@ -11,6 +11,8 @@ public enum SoundType
     UNLOCK,
     ACCESS_DENIED,
     KEY_PRESS,
+    APPEAR,
+    DOOR,
 }
 
 public struct Range
@@ -80,13 +82,15 @@ public class AudioManager : MonoBehaviour
     {
         audioSrc = GetComponent<AudioSource>();
         sounds = new Dictionary<SoundType, SoundCollection>() {
-            {SoundType.DROP, new SoundCollection("drop") },
+            {SoundType.DROP, new SoundCollection("impact") },
             {SoundType.GRAB, new SoundCollection("grab") },
             {SoundType.UI, new SoundCollection("tick") },
             {SoundType.UNLOCK, new SoundCollection("unlockTech") },
-            {SoundType.ACCESS_DENIED, new SoundCollection("accessDenied") },
+            {SoundType.ACCESS_DENIED, new SoundCollection("lockedTech") },
             {SoundType.KEY_PRESS, new SoundCollection("keypress") },
-    };
+            {SoundType.APPEAR, new SoundCollection("appear") },
+            {SoundType.DOOR, new SoundCollection("Door Unlock Sound") },
+        };
     }
 
     public void PlaySound(SoundType type, bool allowPitchShift = true, bool allowVolShift = true)

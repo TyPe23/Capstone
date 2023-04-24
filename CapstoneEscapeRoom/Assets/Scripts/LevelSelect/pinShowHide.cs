@@ -8,6 +8,7 @@ public class pinShowHide : MonoBehaviour
     public ScoreBoard scores;
     public GameObject levelParticles;
     public GameObject UI;
+    public AudioAppear appear;
 
     private string[][][] data;
 
@@ -23,13 +24,15 @@ public class pinShowHide : MonoBehaviour
     {
         for (int i = 0; i < data.Length; i++)
         {
-            pins[i].SetActive(true);
             if (data[i][0][0] == "")
             {
                 yield return new WaitForSecondsRealtime(3);
+                pins[i].SetActive(true);
+                appear.appear();
                 var newParticles = Instantiate(levelParticles, pins[i].transform.position, Quaternion.Euler(0, 0, 0));
                 break;
             }
+            pins[i].SetActive(true);
         }
     }
 
@@ -40,6 +43,7 @@ public class pinShowHide : MonoBehaviour
             for (int i = 0; i < data.Length; i++)
             {
                 pins[i].SetActive(true);
+                appear.appear();
                 var newParticles = Instantiate(levelParticles, pins[i].transform.position, Quaternion.Euler(0, 0, 0));
             }
         }

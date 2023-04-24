@@ -12,9 +12,9 @@ public class LevelPins : MonoBehaviour
     public GameObject button;
     public GameObject[] buttons;
     public UnityEvent onPress, onReleased;
+    public ParticleSystem particles;
     //audio
-    public AudioSource source;
-    public AudioClip Clip;
+    public AudioUI sound;
 
     public void LevelSet()
     {
@@ -22,7 +22,8 @@ public class LevelPins : MonoBehaviour
         {
             buttons[i].SetActive(true);
         }
-        source.PlayOneShot(Clip);
+        sound.btnClick();
+        particles.Play();
         //Debug.Log("Button Pressed");
         button.SetActive(false);
     }

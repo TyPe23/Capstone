@@ -8,11 +8,9 @@ using UnityEngine.ProBuilder.Shapes;
 public class Lockpick1 : MonoBehaviour
 {
     public Transform NormalRef;
-    public InputActionProperty turnLockAction;
     public Transform tumbler;
     public Transform pickPosition;
     public GameObject pick;
-    public Camera cam;
     public GameObject door;
     public GameObject trackedHand;
 
