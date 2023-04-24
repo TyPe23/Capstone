@@ -11,7 +11,7 @@ public class BonusPoints : MonoBehaviour
 
     public void updatePoints(int i)
     {
-        if(items[i])
+        if(!items[i])
         {
             try
             {
