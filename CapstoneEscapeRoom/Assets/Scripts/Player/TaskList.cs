@@ -153,11 +153,11 @@ public class TaskList : MonoBehaviour
                 break;
             case 1: // level 1
 
-                L = "Do not store passwords in unsecured locations such as sticky notes";
+                L = "Do not store passwords in unsecured locations \nsuch as sticky notes";
                 break;
             case 2: // level 2
 
-                L = "Do not have security questions with easily accessible information";
+                L = "Do not have security questions with easily \naccessible information";
                 break;
             case 3: // level 3
 
