@@ -12,23 +12,38 @@ public class Hints : MonoBehaviour
     public TMP_Text hint;
     public string output;
     public GameObject background;
+    public bool hintUsed;
+    public int currentTask;
     // Start is called before the first frame update
 
 
     public void useHint()
     {
-        hintsTotal = PlayerPrefs.GetInt("Hints");
+        level = PlayerPrefs.GetInt("Level");
+        task = PlayerPrefs.GetInt("Task");
+        if (task != currentTask)
+        {
+            currentTask = task;
+            hintUsed = false;
+        }
+        if (!hintUsed)
+        {
 
-        hintsTotal += negativePoints;
 
-        PlayerPrefs.SetInt("Hints", hintsTotal);
-        displayHint();
+            hintsTotal = PlayerPrefs.GetInt("Hints");
+
+            hintsTotal += negativePoints;
+
+            PlayerPrefs.SetInt("Hints", hintsTotal);
+
+            displayHint();
+            hintUsed = true;
+        }
     }
 
     void displayHint()
     {
-        level = PlayerPrefs.GetInt("Level");
-        task = PlayerPrefs.GetInt("Task");
+
         background.SetActive(true);
         switch (level)
         {
@@ -64,6 +79,7 @@ public class Hints : MonoBehaviour
                 }
                 break;
         }
+        
         hint.text = output;
         //task = 
         //show hint to player based on level and task
