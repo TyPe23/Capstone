@@ -89,7 +89,7 @@ public class AudioManager : MonoBehaviour
             {SoundType.ACCESS_DENIED, new SoundCollection("lockedTech") },
             {SoundType.KEY_PRESS, new SoundCollection("keypress") },
             {SoundType.APPEAR, new SoundCollection("appear") },
-            {SoundType.DOOR, new SoundCollection("Door Unlock Sound") },
+            {SoundType.DOOR, new SoundCollection("door") },
         };
     }
 

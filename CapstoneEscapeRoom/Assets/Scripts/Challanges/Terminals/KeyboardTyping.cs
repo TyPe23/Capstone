@@ -38,6 +38,8 @@ public class KeyboardTyping : MonoBehaviour {
 
         //check if the curser has been moved
         if (curserIndex != wordIndex) {
+            print($"word index: {wordIndex}");
+            print($"cursor index {curserIndex}");
             string[] wordParts = word.Split("|");
             word = wordParts[0] + letter + "|" + wordParts[1];
             //word = word.Substring(0, curserIndex) + letter + "|" + word.Substring(curserIndex + 1);

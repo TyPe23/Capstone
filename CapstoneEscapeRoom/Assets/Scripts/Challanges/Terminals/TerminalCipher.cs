@@ -19,9 +19,6 @@ public class TerminalCipher : Terminal
     public bool question1 = false;
     public bool question2 = false;
     public bool question3 = false;
-
-    //password = inputField.GetComponent<TMP_Text>().text;
-    public TaskList UI; // access to UI class
     
     public void Start()
     {
@@ -112,6 +109,7 @@ public class TerminalCipher : Terminal
     //triggered when the "Enter" button is pressed
     public override void commandExecution()
     {
+        removeCurser();
         getPassword();
         commandLine += word;
         if (loggedin == false)
@@ -201,6 +199,7 @@ public class TerminalCipher : Terminal
         //reset terminal input
         word = "";
         wordIndex = 0;
+        resetInput();
     }
 
    
