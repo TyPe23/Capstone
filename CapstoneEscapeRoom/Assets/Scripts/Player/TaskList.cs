@@ -39,6 +39,7 @@ public class TaskList : MonoBehaviour
     void Start()
     {
         PlayerPrefs.SetInt("Level", level);
+        clearPref();
         // file connection 
         //FilePath = "Assets/Scenes/TestWorlds/" + "TaskList" +level+ ".txt";
         //fileLines = File.ReadAllLines(FilePath).ToList();
@@ -89,6 +90,12 @@ public class TaskList : MonoBehaviour
         total = left;
         PlayerPrefs.SetInt("Task", left);
         outputs.text = output; // send to text mesh pro
+    }
+
+    public void clearPref()
+    {
+        PlayerPrefs.SetInt("Hints", 0);
+        PlayerPrefs.SetInt("BonusPoints", 0);
     }
 
     public void taskDone(int num) // task compleated and update list 

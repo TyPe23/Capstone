@@ -16,7 +16,7 @@ public class Hints : MonoBehaviour
     public int currentTask;
     // Start is called before the first frame update
 
-
+    
     public void useHint()
     {
         level = PlayerPrefs.GetInt("Level");
