@@ -1,4 +1,4 @@
-using System.Collections;
+    using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -47,7 +47,7 @@ public class Hints : MonoBehaviour
         background.SetActive(true);
         switch (level)
         {
-            case 2:
+            case 1: //level 1
                 switch(task)
                 {
                     case 3:
@@ -61,7 +61,7 @@ public class Hints : MonoBehaviour
                         break;
                 }
                 break;
-            case 3:
+            case 2: //level
                 switch (task)
                 {
                     case 4:
