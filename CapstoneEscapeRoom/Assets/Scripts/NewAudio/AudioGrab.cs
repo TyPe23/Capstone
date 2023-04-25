@@ -16,6 +16,7 @@ public class AudioGrab : MonoBehaviour
     public void grab()
     {
         Game.globalInstance.sndPlayer.PlaySound(SoundType.GRAB, m_AudioSource);
+        StartCoroutine(Cooldown());
     }
 
     private void OnCollisionEnter(Collision collision)
