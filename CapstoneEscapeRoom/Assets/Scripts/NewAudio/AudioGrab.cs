@@ -16,13 +16,13 @@ public class AudioGrab : MonoBehaviour
     public void grab()
     {
         Game.globalInstance.sndPlayer.PlaySound(SoundType.GRAB, m_AudioSource);
+        StartCoroutine(Cooldown());
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         if (canPlay && Time.time > 3)
         {
-            canPlay = false;
             Game.globalInstance.sndPlayer.PlaySound(SoundType.DROP, m_AudioSource);
             StartCoroutine(Cooldown());
         }
@@ -30,6 +30,7 @@ public class AudioGrab : MonoBehaviour
 
     public IEnumerator Cooldown()
     {
+        canPlay = false;
         yield return new WaitForSecondsRealtime(0.1f);
         canPlay = true;
     }

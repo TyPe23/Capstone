@@ -4,6 +4,7 @@
 
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,6 +13,7 @@ public class DoorButton : MonoBehaviour
     public GameObject [] buttons;
     bool open = false;
     public AudioDoor sound;
+    public TMP_Text text; 
 
     private void Update()
     {
@@ -23,6 +25,7 @@ public class DoorButton : MonoBehaviour
                 GetComponent<BoxCollider>().isTrigger = true;
                 sound.open();
                 open = true;
+                text.text = "Enter to go to\n Level " + (i + 1);
             }
         }
     }
