@@ -23,7 +23,6 @@ public class AudioGrab : MonoBehaviour
     {
         if (canPlay && Time.time > 3)
         {
-            canPlay = false;
             Game.globalInstance.sndPlayer.PlaySound(SoundType.DROP, m_AudioSource);
             StartCoroutine(Cooldown());
         }
@@ -31,6 +30,7 @@ public class AudioGrab : MonoBehaviour
 
     public IEnumerator Cooldown()
     {
+        canPlay = false;
         yield return new WaitForSecondsRealtime(0.1f);
         canPlay = true;
     }
