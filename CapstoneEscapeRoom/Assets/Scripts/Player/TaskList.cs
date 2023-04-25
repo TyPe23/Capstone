@@ -16,7 +16,7 @@ public class TaskList : MonoBehaviour
 {
     public TMP_Text outputs; // connect TMP text to outputs in code
     public int level; // current level
-
+    
     public int compleated = 0; // number compleated 
     public int left = 0; // number left 
     public int total = 0; // total task 
@@ -38,7 +38,8 @@ public class TaskList : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        PlayerPrefs.SetInt("Level", level);
+        clearPref();
         // file connection 
         //FilePath = "Assets/Scenes/TestWorlds/" + "TaskList" +level+ ".txt";
         //fileLines = File.ReadAllLines(FilePath).ToList();
@@ -89,6 +90,12 @@ public class TaskList : MonoBehaviour
         total = left;
         PlayerPrefs.SetInt("Task", left);
         outputs.text = output; // send to text mesh pro
+    }
+
+    public void clearPref()
+    {
+        PlayerPrefs.SetInt("Hints", 0);
+        PlayerPrefs.SetInt("BonusPoints", 0);
     }
 
     public void taskDone(int num) // task compleated and update list 
