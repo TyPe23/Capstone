@@ -11,7 +11,7 @@ public class TerminalLevel3 : Terminal {
     public string userName;
     public string password;
     public Dictionary<string, string> files;
-    public TaskList UI;
+    public TaskList UITL;
     public int taskNum = 3;
 
     Dictionary<string, string> filesRoot = new Dictionary<string, string>
@@ -96,7 +96,7 @@ public class TerminalLevel3 : Terminal {
             case "killSwitch.exe":
                 if (files.ContainsKey(inputArgs[0])) {
                     commandLine += "\n" + files[inputArgs[0]];
-                    UI.taskDone(taskNum);
+                    UITL.taskDone(taskNum);
                 }
                         else if (inputArgs.Length > 1) {
                     commandLine += "\ntoo many args for an executable";
