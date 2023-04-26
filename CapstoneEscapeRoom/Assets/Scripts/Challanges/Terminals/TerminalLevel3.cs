@@ -72,8 +72,6 @@ public class TerminalLevel3 : Terminal {
     //controls what happens in the command line
     public override void commandOptions(string input) {
 
-        PlayerPrefs.SetString("cableHookedUp", "true");
-
         string[] inputArgs = input.Split(' ');
 
         //identify command
