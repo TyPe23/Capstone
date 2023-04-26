@@ -78,6 +78,21 @@ public class Hints : MonoBehaviour
                         break;
                 }
                 break;
+            case 3:
+                switch (task)
+                {
+                    case 3:
+                        output = "in the Cabent";
+                        break;
+                    case 2:
+                        output = "find blinking port and plug into computer with cable";
+                        break;
+                    case 1:
+                        output = "find a exe maybe use cd on the new file";
+                        break;
+
+                }
+                break;
         }
         
         hint.text = output;
