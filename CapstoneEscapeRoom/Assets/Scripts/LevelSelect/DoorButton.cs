@@ -19,12 +19,16 @@ public class DoorButton : MonoBehaviour
     {
         for (int i = 0; i < buttons.Length; i++)
         {
-            if (buttons[i].activeSelf == false && !open)
+            if (buttons[i].activeSelf == false)
             {
-                GetComponent<MeshRenderer>().enabled = false;
-                GetComponent<BoxCollider>().isTrigger = true;
-                sound.open();
-                open = true;
+                if (!open)
+                {
+                    GetComponent<MeshRenderer>().enabled = false;
+                    GetComponent<BoxCollider>().isTrigger = true;
+                    sound.open();
+                    open = true;
+                }
+
                 text.text = "Enter to go to\n Level " + (i + 1);
             }
         }
