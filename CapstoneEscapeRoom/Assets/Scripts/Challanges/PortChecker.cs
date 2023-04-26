@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class PortChecker : MonoBehaviour
 {
-    // connect the two ports through there scripts 
+    // connect the two ports through their scripts 
     public PortScript Starting; 
     public PortScript Ending;
 
@@ -15,6 +15,12 @@ public class PortChecker : MonoBehaviour
     public int taskNum = 2;
 
     public bool allDone = false;
+
+    // Called when the script is loaded for thr first time
+    void Awake() {
+        // used for the Level 3 Terminal
+        PlayerPrefs.SetString("cableHookedUp", "false");
+    }
 
     // Update is called once per frame
     void Update()
@@ -25,6 +31,7 @@ public class PortChecker : MonoBehaviour
             if (allDone == false)
             {
                 allDone = true;
+                PlayerPrefs.SetString("cableHookedUp", "true");
                 UI.taskDone(taskNum);
             }
         }
@@ -33,6 +40,7 @@ public class PortChecker : MonoBehaviour
             if (allDone == true) // but both were fixed at one time 
             {
                 allDone = false;
+                PlayerPrefs.SetString("cableHookedUp", "false");
             }
         }
     }
