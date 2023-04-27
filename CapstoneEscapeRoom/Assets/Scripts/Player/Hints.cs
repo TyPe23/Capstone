@@ -82,7 +82,7 @@ public class Hints : MonoBehaviour
                 switch (task)
                 {
                     case 3:
-                        output = "in the Cabent";
+                        output = "the key card can be found in the Cabent";
                         break;
                     case 2:
                         output = "find blinking port and plug into computer with cable";
