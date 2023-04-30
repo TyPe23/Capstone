@@ -132,7 +132,6 @@ public class Terminal1 : Terminal {
                 commandLine += "\ncat\tused to display the content of a file" +
                                "\n\texample:  cat <filename>" +
                                "\ncd\tused to change the current directory" +
-                               "\n\ncd\tused to change the directory" +
                                "\n\texample: cd <directoryname>" +
                                "\n\texample: cd" +
                                "\n\t         the exclusion of a directory" +
@@ -140,7 +139,7 @@ public class Terminal1 : Terminal {
                                "\n\nexit\tused to exit the terminal" +
                                "\n\nls\tused to display the files in the directory" +
                                "\n\nrm\tused to delete files" +
-                               "\n\texample: rm <options> <filename>" + 
+                               "\n\texample: rm <options> <filename>" +
                                "\n\nwhoami\tused to display the name of the user";
                 break;
 
