@@ -93,8 +93,8 @@ public class TerminalLevel3 : Terminal {
                 }
                 break;
 
-            case "killSwitch.exe":
-                if (files.ContainsKey(inputArgs[0])) {
+            case "./killSwitch.exe":
+                if (files.ContainsKey("killSwitch.exe")) {
                     commandLine += "\n" + files[inputArgs[0]];
                     UITL.taskDone(taskNum);
                 }
@@ -123,7 +123,6 @@ public class TerminalLevel3 : Terminal {
                 commandLine += "\ncat\tused to display the content of a file" +
                                "\n\texample:  cat <filename>" +
                                "\ncd\tused to change the current directory" +
-                               "\n\ncd\tused to change the directory" +
                                "\n\texample: cd <directoryname>" +
                                "\n\texample: cd" +
                                "\n\t         the exclusion of a directory" +
