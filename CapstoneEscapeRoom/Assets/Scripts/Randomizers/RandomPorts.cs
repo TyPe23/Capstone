@@ -27,7 +27,7 @@ public class RandomPorts : MonoBehaviour
         List<int> used = new List<int>();
         int x = 0;
         bool c = true;
-        if (HARDCODE == -1)
+        if (HARDCODE != -1)
         {
             foreach (GameObject port in allPorts)
             {
