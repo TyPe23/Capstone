@@ -141,7 +141,7 @@ public class PlayerDatabase : MonoBehaviour {
     /// clears the data for level 3; used for demonstration purposes
     /// </summary>
     public static void clearLevel3() {
-        PlayerPrefs.SetString("Level3");
+        PlayerPrefs.SetString("Level3", "");
     }
 
     /// <summary>
