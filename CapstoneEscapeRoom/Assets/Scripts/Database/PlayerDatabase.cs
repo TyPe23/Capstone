@@ -138,6 +138,13 @@ public class PlayerDatabase : MonoBehaviour {
     }
 
     /// <summary>
+    /// clears the data for level 3; used for demonstration purposes
+    /// </summary>
+    public static void clearLevel3() {
+        PlayerPrefs.SetString("Level3");
+    }
+
+    /// <summary>
     /// uses the currently set player Name and makes a key,value pair with the team name and teamID
     /// </summary>
     /// <param name="teamID"></param>
