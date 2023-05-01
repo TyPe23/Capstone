@@ -8,7 +8,8 @@ public class RandomPorts : MonoBehaviour
     public GameObject[] allPorts;
     // empty arry of vector 3s 
     private Vector3[] locations;
-    private Quaternion[] rotationY; 
+    private Quaternion[] rotationY;
+    private int HARDCODE = -1; 
 
     // Start is called before the first frame update
     void Start()
@@ -26,21 +27,24 @@ public class RandomPorts : MonoBehaviour
         List<int> used = new List<int>();
         int x = 0;
         bool c = true;
-        foreach(GameObject port in allPorts)
+        if (HARDCODE == -1)
         {
-            c = true;
-            while (c)
+            foreach (GameObject port in allPorts)
             {
-                x = Random.Range(0, allPorts.Length);
-                if (!(used.Contains(x)))
+                c = true;
+                while (c)
                 {
-                    port.transform.position = locations[x];
-                    port.transform.rotation = rotationY[x];
-                    c = false;
-                    used.Add(x);
+                    x = Random.Range(0, allPorts.Length);
+                    if (!(used.Contains(x)))
+                    {
+                        port.transform.position = locations[x];
+                        port.transform.rotation = rotationY[x];
+                        c = false;
+                        used.Add(x);
+                    }
                 }
+
             }
-            
         }
 
     }

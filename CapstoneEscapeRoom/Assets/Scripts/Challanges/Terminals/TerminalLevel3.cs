@@ -93,8 +93,8 @@ public class TerminalLevel3 : Terminal {
                 }
                 break;
 
-            case "./killSwitch.exe":
-                if (files.ContainsKey("killSwitch.exe")) {
+            case "killSwitch.exe":
+                if (files.ContainsKey(inputArgs[0])) {
                     commandLine += "\n" + files[inputArgs[0]];
                     UITL.taskDone(taskNum);
                 }
