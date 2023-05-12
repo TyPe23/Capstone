@@ -109,6 +109,11 @@ public class PlayerDatabase : MonoBehaviour {
         PlayerPrefs.SetInt("Hints", 0);
         //The playerPref "Level" is not reset here b/c we need to
         //know which level the player is entering
+
+        // #################################################################################################################################
+        //The below code is a bandaid for Cyberstorm and should be deleted!! It is here because scrolling needs to be added to the scoreboard
+        clearDatabase();
+        // #################################################################################################################################
     }
 
     /// <summary>
